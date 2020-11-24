@@ -140,8 +140,36 @@ add_action( 'widgets_init', 'karjala_event_widgets_init' );
  * Enqueue scripts and styles.
  */
 function karjala_event_scripts() {
-	wp_enqueue_style( 'karjala_event-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	//TODO
+	//if( is_homepage() )
+
+	wp_enqueue_style( 'karjala_event-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C400i%2C600%7CMuli%3A300%2C400%2C400i%2C600%7CCrimson+Text%3A300%2C400%2C400i%2C600&#038;subset=latin-ext&#038;', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-part1', get_template_directory_uri() . '/css/part1.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-part2', get_template_directory_uri() . '/css/part2.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-common', get_template_directory_uri() . '/css/common.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-trips', get_template_directory_uri() . '/css/trips.css', array(), _S_VERSION );
+
+
 	wp_style_add_data( 'karjala_event-style', 'rtl', 'replace' );
+
+
+
+
+	/**** scripts */
+	
+	
+	wp_enqueue_script('karjala_event-jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', null, null, true);
+
+	wp_enqueue_script('karjala_event-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', null, null, true);
+
+
 
 	wp_enqueue_script( 'karjala_event-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

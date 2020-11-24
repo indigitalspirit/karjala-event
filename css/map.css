@@ -1,0 +1,108 @@
+/**** MAP PAGE ***/
+
+/**** logo ******/
+
+
+.mkdf-logo-wrapper {
+  max-width: 150px;
+}
+
+
+footer .widget_text img {
+  width: 100%;
+}
+
+/**** ./logo ******/
+
+
+/****** BLOG TOP *****/
+.blog-page__block_top {
+  height: 452px;background-image:url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg);
+
+  margin-bottom: 90px;
+
+}
+
+.blog-page__block_top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-color: #1a1a1a;
+}
+
+.blog-page__block_top .mkdf-title-wrapper { 
+  height: 150px;
+  padding-top: 140px
+}
+
+.blog-page__block_top h2.mkdf-page-title {
+text-align: center;
+}
+
+
+/****** ./BLOG TOP *****/
+
+
+
+/**** BOTTOM BAR ****/
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(255, 255, 255, 75%);
+}
+
+/**** BOTTOM BAR ****/
+
+
+
+
+
+.map-page {
+  
+}
+
+.map-page .map-page__items {
+  margin-bottom: 80px;
+}
+
+.map-page .map-page__top-pages {
+  
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 24.7%;
+  padding: 10px 25px;
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item h2 {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item h2 a {
+  font-size: 27px;
+  
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item .top-pages-item__children {
+  list-style-type: disc;
+  padding-left: 15px;
+  margin-top: 0;
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item .top-pages-item__children li {
+  
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item .top-pages-item__children li a {
+  
+}
+

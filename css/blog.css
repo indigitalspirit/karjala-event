@@ -1,0 +1,63 @@
+/**** logo ******/
+
+
+.mkdf-logo-wrapper {
+  max-width: 150px;
+}
+
+
+footer .widget_text img {
+  width: 100%;
+}
+
+/**** ./logo ******/
+
+
+/****** BLOG TOP *****/
+.blog-page__block_top {
+  height: 452px;background-image:url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg);
+
+  margin-bottom: 90px;
+
+}
+
+.blog-page__block_top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-color: #1a1a1a;
+}
+
+.blog-page__block_top .mkdf-title-wrapper { 
+  height: 150px;
+  padding-top: 140px
+}
+
+.blog-page__block_top h2.mkdf-page-title {
+text-align: center;
+}
+
+
+/****** ./BLOG TOP *****/
+
+
+
+/**** PAGINATION *****/
+
+.blog-page__pagination {
+  text-align: center;
+  margin-bottom: 90px;
+
+}
+
+.blog-page__pagination .mkdf-blog-pagination ul li.mkdf-pag-active a {
+  font-size: 24px;
+
+}
+
+/**** ./PAGINATION *****/
+

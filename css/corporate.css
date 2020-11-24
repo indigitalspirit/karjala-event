@@ -1,0 +1,690 @@
+
+
+
+
+
+
+
+/***** CORPORATE SERVICES ***/
+
+.aside-contacts {
+
+}
+
+
+.aside-contacts .aside-contacts__item {
+  
+}
+
+.aside-contacts .aside-contacts__item span {
+  font-size: 22px;
+}
+
+
+
+/******************/
+
+.corporate-block_wrapper {
+  padding: 80px 8% 22px 8%
+}
+
+
+
+
+
+
+
+
+.corporate-page__top {
+  background: url(../img/main/slider/h4-img-01.jpg) center center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    padding: 140px 8% 140px 8%
+
+
+}
+
+
+.corporate-page__top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+  background-color: #1a1a1a;
+
+}
+
+.corporate-page__top img.top-block__top-bg,
+.corporate-page__top img.top-block__bottom-bg {
+  width: 100%;
+  position: absolute;
+
+  /* padding: 0px 15px; */
+}
+
+.corporate-page__top img.top-block__top-bg {
+  transform: rotateX(180deg);
+  top: 0;
+  left: 0;
+
+}
+
+
+.corporate-page__top img.top-block__bottom-bg {
+
+  bottom: 0;
+  left: 0;
+
+}
+
+
+
+
+.corporate-page__top .corporate-page__top-title {
+  color: #ffffff;
+}
+
+.corporate-page__top .corporate-page__top-btns {
+  margin-top: 30px;
+  
+}
+
+.corporate-page__top .corporate-page__top-btn {
+  
+}
+
+.corporate-page__top .corporate-page__top-btn:first-child {
+  margin-right: 20px;
+}
+
+.corporate-page__top .corporate-page__top-icons-set {
+  margin-top: 25px;
+}
+
+.corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon {
+  margin-bottom: 5px;
+
+
+}
+
+.corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon span,
+.corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  margin-right: 15px;
+  color: #ffffff;
+
+}
+
+
+
+
+
+.corporate-services__block {
+  /* padding: 40px; */
+}
+
+.corporate-services__block .corporate-services__block-title {
+  margin-bottom: 50px;
+  
+  color: #1a1a1a;
+  font-family: Oswald,sans-serif;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.corporate-services__block-items {
+  width: 100%;
+  margin-top: 20px;
+
+}
+
+.corporate-services__block .corporate-services__block-items .corporate-services__block-item {
+  position: relative;
+  width: 24.7%;
+  display: inline-block;
+  height: 450px;
+  
+
+}
+
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_1 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_2 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_3 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_4 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_5 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_6 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_7 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.corporate-services__block .corporate-services__block-items
+.corporate-services__block-item.block-item_8 {
+  background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
+  background-size: cover;
+
+}
+
+
+
+ .corporate-services__block-items .corporate-services__block-item img {
+  max-width: 100%;
+}
+
+
+ .corporate-services__block-item-descr-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+}
+
+ .corporate-services__block-item-descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 5%;
+  text-align: center;
+  width: 90%;
+  z-index: 100;
+}
+
+ .corporate-services__block-item-title {
+  margin-bottom: 20px;
+  font-size: 29PX;
+  color: #ffffff;
+  font-family: Oswald,sans-serif;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+ .corporate-services__block-subtitle {
+    font-family: crimson text,serif;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+ .corporate-services__block-item-btn {
+  margin-bottom: 20px;
+  background: #59815b;
+  color: #ffffff;
+  font-family: Oswald,sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+ .corporate-services__block-items .corporate-services__block-item-img {
+  position: relative;
+}
+
+ .corporate-services__block-item .corporate-services__block-item-img::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: .3;
+  z-index: 1;
+}
+
+ .corporate-services__block-item-descr > * {
+  z-index: 100;
+}
+
+/**** ./corporate services *****/
+
+
+
+
+
+/**** corporate icons *****/
+
+.corporate-icons__block {
+
+}
+
+.corporate-icons__block .corporate-icons__block-title {
+
+}
+
+.corporate-icons__block .corporate-icons__block-item {
+  
+}
+
+.corporate-icons__block .corporate-icons__block-item .mkdf-dcli-title {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+.corporate-icons__block .corporate-icons__block-item > 
+.mkdf-dcl-item-inner {
+padding: 30px 10px 20px 10px;
+}
+
+.corporate-icons__block .corporate-icons__block-item:first-child > 
+.mkdf-dcl-item-inner {
+  padding-left: 0;
+}
+
+.corporate-icons__block .corporate-icons__block-item:last-child > 
+.mkdf-dcl-item-inner {
+  padding-right: 0;
+}
+
+
+
+/**** ./corporate icons *****/
+
+
+
+/********/
+
+
+.we-know__block {
+
+}
+
+.we-know__block .we-know__block-text {
+  padding-right: 20px;
+}
+
+
+.we-know-slider__wrapper {
+  position: relative;
+}
+
+
+.we-know-slider__wrapper .we-know-slider__item {
+  
+}
+
+.we-know-slider__wrapper .we-know-slider__item img {
+  width: 100%;
+}
+
+
+
+.we-know-slider__arrows {
+  top: 50%;
+  position: absolute;
+  /* top: unset;
+  position: relative; */
+  /* text-align: center;
+  width: 100%; */
+  width: 100%;
+  height: 69px;
+}
+
+.we-know-slider__arrows .we-know-slider__arrows_arrow-left, .we-know-slider__arrows .we-know-slider__arrows_arrow-right {
+  position: absolute;
+  
+  margin-top: -20px;
+  /* display: inline-block; */
+
+}  
+
+.we-know-slider__arrows .we-know-slider__arrows_arrow-left {
+  left: 0;
+  top: 0%;
+  /* margin-left: 40px; */
+}  
+
+.we-know-slider__arrows .we-know-slider__arrows_arrow-right {
+  right: 0;
+  top: 0%;
+  /* margin-right: 40px; */
+
+
+}  
+
+.we-know-slider__arrows .we-know-slider__arrows_arrow-left:before {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.we-know-slider__arrows .we-know-slider__arrows_arrow-right:before {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+
+
+
+/****** video block ****/
+.corporate-video__block {
+
+}
+
+
+.corporate-video__block .corporate-block_wrapper {
+  padding-top: 20px;
+}
+
+.corporate-video__block .corporate-video__block-title {
+  margin-bottom: 40px;
+}
+
+
+/******** ./video block ***/
+
+
+
+
+/************* reviews block ***************/
+
+.corporate-reviews__block {
+  padding-bottom: 40px;
+}
+
+.corporate-reviews__block .corporate-reviews__block-title {
+margin-bottom: 40px;
+}
+
+/************* ./reviews block ***************/
+
+
+
+/* MAILLIST */
+
+.trips-page__block_maillist {
+  padding: 50px 0px 50px 0px;
+}
+
+
+.trips-page__block_maillist .trips-page__block_maillist-wrapper {
+  padding: 70px 0px 70px 0px;
+}
+
+.trips-page__block_maillist .trips-page__block_maillist-img {
+  max-width: 40%;
+  display: inline-block;
+}
+
+
+.trips-page__block_maillist .trips-page__block_maillist-text {
+  padding-left: 30px;
+  display: inline-block;
+}
+
+.trips-page__block_maillist .trips-page__block_maillist-text h3 { 
+  margin-bottom: 30px;
+
+}
+
+.trips-page__block_maillist .trips-page__block_maillist-text p { 
+  margin-bottom: 30px;
+
+}
+
+/* ./MAILLIST */
+
+
+/********* shop *****/
+.corporate-shop__block {
+
+}
+
+.corporate-shop__block .corporate-shop__block-title {
+  margin-bottom: 40px;
+}
+
+
+/**** ./shop *****/
+
+
+
+
+
+/**** blog *****/
+.corporate-blog__block {
+
+}
+
+.corporate-blog__block .corporate-blog__block-title {
+  margin-bottom: 40px;
+}
+
+.corporate-blog__block .corporate-blog__block-item {
+  
+}
+
+
+.corporate-blog__block .corporate-blog__item .image__animation-tranform-wrap {
+  max-width: 100%;
+}
+
+.corporate-blog__block .corporate-blog__item .mkdf-bli-content {
+  /* margin-top: 60px; */
+}
+
+
+
+/**** ./blog *****/
+
+
+
+/***** form ****/
+
+.common__form.common__form_big {
+  padding: 30px 10% 20px 10%;
+}
+
+/***** ./form ****/
+
+
+/**** footer ****/
+.corporate-footer {
+  margin-top: 70px;
+  padding: 30px 0px;
+
+}
+
+.corporate-footer .footer-phraze {
+  margin-top: 30px;
+}
+
+
+.corporate-footer .footer-author {
+  margin-bottom: 25px;
+}
+
+/**** ./footer ****/
+
+
+
+
+
+/********* MEDIA *************/
+/*****************************/
+
+@media(max-width: 1699px) {
+  .corporate-services__block .corporate-services__block-items .corporate-services__block-item {
+    /* position: relative;
+    
+    display: inline-block; */
+    height: 400px;
+    width: 24.6%;
+  }
+  
+}
+
+
+@media(max-width: 1499px) {
+  .corporate-services__block .corporate-services__block-items .corporate-services__block-item {
+    /* position: relative;
+    
+    display: inline-block; */
+    height: 360px;
+    width: 24.6%;
+  }
+  
+}
+
+
+@media(max-width: 1199px) {
+  .corporate-services__block .corporate-services__block-items .corporate-services__block-item {
+    /* position: relative;
+    
+    display: inline-block; */
+    height: 360px;
+    width: 32.9%;
+  }
+
+  .corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-bottomtext .corporate-maillist__block-text-par {
+    display: inline-block;
+    width: 100%;
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-bottomtext .mkdf-btn {
+  display: inline-block;
+  width: fit-content;
+}
+  
+}
+
+
+@media(max-width: 1024px) { 
+  .we-know__block .we-know__block-text {
+    padding: 0px 20px 30px 20px;
+    text-align: center;
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-img img {
+  padding-right: 0px;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-text {
+  text-align: center;
+}
+
+
+
+}
+
+
+@media(max-width: 991px) { 
+  .corporate-page__top .corporate-page__top-title,
+  .corporate-page__top .corporate-page__top-icons-set,
+  .corporate-page__top .corporate-page__top-btns {
+    text-align: center;
+  }
+
+
+  .reviews-slider .reviews-slider__item {
+    text-align: center;
+  }
+  
+  .reviews-slider .reviews-slider__item .reviews-slider__img img {
+    margin: 0 auto;
+  }
+  
+  .corporate-maillist__block h3,
+  .corporate-maillist__block .corporate-maillist__block-text-par{
+    text-align: center;
+  }
+
+  
+
+
+}
+
+
+@media(max-width: 767px) { 
+  .corporate-services__block .corporate-services__block-items .corporate-services__block-item {
+    height: 360px;
+    width: 48.9%;
+
+    
+}
+
+.corporate-page__top .corporate-page__top-btn:first-child {
+  margin-right: auto;
+}
+
+.corporate-page__top .corporate-page__top-btn {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+  width: fit-content;
+}
+
+}
+
+@media(max-width: 575px) { 
+  .corporate-services__block .corporate-services__block-items .corporate-services__block-item {
+    height: 360px;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+
+
+}
+
+
+
+/*****************************/
+/********* ./MEDIA *************/
+
+
+
