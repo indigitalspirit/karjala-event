@@ -14,12 +14,12 @@
 function karjala_event_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
+		$classes[] = 'page-template page-template-full-width page-template-full-width-php page page-id-202 theme-wanderland wanderland-core-1.0 woocommerce-no-js wanderland-ver-1.0 mkdf-grid-1300 mkdf-wide-dropdown-menu-content-in-grid mkdf-dark-header mkdf-no-behavior mkdf-dropdown-animate-height mkdf-header-standard mkdf-menu-area-shadow-disable mkdf-menu-area-in-grid-shadow-disable mkdf-menu-area-border-disable mkdf-menu-area-in-grid-border-disable mkdf-logo-area-border-disable mkdf-logo-area-in-grid-border-disable mkdf-header-vertical-border-disable mkdf-side-menu-slide-from-right mkdf-woocommerce-columns-3 mkdf-woo-normal-space mkdf-woo-pl-info-below-image mkdf-woo-single-thumb-on-left-side mkdf-woo-single-has-pretty-photo mkdf-default-mobile-header mkdf-sticky-up-mobile-header mkdf-header-top-enabled mkdf-on-side-search wpb-js-composer js-comp-ver-6.1 vc_responsive hfeed';
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
 	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
+		$classes[] = 'page-template page-template-full-width page-template-full-width-php page page-id-202 theme-wanderland wanderland-core-1.0 woocommerce-no-js wanderland-ver-1.0 mkdf-grid-1300 mkdf-wide-dropdown-menu-content-in-grid mkdf-dark-header mkdf-no-behavior mkdf-dropdown-animate-height mkdf-header-standard mkdf-menu-area-shadow-disable mkdf-menu-area-in-grid-shadow-disable mkdf-menu-area-border-disable mkdf-menu-area-in-grid-border-disable mkdf-logo-area-border-disable mkdf-logo-area-in-grid-border-disable mkdf-header-vertical-border-disable mkdf-side-menu-slide-from-right mkdf-woocommerce-columns-3 mkdf-woo-normal-space mkdf-woo-pl-info-below-image mkdf-woo-single-thumb-on-left-side mkdf-woo-single-has-pretty-photo mkdf-default-mobile-header mkdf-sticky-up-mobile-header mkdf-header-top-enabled mkdf-on-side-search wpb-js-composer js-comp-ver-6.1 vc_responsive no-sidebar';
 	}
 
 	return $classes;
