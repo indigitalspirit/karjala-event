@@ -1,6 +1,65 @@
 
 
+ .vc_custom_1576679106364 {
+  background-image: url(img/bg-map.jpg) !important;
+  background-position: 0 0 !important;
+  background-repeat: no-repeat !important;
+}
 
+.vc_custom_1571759169670 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.vc_custom_1570712658299 {
+  margin-top: -30px !important;
+}
+
+.vc_custom_1576680478451 {
+  padding-top: 100px !important;
+  padding-bottom: 81px !important;
+}
+
+.page-id-401 .mkdf-content {
+  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h6-bckg-img-01.jpg);
+  background-repeat: no-repeat;
+  /* background-position: center 0; */
+  background-size: cover;
+}
+
+.page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+.page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+  padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+  .page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+    padding: 0;
+  }
+}
+
+.page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+.page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+  padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+  .page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+    padding: 0;
+  }
+}
+
+.page-id-401.mkdf-header-vertical .mkdf-vertical-area-background {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.page-id-401 .mkdf-page-footer .mkdf-footer-bottom-holder {
+  background-color: #ecebe1;
+}
 
 
 

@@ -10,10 +10,11 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main archive">
 
 		<?php if ( have_posts() ) : ?>
 
+			BLOG BLOG BLOG
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );

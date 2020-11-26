@@ -19,323 +19,6 @@
 
 	<?php wp_head(); ?>
 
-	<style type="text/css" data-type="vc_shortcodes-custom-css">
-    .vc_custom_1576679106364 {
-      background-image: url(img/bg-map.jpg) !important;
-      background-position: 0 0 !important;
-      background-repeat: no-repeat !important;
-    }
-
-    .vc_custom_1571759169670 {
-      padding-right: 0px !important;
-      padding-left: 0px !important;
-    }
-
-    .vc_custom_1570712658299 {
-      margin-top: -30px !important;
-    }
-
-    .vc_custom_1576680478451 {
-      padding-top: 100px !important;
-      padding-bottom: 81px !important;
-    }
-  </style>
-
-  <style id='wanderland-mikado-woo-inline-css' type='text/css'>
-    .page-id-202 .mkdf-top-bar {
-      background-color: rgba(236, 235, 225, 1);
-      border-bottom: 0;
-    }
-
-    .page-id-202 .mkdf-top-bar .mkdf-grid .mkdf-vertical-align-containers {
-      border-bottom: 0;
-    }
-
-    .page-id-202 .mkdf-top-bar:after {
-      border-bottom: 0;
-    }
-
-    .page-id-202 .mkdf-content {
-      background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-02.jpg);
-      background-repeat: no-repeat;
-      background-position: center 0;
-      background-size: cover;
-    }
-
-    .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-    .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-      padding: 0;
-    }
-
-    @media only screen and (max-width: 1024px) {
-
-      .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-      .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-        padding: 0;
-      }
-    }
-
-    .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-    .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-      padding: 0;
-    }
-
-    @media only screen and (max-width: 1024px) {
-
-      .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
-      .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
-        padding: 0;
-      }
-    }
-
-    .page-id-202.mkdf-header-vertical .mkdf-vertical-area-background {
-      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-    }
-
-    .page-id-202 .mkdf-page-header .mkdf-menu-area {
-      background-color: rgba(255, 255, 255, 1);
-    }
-
-    .page-id-202 .mkdf-page-header .mkdf-menu-area:after {
-      border-bottom: none;
-    }
-
-    .page-id-202 .mkdf-page-footer .mkdf-footer-bottom-holder {
-      background-color: #ecebe1;
-    }
-  </style>
-
-  <style type="text/css" data-type="vc_shortcodes-custom-css">
-    .vc_custom_1579265695115 {
-      padding-top: 72px !important;
-      padding-bottom: 38px !important;
-    }
-
-    .vc_custom_1571996104789 {
-      padding-bottom: 20px !important;
-    }
-
-    .vc_custom_1575627713204 {
-      padding-top: 65px !important;
-      padding-bottom: 105px !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-size: cover !important;
-    }
-
-    .vc_custom_1575627659852 {
-      padding-top: 29px !important;
-    }
-
-    .vc_custom_1572617876474 {
-      padding-top: 110px !important;
-      padding-bottom: 100px !important;
-    }
-
-    .vc_custom_1575548558102 {
-      padding-top: 42px !important;
-    }
-
-    .vc_custom_1579104144167 {
-      padding-top: 65px !important;
-      padding-bottom: 150px !important;
-      background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-05.png?id=1681) !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      background-size: cover !important;
-    }
-
-    .vc_custom_1572440552355 {
-      padding-bottom: 52px !important;
-    }
-
-    .vc_custom_1572440624442 {
-      padding-bottom: 52px !important;
-    }
-
-    .vc_custom_1572599077583 {
-      padding-right: 0px !important;
-      padding-left: 0px !important;
-    }
-
-    .vc_custom_1570709430523 {
-      margin-top: -45px !important;
-    }
-
-    .vc_custom_1575290986357 {
-      padding-top: 41px !important;
-      padding-bottom: 111px !important;
-    }
-  </style>
-  
-  <noscript>
-    <style>
-      .wpb_animate_when_almost_visible {
-        opacity: 1;
-      }
-    </style>
-	</noscript>
-	
-	<style>
-    .loading {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #ffffff;
-      z-index: 9999999999999;
-
-      background-image: url(https://wanderland.qodeinteractive.com/wp-content/themes/wanderland/assets/img/preloader-bg-wanderland.jpg);
-      will-change: transform;
-      -webkit-transition: -webkit-transform 1s cubic-bezier(.86,0,.07,1) 1.5s;
-      transition: -webkit-transform 1s cubic-bezier(.86,0,.07,1) 1.5s;
-      -o-transition: transform 1s cubic-bezier(.86,0,.07,1) 1.5s;
-      transition: transform 1s cubic-bezier(.86,0,.07,1) 1.5s;
-      transition: transform 1s cubic-bezier(.86,0,.07,1) 1.5s,-webkit-transform 1s cubic-bezier(.86,0,.07,1) 1.5s;
-    }
-
-    .loading:after,.loading:before {
-        content: '';
-        background: #fff;
-        height: 50%;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        transition: all 1s
-    }
-
-    .loading:after {
-        top: 0
-    }
-
-    .loading:before {
-        bottom: 0
-    }
-
-    .loading-end:after {
-        top: -60%
-    }
-
-    .loading-end:before {
-        bottom: -60%
-    }
-
-    .load-circle {
-        margin: 50vh auto;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 10px solid #e8e8e8;
-        border-top: 10px solid #000;
-        -webkit-animation: rotate 1.2s infinite linear;
-        animation: rotate 1.2s infinite linear
-    }
-
-    @-webkit-keyframes rotate {
-        0% {
-            transform: rotate(0deg)
-        }
-
-        100% {
-            transform: rotate(360deg)
-        }
-    }
-
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg)
-        }
-
-        100% {
-            transform: rotate(360deg)
-        }
-    }
-
-	</style>
-	
-	<style>
-
-    @-webkit-keyframes pulse {
-        from {
-            -webkit-transform: scale(0.8);
-            transform: scale(0.8)
-        }
-
-        50% {
-            -webkit-transform: scale(1);
-            transform: scale(1)
-        }
-
-        to {
-            -webkit-transform: scale(0.8);
-            transform: scale(0.8)
-        }
-    }
-
-    @keyframes pulse {
-        from {
-            -webkit-transform: scale(0.8);
-            transform: scale(0.8)
-        }
-
-        50% {
-            -webkit-transform: scale(1);
-            transform: scale(1)
-        }
-
-        to {
-            -webkit-transform: scale(0.8);
-            transform: scale(0.8)
-        }
-    }
-    
-    
-    #widget-call {
-      z-index: 1000000;
-      position: fixed;
-      bottom: 10px;
-      right: 25px;
-
-
-      display: block;
-
-      width: 65px;
-      height: 65px;
-
-      padding: 10px;
-
-      border: solid 1px #59815b;
-      border-radius: 50%;
-      background-color: #59815b;
-      text-align: center;
-      
-      
-      -webkit-transition: background-color .9s;
-      -o-transition: background-color .9s;
-      transition: background-color .9s;
-      -webkit-box-shadow: 0 0 14px 0 rgba(0,0,0,.07);
-      box-shadow: 0 0 14px 0 rgba(0,0,0,.07);
-      -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-      transform: scale(0.8);
-      -webkit-animation: pulse 4s ease-in-out infinite;
-      animation: pulse 4s ease-in-out infinite;
-    }
-
-    #widget-call__icon {
-      color: #ffffff;
-      font-size: 45px;
-      top: 19px;
-      left: 27px;
-      position: absolute;
-    }
-
-
-</style>
-
-
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -417,73 +100,26 @@
               
               <div class="mkdf-position-left-inner" style="padding-right: 30px;">
         
-                <nav class="mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav centered-nav">
-                  <ul id="menu-divided-left" class="clearfix">
-                    <li id="nav-menu-item-604" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                      <a href="index.html" class="">
-                        <span class="mkdf-menu-item-holder">
-                          <span class="mkdf-active-hover">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve" class="mkdf-active-hover-left">
-                              <polygon class="st0" points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-                              </polygon>
-                            </svg>
-                            <span class="mkdf-active-hover-middle"></span>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-                              <polygon class="st0" points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-                              </polygon>
-                            </svg>
-                          </span>
-                          <span class="item_outer">
-                            <span class="item_text">Главная</span>
-                            <i class="mkdf-menu-arrow fa fa-angle-down"></i>
-                          </span>
-                        </span>
-                      </a>                   
-                    </li>
-                    <li id="nav-menu-item-605" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                      <a href="pohodi.html" class="centered-nav__active-item">
-                        <span class="mkdf-menu-item-holder">
-                          <span class="mkdf-active-hover">
-                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve" class="mkdf-active-hover-left">
-                              <polygon class="st0" points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-                              </polygon>
-                            </svg>
-                            <span class="mkdf-active-hover-middle"></span>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-                              <polygon class="st0" points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-                              </polygon>
-                            </svg>
-                          </span>
-                          <span class="item_outer">
-                            <span class="item_text centered-nav__active-txt">Походы</span>
-                            <i class="mkdf-menu-arrow fa fa-angle-down"></i>
-                          </span>
-                        </span>
-                      </a>  
-                    </li>
-                    <li id="nav-menu-item-606" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                      <a href="korporativy.html" class="">
-                      <span class="mkdf-menu-item-holder">
-                        <span class="mkdf-active-hover">
-                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve" class="mkdf-active-hover-left">
-                              <polygon class="st0" points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-                              </polygon>
-                            </svg>
-                            <span class="mkdf-active-hover-middle"></span>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-                              <polygon class="st0" points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-                              </polygon>
-                            </svg>
-                          </span>
-                          <span class="item_outer">
-                            <span class="item_text">Корпоративы</span>
-                            <i class="mkdf-menu-arrow fa fa-angle-down"></i>
-                          </span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+
+                  <?php
+                    wp_nav_menu(
+                      array(
+                        'theme_location' => 'menu-1',
+                        'menu' => '',
+                        'container'       => 'nav', 
+                        //'container_class' => 'container', 
+                        //'container_id'    => 'container-id',
+                        'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav centered-nav', 
+                        //'menu_class'      => 'menu', 
+                        'menu_id'        => 'primary-menu',
+                        'items_wrap'      => '<ul id="menu-divided-left" class="clearfix">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'echo'            => true,
+                        'depth'           => 0,
+                        //'walker'          => '',
+                      )
+                    );
+                  ?>
+             
         
               </div>
             </div>
@@ -494,84 +130,41 @@
         
         
                 <div class="mkdf-logo-wrapper">
-                  <a itemprop="url" href="https://wanderland.qodeinteractive.com/" style="height: 76px;">
+                  <!-- <a itemprop="url" href="https://wanderland.qodeinteractive.com/" style="height: 76px;">
                     <img itemprop="image" class="mkdf-normal-logo logo-custom" src="img/logo/logo-svg.svg" width="286" height="153" alt="logo">
-                    <img itemprop="image" class="mkdf-dark-logo" src="img/logo/logo-svg.svg" width="286" height="153" alt="dark logo"> <img itemprop="image" class="mkdf-light-logo" src="https://wanderland.qodeinteractive.com/wp-content/uploads/2020/01/logo-img-03.png" width="286" height="160" alt="light logo"> </a>
+                    <img itemprop="image" class="mkdf-dark-logo" src="img/logo/logo-svg.svg" width="286" height="153" alt="dark logo"> <img itemprop="image" class="mkdf-light-logo" src="https://wanderland.qodeinteractive.com/wp-content/uploads/2020/01/logo-img-03.png" width="286" height="160" alt="light logo"> 
+                  </a> -->
+                  <?php the_custom_logo(); ?>
+
                 </div>
         
               </div>
             </div>
+
             <div class="mkdf-position-right" style="width: 45%;max-width:440px;text-align: left;">
               <!--
                        -->
               <div class="mkdf-position-right-inner"style="padding-left: 30px;">
         
-                <nav class="mkdf-main-menu mkdf-drop-down mkdf-divided-right-part mkdf-default-nav">
-                  <ul id="menu-divided-right" class="clearfix">
-                    <li id="nav-menu-item-607" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                      <a href="svadby.html" class="">
-                      <span class="mkdf-menu-item-holder">
-                        <span class="mkdf-active-hover">
-                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve" class="mkdf-active-hover-left">
-                              <polygon class="st0" points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-                              </polygon>
-                            </svg>
-                            <span class="mkdf-active-hover-middle"></span>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-                              <polygon class="st0" points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-                              </polygon>
-                            </svg>
-                          </span>
-                          <span class="item_outer">
-                            <span class="item_text">Свадьбы</span>
-                            <i class="mkdf-menu-arrow fa fa-angle-down"></i>
-                          </span>
-                        </span>
-                      </a>                
-                    </li>
-                    <li id="nav-menu-item-608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                      <a href="prazdniki.html" class="">
-                        <span class="mkdf-menu-item-holder">
-                          <span class="mkdf-active-hover">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve" class="mkdf-active-hover-left">
-                              <polygon class="st0" points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-                              </polygon>
-                            </svg>
-                            <span class="mkdf-active-hover-middle"></span>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-                              <polygon class="st0" points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-                              </polygon>
-                            </svg>
-                          </span>
-                          <span class="item_outer"><span class="item_text">Праздники</span>
-                          <i class="mkdf-menu-arrow fa fa-angle-down"></i>
-                        </span>
-                      </span>
-                    </a>
-                      
-                    </li>
-                    <li id="nav-menu-item-3402" class="menu-item menu-item-type-post_type menu-item-object-page  narrow">
-                      <a href="blog.html" class="">
-                        <span class="mkdf-menu-item-holder">
-                        <span class="mkdf-active-hover">
-                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve" class="mkdf-active-hover-left">
-                              <polygon class="st0" points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-                              </polygon>
-                            </svg>
-                            <span class="mkdf-active-hover-middle"></span>
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-                              <polygon class="st0" points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-                              </polygon>
-                            </svg>
-                          </span>
-                          <span class="item_outer">
-                            <span class="item_text">Блог</span>
-                          </span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+              <?php
+                    wp_nav_menu(
+                      array(
+                        'theme_location' => 'menu-1',
+                        'menu' => '',
+                        'container'       => 'nav', 
+                        //'container_class' => 'container', 
+                        //'container_id'    => 'container-id',
+                        'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav centered-nav', 
+                        //'menu_class'      => 'menu', 
+                        'menu_id'        => 'primary-menu',
+                        'items_wrap'      => '<ul id="menu-divided-left" class="clearfix">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'echo'            => true,
+                        'depth'           => 0,
+                        //'walker'          => '',
+                      )
+                    );
+                  ?>
+             
         
               </div>
               <div class="mkdf-divided-right-widget-area">
@@ -594,11 +187,12 @@
                 <div class="mkdf-position-left">
                   <div class="mkdf-position-left-inner">
                     <div class="mkdf-mobile-logo-wrapper">
-                      <a itemprop="url" href="index.html" style="height: 38px">
+                    <?php the_custom_logo(); ?>
+                      <!-- <a href="index.html" style="height: 38px">
                         <img itemprop="image"
                           src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/logo-dark-img-02.png"
                           width="144" height="77" alt="Mobile Logo" />
-                      </a>
+                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -818,50 +412,26 @@
               </ul>
             </div>
           </nav>
+
+          <nav id="site-navigation" class="main-navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'karjala_event' ); ?></button>
+            <?php
+            wp_nav_menu(
+              array(
+                'theme_location' => 'menu-1',
+                'menu_id'        => 'primary-menu',
+              )
+            );
+            ?>
+		      </nav><!-- #site-navigation -->
         </div>
       </header>
       <!-- ./headers -->
 
       
 			
-		</div>
-	</div>
+		<!-- </div>
+	</div> -->
 		
+<?php wp_body_open(); ?>
 
-
-		<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'karjala_event' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$karjala_event_description = get_bloginfo( 'description', 'display' );
-			if ( $karjala_event_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $karjala_event_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'karjala_event' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->

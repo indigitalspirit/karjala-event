@@ -7,54 +7,68 @@
  * @package karjala-event
  */
 
-get_header();
+get_header('404');
 ?>
 
-	<main id="primary" class="site-main">
+<div class="mkdf-content" style="margin-top: -150px">
+	<div class="mkdf-content-inner">
+		<div class="mkdf-page-not-found">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'karjala_event' ); ?></h1>
-			</header><!-- .page-header -->
+			<h1 class="mkdf-404-title">
+				Ой ... страница не найдена </h1>
 
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'karjala_event' ); ?></p>
+			<h3 class="mkdf-404-subtitle">
+			</h3>
 
-					<?php
-					get_search_form();
+			<p class="mkdf-404-text">
+			Попробуйте воспользоваться поиском. </p>
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+			<?php 
+			get_search_form();
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'karjala_event' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
+		//the_widget( 'WP_Widget_Recent_Posts' );
 
-					<?php
-					/* translators: %1$s: smiley */
-					$karjala_event_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'karjala_event' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$karjala_event_archive_content" );
+			?>
 
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+			<form role="search" method="get" class="mkdf-searchform searchform" id="searchform-836"
+				action="https://wanderland.qodeinteractive.com/">
+				<div class="input-holder clearfix">
+					<input type="search" class="search-field" placeholder="Я ищу..." value="" name="s"
+						title="Enter keywords" />
+					<button type="submit"
+						class="mkdf-search-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid mkdf-btn-icon mkdf-btn-svg-icon">
+						<span class="mkdf-btn-text">НАЙТИ</span>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							x="0px" y="0px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;" xml:space="preserve">
+							<g>
+								<path d="M15,1.9" />
+								<line x1="1.7" y1="15.3" x2="15" y2="1.9" />
+								<line x1="16" y1="1.9" x2="15" y2="1.9" />
+								<line x1="15" y1="1.9" x2="1" y2="1.9" />
+								<path d="M15,1.9" />
+								<line x1="15" y1="16" x2="15" y2="1.9" />
+							</g>
+						</svg>
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							x="0px" y="0px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;" xml:space="preserve">
+							<g>
+								<path d="M15,1.9" />
+								<line x1="1.7" y1="15.3" x2="15" y2="1.9" />
+								<line x1="16" y1="1.9" x2="15" y2="1.9" />
+								<line x1="15" y1="1.9" x2="1" y2="1.9" />
+								<path d="M15,1.9" />
+								<line x1="15" y1="16" x2="15" y2="1.9" />
+							</g>
+						</svg>
+					</button>
+				</div>
+			</form>
 
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
+		</div>
+	</div>
+</div>
 
-	</main><!-- #main -->
+
 
 <?php
-get_footer();
+get_footer('404');

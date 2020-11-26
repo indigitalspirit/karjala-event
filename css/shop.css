@@ -1,5 +1,158 @@
 /*** SHOP PAGE ***/
 
+.vc_custom_1576679106364 {
+  background-image: url(img/bg-map.jpg) !important;
+  background-position: 0 0 !important;
+  background-repeat: no-repeat !important;
+}
+
+.vc_custom_1571759169670 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.vc_custom_1570712658299 {
+  margin-top: -30px !important;
+}
+
+.vc_custom_1576680478451 {
+  padding-top: 100px !important;
+  padding-bottom: 81px !important;
+}
+
+
+
+.page-id-202 .mkdf-top-bar {
+  background-color: rgba(236, 235, 225, 1);
+  border-bottom: 0;
+}
+
+.page-id-202 .mkdf-top-bar .mkdf-grid .mkdf-vertical-align-containers {
+  border-bottom: 0;
+}
+
+.page-id-202 .mkdf-top-bar:after {
+  border-bottom: 0;
+}
+
+.page-id-202 .mkdf-content {
+  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-02.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+
+.page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+.page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+  padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+  .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+    padding: 0;
+  }
+}
+
+.page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+.page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+  padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
+  .page-id-202 .mkdf-content .mkdf-content-inner>.mkdf-full-width>.mkdf-full-width-inner {
+    padding: 0;
+  }
+}
+
+.page-id-202.mkdf-header-vertical .mkdf-vertical-area-background {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.page-id-202 .mkdf-page-header .mkdf-menu-area {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.page-id-202 .mkdf-page-header .mkdf-menu-area:after {
+  border-bottom: none;
+}
+
+.page-id-202 .mkdf-page-footer .mkdf-footer-bottom-holder {
+  background-color: #ecebe1;
+}
+</style>
+
+<style type="text/css" data-type="vc_shortcodes-custom-css">
+.vc_custom_1579265695115 {
+  padding-top: 72px !important;
+  padding-bottom: 38px !important;
+}
+
+.vc_custom_1571996104789 {
+  padding-bottom: 20px !important;
+}
+
+.vc_custom_1575627713204 {
+  padding-top: 65px !important;
+  padding-bottom: 105px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.vc_custom_1575627659852 {
+  padding-top: 29px !important;
+}
+
+.vc_custom_1572617876474 {
+  padding-top: 110px !important;
+  padding-bottom: 100px !important;
+}
+
+.vc_custom_1575548558102 {
+  padding-top: 42px !important;
+}
+
+.vc_custom_1579104144167 {
+  padding-top: 65px !important;
+  padding-bottom: 150px !important;
+  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-05.png?id=1681) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.vc_custom_1572440552355 {
+  padding-bottom: 52px !important;
+}
+
+.vc_custom_1572440624442 {
+  padding-bottom: 52px !important;
+}
+
+.vc_custom_1572599077583 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.vc_custom_1570709430523 {
+  margin-top: -45px !important;
+}
+
+.vc_custom_1575290986357 {
+  padding-top: 41px !important;
+  padding-bottom: 111px !important;
+}
+
+
+.wpb_animate_when_almost_visible {
+  opacity: 1;
+}
+
+
 /**** logo ******/
 
 
