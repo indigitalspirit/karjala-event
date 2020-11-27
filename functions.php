@@ -160,6 +160,26 @@ function karjala_event_scripts() {
 
 	wp_enqueue_style( 'karjala_event-common', get_template_directory_uri() . '/css/common.css', array(), _S_VERSION );
 
+	if( is_archive() ) {
+		wp_enqueue_style( 'karjala_event-archive', get_template_directory_uri() . '/css/archive.css', array(), _S_VERSION );
+
+	}
+
+	if( is_single() ) {
+		wp_enqueue_style( 'karjala_event-single', get_template_directory_uri() . '/css/post.css', array(), _S_VERSION );
+
+	}
+
+	if( is_search() ) {
+		wp_enqueue_style( 'karjala_event-search', get_template_directory_uri() . '/css/search.css', array(), _S_VERSION );
+
+	}
+
+	if( is_page('Политика конфиденциальности') ) {
+		wp_enqueue_style( 'karjala_event-privacy', get_template_directory_uri() . '/css/privacy.css', array(), _S_VERSION );
+
+	}
+
 	if( is_page('Блог') ) {
 		wp_enqueue_style( 'karjala_event-blog', get_template_directory_uri() . '/css/blog.css', array(), _S_VERSION );
 

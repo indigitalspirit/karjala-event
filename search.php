@@ -10,44 +10,102 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<div class="mkdf-content">
+	<div class="mkdf-content-inner">
 
-		<?php if ( have_posts() ) : ?>
+	
 
-			<header class="page-header">
-				<h1 class="page-title">
+		<!-- BLOG TOP -->
+		<div
+			class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"
+			style="">
+			<div class="mkdf-title-image">
+				<!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
+					alt="s"> -->
 					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'karjala_event' ), '<span>' . get_search_query() . '</span>' );
+						the_post_thumbnail();
 					?>
-				</h1>
-			</header><!-- .page-header -->
+			</div>
+			<div class="mkdf-title-wrapper" style="">
+				<div class="mkdf-title-inner">
+					<div class="mkdf-grid">
+						<h1 class="page-title">
+							<?php
+							/* translators: %s: search query. */
+							printf( esc_html__( 'Search Results for: %s', 'karjala_event' ), '<span>' . get_search_query() . '</span>' );
+							?>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+		<div class="mkdf-container-inner clearfix">
+			<div class="mkdf-grid-row">
+				<div class="mkdf-page-content-holder mkdf-grid-col-12">
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+					<div class="mkdf-search-page-holder">
+						
 
-			endwhile;
+						<?php if ( have_posts() ) : ?>
 
-			the_posts_navigation();
 
-		else :
+					
 
-			get_template_part( 'template-parts/content', 'none' );
+						<?php
+							/* Start the Loop */
+							while ( have_posts() ) :
+								the_post();
+						?>
 
-		endif;
-		?>
 
-	</main><!-- #main -->
+						<?
+								/**
+								 * Run the loop for the search to output the results.
+								 * If you want to overload this in a child theme then include a file
+								 * called content-search.php and that will be used instead.
+								 */
+
+								get_template_part( 'template-parts/content', 'search' );
+
+							endwhile;
+						
+						?>
+
+						<!-- ./SMTH FOUND -->
+
+
+						<?
+
+							the_posts_navigation();
+
+							?>
+
+						
+
+
+							<?
+
+						else :
+
+							get_template_part( 'template-parts/content', 'none' );
+
+						endif;
+						?>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

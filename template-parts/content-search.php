@@ -9,27 +9,26 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			karjala_event_posted_on();
-			karjala_event_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php karjala_event_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php karjala_event_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<article id="post-<?php the_ID(); ?>" class="post-<?php the_ID(); ?> destination-item type-destination-item status-publish has-post-thumbnail hentry destination-category-low-budget">
+	<div class="mkdf-post-content">
+		<div class="mkdf-post-image">
+			<?php karjala_event_post_thumbnail(); ?>
+			<!-- <a itemprop="url" href="https://wanderland.qodeinteractive.com/destination-item/india-2/" title="India">
+				<img width="150" height="150" src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/p4-destination-img-02-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="s" loading="lazy" srcset="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/p4-destination-img-02-150x150.jpg 150w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/p4-destination-img-02-650x650.jpg 650w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/p4-destination-img-02-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px"> 
+			</a> -->
+		</div>
+		<div class="mkdf-post-title-area ">
+			<div class="mkdf-post-title-area-inner">
+				<h5 class="mkdf-post-title entry-title">
+				<a href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>">
+					<?php the_title(); ?>
+				</a>
+				</h5>
+				<p class="mkdf-post-excerpt">
+					<?php the_excerpt(); ?>
+				</p>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- #post-<?php the_ID(); ?> -->

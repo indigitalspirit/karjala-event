@@ -17,9 +17,6 @@ if ( is_home() || is_front_page() ) :
 	?>
 
 
-
-											
-
 											<!-- history -->
 											
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
@@ -749,15 +746,63 @@ else:
 
 
 	get_header();
-	?>
+?>
 
-		<main id="primary" class="site-main">
-		BLOG BLOG BLOG 
-			<?php
+	<div class="mkdf-content">
+		<div class="mkdf-content-inner">
+
+		<?php
 			while ( have_posts() ) :
 				the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+		?>
+
+			<!-- BLOG TOP -->
+			<div
+				class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"
+				style="">
+				<div class="mkdf-title-image">
+					<!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
+						alt="s"> -->
+						<?php
+						the_post_thumbnail();
+						?>
+				</div>
+				<div class="mkdf-title-wrapper" style="">
+					<div class="mkdf-title-inner">
+						<div class="mkdf-grid">
+							<h2 class="mkdf-page-title entry-title"><?php
+						the_title();
+						?></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="mkdf-full-width">
+				<div class="mkdf-full-width-inner">
+
+					<div class="mkdf-container-inner clearfix">
+						<div class="mkdf-grid-row  mkdf-grid-large-gutter">
+							<div class="mkdf-page-content-holder mkdf-grid-col-12">
+								<div class="mkdf-blog-holder mkdf-blog-single mkdf-blog-single-standard">
+
+									<?php
+										get_template_part( 'template-parts/content', 'page' );
+
+									?>
+
+								</div>
+              </div>
+            </div>
+					</div>
+					
+				</div>
+			</div>
+
+		<?php
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -765,12 +810,16 @@ else:
 				endif;
 
 			endwhile; // End of the loop.
-			?>
 
-		</main><!-- #main -->
+		?>
+			
+		</div>
+  </div>
+
+
 
 	<?php
-	get_sidebar();
+	//get_sidebar();
 	get_footer();
 
 endif;
