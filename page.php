@@ -272,8 +272,7 @@ if ( is_home() || is_front_page() ) :
 											</div>
 											<!-- ./services -->
 
-											
-
+										
 											<!-- form -->
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
@@ -313,22 +312,18 @@ if ( is_home() || is_front_page() ) :
 																		<div role="form" class="wpcf7" id="wpcf7-f1433-p1182-o1 common__form" lang="en-US"
 																			dir="ltr">
 																			<div class="screen-reader-response" role="alert" aria-live="polite"></div>
-																			<form action="/get-in-touch/#wpcf7-f1433-p1182-o1" method="post"
-																				class="wpcf7-form init cf7_custom_style_1" novalidate="novalidate">
+																			
+																			<!-- <form class="wpcf7-form init cf7_custom_style_1">
 
 																				<div class="contact-us">
-																					<!-- <span class="wpcf7-form-control-wrap your-name"> -->
-																					<input type="text" name="your-name" value="" size="40"
-																						class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-																						aria-required="true" aria-invalid="false" placeholder="Имя"
+																				
+																					<input type="text" name="your-name" size="40"
+																						class="wpcf7-form-control wpcf7-text " placeholder="Имя"
 																						>
-																					<!-- </span> -->
-																					<!-- <span class="wpcf7-form-control-wrap your-email"> -->
-																					<input type="email" name="your-email" value="" size="40"
-																						class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
-																						aria-required="true" aria-invalid="false" placeholder="Телефон"
-																						>
-																					<!-- </span> -->
+																				
+																					<input type="email" name="your-email" size="40"
+																						class="wpcf7-form-control wpcf7-text wpcf7-email" placeholder="Телефон">
+																					
 																					<button type="submit"
 																						class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
 																						<span class="mkdf-btn-text">Заказать звонок</span>
@@ -340,7 +335,9 @@ if ( is_home() || is_front_page() ) :
 																					<span class="ajax-loader"></span>
 																				</div>
 																				<div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
-																			</form>
+																			</form> -->
+																			<?php echo do_shortcode('[contact-form-7 id="784" title="Форма на главной"]'); ?>
+
 																		</div>
 
 																		</div>
@@ -356,9 +353,6 @@ if ( is_home() || is_front_page() ) :
 												</div>
 											</div>
 											<!-- ./form -->
-
-
-										
 
 
 											<!-- mobile slider -->
@@ -434,167 +428,201 @@ if ( is_home() || is_front_page() ) :
 
 											
 											<footer class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
 														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
 
 															<div class="footer-wrapper">
 																
 
-																		<div class="footer-logo">
-																			<a itemprop="url" href="index.html" style="height: 76px;">
-																				<img itemprop="image" class="mkdf-normal-logo logo-custom"
-																					src="img/logo/logo-svg.svg"
-																					alt="logo">
-
-
-																			</a>
-																		</div>
-
-																		<div class="footer-text">
-
-																			<div class="mkdf-section-title-holder   mkdf-st-highlight">
-																				<div class="mkdf-st-inner">
-																					<p class="mkdf-st-text mkdf-text-highlight" style="font-weight: 400">
-																						Based in Utah, USA, Wanderlust is a blog by Markus <span class="mkdf-st-highlight-title-holder"
-																							style="color: #ecebe1;">
-																							<span class="mkdf-st-highlight-title" style="color: #59815b">Thompson.</span>
-																							<span class="mkdf-st-highlight">
-																								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-																									y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																									class="mkdf-active-hover-left">
-																									<polygon class="st0"
-																										points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																									</polygon>
-																								</svg>
-																								<span class="mkdf-active-hover-middle"></span>
-																								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-																									y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve"
-																									class="mkdf-active-hover-right">
-																									<polygon class="st0"
-																										points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 	11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																									</polygon>
-																								</svg>
-																							</span>
-																						</span> His posts explore outdoor exeriences through photos and diaries with tips </p>
-																				</div>
-																			</div>
-
-																		</div>
-
-																		
-
-																	
-																		<div class="footer-menu">
-																			<!-- <ul>
-																				<li>
-																					<a class="mkdf-link-with-svg" href="o-nas.html"><span><span class="mkdf-active-hover"><svg version="1.1"
-																									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																									viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																									class="mkdf-active-hover-left">
-																									<polygon class="st0"
-																										points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																									</polygon>
-																								</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-																									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
-																									style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-																									<polygon class="st0"
-																										points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																									</polygon>
-																								</svg></span><span class="mkdf-link-with-svg-text">О
-																								нас</span></span>
-																					</a>
-																				</li>
-																				<li>
-																					<a class="mkdf-link-with-svg" href="blog.html"><span><span class="mkdf-active-hover"><svg version="1.1"
-																									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																									viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																									class="mkdf-active-hover-left">
-																									<polygon class="st0"
-																										points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																									</polygon>
-																								</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-																									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
-																									style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-																									<polygon class="st0"
-																										points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																									</polygon>
-																								</svg></span><span class="mkdf-link-with-svg-text">Блог</span></span>
-																					</a>
-																				</li>
-																				<li>
-																					<a class="mkdf-link-with-svg" href="magazin.html"><span><span class="mkdf-active-hover"><svg version="1.1"
-																									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																									viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																									class="mkdf-active-hover-left">
-																									<polygon class="st0"
-																										points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																									</polygon>
-																								</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-																									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
-																									style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-																									<polygon class="st0"
-																										points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																									</polygon>
-																								</svg></span><span class="mkdf-link-with-svg-text">
-																								Магазин
-																							</span></span>
-																					</a>
-																				</li>
-																		
-																			</ul> -->
-
-																			<?php
-																				wp_nav_menu(
-																					array(
-																						'theme_location' => 'menu-1',
-																						'menu' => '',
-																						'container'       => 'nav', 
-																						//'container_class' => 'container', 
-																						//'container_id'    => 'container-id',
-																						'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-default-nav', 
-																						//'menu_class'      => 'menu', 
-																						'menu_id'        => 'primary-menu',
-																						'items_wrap'      => '<ul class="main-page__header-menu">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
-																						'echo'            => true,
-																						'depth'           => 0,
-																						//'walker'          => '',
-																					)
-																				);
-																			?>
-																		</div>
-
-																	
-
-																<!-- footer-email -->
-
-																<div class="footer-email">
-																	<a class="mkdf-icon-widget-holder green-hover"
-																		href="mailto:wanderland@qodeinteractive.com" target="_blank">
-
-																		<span class="mkdf-icon-element ion-ios-email-outline"></span> 
-																		<span class="mkdf-icon-text">wanderland@qodeinteractive.com</span>
-																	</a>
+																<div class="footer-logo">
+																	<?php the_custom_logo(); ?>
 																</div>
+
+																
+																<?php 
+																	$thezis = get_option('karjala_event_thezis_field');
+
+																	if( $thezis ):
+																
+																?>
+
+																<div class="footer-text">
+
+																	<div class="mkdf-section-title-holder   mkdf-st-highlight">
+																		<div class="mkdf-st-inner">
+																			<p class="mkdf-st-text mkdf-text-highlight" style="font-weight: 400">
+																				<!-- Based in Utah, USA, Wanderlust is a blog by Markus
+																				
+																				<span class="mkdf-st-highlight-title-holder"
+																					style="color: #ecebe1;">
+
+																					<span class="mkdf-st-highlight-title" style="color: #59815b">Thompson.</span>
+
+																					<span class="mkdf-st-highlight">
+																						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+																							y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
+																							class="mkdf-active-hover-left">
+																							<polygon class="st0"
+																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
+																							</polygon>
+																						</svg>
+																						<span class="mkdf-active-hover-middle"></span>
+																						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+																							y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve"
+																							class="mkdf-active-hover-right">
+																							<polygon class="st0"
+																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 	11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
+																							</polygon>
+																						</svg>
+																					</span>
+
+																				</span> 
+																				
+																				His posts explore outdoor exeriences through photos and diaries with tips  -->
+																				<?php echo $thezis; ?>
+
+																			</p>
+																		</div>
+																	</div>
+
+																</div>
+
+																<?php endif; ?>
+															
+																<div class="footer-menu">
+																	<!-- <ul>
+																		<li>
+																			<a class="mkdf-link-with-svg" href="o-nas.html"><span><span class="mkdf-active-hover"><svg version="1.1"
+																							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+																							viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
+																							class="mkdf-active-hover-left">
+																							<polygon class="st0"
+																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
+																							</polygon>
+																						</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+																							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
+																							style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
+																							<polygon class="st0"
+																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
+																							</polygon>
+																						</svg></span><span class="mkdf-link-with-svg-text">О
+																						нас</span></span>
+																			</a>
+																		</li>
+																		<li>
+																			<a class="mkdf-link-with-svg" href="blog.html"><span><span class="mkdf-active-hover"><svg version="1.1"
+																							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+																							viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
+																							class="mkdf-active-hover-left">
+																							<polygon class="st0"
+																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
+																							</polygon>
+																						</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+																							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
+																							style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
+																							<polygon class="st0"
+																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
+																							</polygon>
+																						</svg></span><span class="mkdf-link-with-svg-text">Блог</span></span>
+																			</a>
+																		</li>
+																		<li>
+																			<a class="mkdf-link-with-svg" href="magazin.html"><span><span class="mkdf-active-hover"><svg version="1.1"
+																							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+																							viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
+																							class="mkdf-active-hover-left">
+																							<polygon class="st0"
+																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
+																							</polygon>
+																						</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+																							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
+																							style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
+																							<polygon class="st0"
+																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
+																							</polygon>
+																						</svg></span><span class="mkdf-link-with-svg-text">
+																						Магазин
+																					</span></span>
+																			</a>
+																		</li>
+																
+																	</ul> -->
+
+																	<?php
+																		wp_nav_menu(
+																			array(
+																				'theme_location' => 'menu-1',
+																				'menu' => '',
+																				'container'       => 'nav', 
+																				//'container_class' => 'container', 
+																				//'container_id'    => 'container-id',
+																				'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-default-nav', 
+																				//'menu_class'      => 'menu', 
+																				'menu_id'        => 'primary-menu',
+																				'items_wrap'      => '<ul class="main-page__header-menu">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+																				'echo'            => true,
+																				'depth'           => 0,
+																				//'walker'          => '',
+																			)
+																		);
+																	?>
+																</div>
+
+
+																<?php 
+																	$email = get_option('karjala_event_mail_field');
+
+																	if( $email ):
+																
+																?>
+
+																	<!-- footer-email -->
+																	<div class="footer-email">
+																		<a class="mkdf-icon-widget-holder green-hover"
+																			href="mailto:<?php echo trim($email); ?>">
+																			<span class="mkdf-icon-element ion-ios-email-outline"></span> 
+																			<span class="mkdf-icon-text">															
+																				<?php echo $email; ?>																	
+																			</span>
+																		</a>
+																	</div>
+
+																<?php endif; ?>
+
+
+																<?php 
+																	$vk = get_option('karjala_event_vk_field');
+
+																	$instagram = get_option('karjala_event_instagram_field');
+																?>
 
 																<!-- footer-socials -->
 																<div class="footer-socials">
 
-																	<div
-																		class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-center">
-																		<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="#" target="_blank">
+																	<div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-center">
+
+																	<?php 
+																			if( $vk ):
+																	?>
+																		<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $vk;?>" target="_blank">
+																			<span class="mkdf-social-icon-widget ion-social-vk">
+																			<i class="fa fa-vk"></i>
+																			</span>
+																		</a>
+
+																	<?php 
+																			endif;
+																			if( $instagram ):
+																	?>
+																			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $instagram;?>" target="_blank">
 																			<span class="mkdf-social-icon-widget ion-social-instagram"></span>
 																		</a>
-																		<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="#" target="_blank">
-																			<span class="mkdf-social-icon-widget ion-social-twitter"></span> 
-																		</a>
-																		<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="#" target="_blank">
-																			<span class="mkdf-social-icon-widget ion-social-facebook"></span> 
-																		</a>
-																		<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" 
-																			href="#" target="_blank">
-																			<span class="mkdf-social-icon-widget ion-social-youtube"></span> 
-																		</a>
+																	<?php 
+																		endif;
+																		
+																	?>
+																		
 																	</div>
 																</div>
 

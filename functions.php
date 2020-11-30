@@ -133,6 +133,34 @@ function karjala_event_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar( array(
+		'name'          => 'Подвал меню-блок левый',
+		'id'            => 'footer-1',
+		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
+		'after_title'   => '</h4>',
+	) );
+
+	
+
+	register_sidebar( array(
+		'name'          => 'Подвал меню-блок центр',
+		'id'            => 'footer-2',
+		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Подвал меню-блок правый',
+		'id'            => 'footer-3',
+		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
+		'after_title'   => '</h4>',
+	) );
 }
 add_action( 'widgets_init', 'karjala_event_widgets_init' );
 

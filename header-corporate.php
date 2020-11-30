@@ -210,41 +210,56 @@
           </nav> -->
 
           <?php
-                    wp_nav_menu(
-                      array(
-                        'theme_location' => 'menu-1',
-                        'menu' => '',
-                        'container'       => 'nav', 
-                        //'container_class' => 'container', 
-                        //'container_id'    => 'container-id',
-                        'menu_class'      => 'mkdf-vertical-menu mkdf-vertical-dropdown-below', 
-                        //'menu_class'      => 'menu', 
-                        'menu_id'        => 'primary-menu',
-                        'items_wrap'      => '<ul id="menu-vertical" class="clearfix">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
-                        'echo'            => true,
-                        'depth'           => 0,
-                        //'walker'          => '',
-                      )
-                    );
-                  ?>
+            wp_nav_menu(
+              array(
+                'theme_location' => 'menu-1',
+                'menu' => '',
+                'container'       => 'nav', 
+                //'container_class' => 'container', 
+                //'container_id'    => 'container-id',
+                'menu_class'      => 'mkdf-vertical-menu mkdf-vertical-dropdown-below', 
+                //'menu_class'      => 'menu', 
+                'menu_id'        => 'primary-menu',
+                'items_wrap'      => '<ul id="menu-vertical" class="clearfix">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'echo'            => true,
+                'depth'           => 0,
+                //'walker'          => '',
+              )
+            );
+          ?>
         </div>
         <div class="mkdf-vertical-area-widget-holder">
           <div class="widget mkdf-social-icons-group-widget text-align-center aside-contacts">
-            <!-- <div class="mkdf-widget-title-holder">
-              <h6 class="mkdf-widget-title">Follow us on</h6>
-            </div>  -->
-            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item" data-hover-color="#59815b"
-              href="https://www.instagram.com/qodeinteractive/" target="_blank">
-              <span class="mkdf-social-icon-widget ion-social-instagram"></span> </a>
-            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item" data-hover-color="#59815b"
-              href="https://twitter.com/qodeinteractive/" target="_blank">
-              <span class="mkdf-social-icon-widget ion-social-twitter"></span> </a>
-            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item" data-hover-color="#59815b"
-              href="https://www.facebook.com/QodeInteractive/" target="_blank">
-              <span class="mkdf-social-icon-widget ion-social-facebook"></span> </a>
-            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item" data-hover-color="#59815b"
-              href="https://www.youtube.com/QodeInteractiveVideos" target="_blank">
-              <span class="mkdf-social-icon-widget ion-social-youtube"></span> </a>
+
+          <?php 
+              $vk = get_option('karjala_event_vk_field');
+
+              $instagram = get_option('karjala_event_instagram_field');
+            ?>
+              <div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
+              <?php 
+                if( $vk ):
+              ?>
+                
+                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item" data-hover-color="#59815b" href="<?php echo $vk;?>" target="_blank">
+                <span class="mkdf-social-icon-widget ion-social-instagram"></span> 
+              </a>
+              <?php 
+                endif;
+                if( $instagram ):
+              ?>
+              <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item" data-hover-color="#59815b" href="<?php echo $instagram;?>" target="_blank">
+                <span class="mkdf-social-icon-widget ion-social-twitter"></span> 
+              </a>
+               
+                <?php 
+                  endif;
+                  
+                ?>
+            
+            
+            
+            
           </div>
         </div>
       </div>

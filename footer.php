@@ -17,10 +17,9 @@
 					<div class="mkdf-grid-row mkdf-footer-top-alignment-left">
 						<div class="mkdf-column-content mkdf-grid-col-3">
 							<div id="custom_html-3" class="widget_text widget mkdf-footer-column-1 widget_custom_html">
-								<div class="textwidget custom-html-widget"><a href="https://wanderland.qodeinteractive.com/"
-										style="max-width: 144px;display: inline-block"><img
-											src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/logo-footer.png"
-											alt="logo_footer"></a></div>
+								<div class="textwidget custom-html-widget">
+									<?php the_custom_logo(); ?>
+								</div>
 							</div>
 						</div>
 						<div class="mkdf-column-content mkdf-grid-col-9">
@@ -28,30 +27,18 @@
 								<div class="textwidget custom-html-widget">
 									<div class="mkdf-section-title-holder   mkdf-st-highlight" style="margin-top:15px">
 										<div class="mkdf-st-inner">
+										<?php 
+											$thezis = get_option('karjala_event_thezis_field');
+
+											if( $thezis ):
+										
+										?>
 											<p class="mkdf-st-text mkdf-text-highlight"
 												style="font-family: Crimson text;font-style: italic;font-size: 25px;line-height: 30px;font-weight: 400;">
-												Based in Utah, USA, Wanderland is a blog by Markus <span class="mkdf-st-highlight-title-holder"
-													style="color: #ecebe1">
-													<span class="mkdf-st-highlight-title" style="color: #59815b">Thompson.</span>
-													<span class="mkdf-st-highlight">
-														<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-															x="0px" y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;"
-															xml:space="preserve" class="mkdf-active-hover-left">
-															<polygon class="st0"
-																points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-															</polygon>
-														</svg>
-														<span class="mkdf-active-hover-middle"></span>
-														<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-															x="0px" y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;"
-															xml:space="preserve" class="mkdf-active-hover-right">
-															<polygon class="st0"
-																points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 	11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-															</polygon>
-														</svg>
-													</span>
-												</span> His posts <br>explore outdoor experiences through photos and diaries with tips &amp; tricks.
+												<?php echo $thezis; ?>
 											</p>
+										<?php endif;?>
+
 										</div>
 									</div>
 								</div>
@@ -67,11 +54,14 @@
 						<div class="mkdf-column-content mkdf-grid-col-3">
 							<div id="text-4" class="widget mkdf-footer-column-1 widget_text">
 								<div class="mkdf-widget-title-holder">
-									<h6 class="mkdf-widget-title">Karjala Event</h6>
+									<h6 class="mkdf-widget-title">
+										<?php bloginfo('name'); ?>
+									</h6>
 								</div>
 								<div class="textwidget">
-									<p style="line-height: 23px; max-width: 90%;">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit,
-										sed do eiusmod mas.</p>
+									<p style="line-height: 23px; max-width: 90%;">
+										<?php bloginfo( 'description' ); ?>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -85,214 +75,59 @@
 									class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-minimal mkdf-one-columns mkdf-disable-bottom-space mkdf-normal-space mkdf-bl-pag-no-pagination ">
 									
 										<div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
+										<?php 
+											$vk = get_option('karjala_event_vk_field');
+
+											$instagram = get_option('karjala_event_instagram_field');
+										
+											if( $vk ):
+										?>
 											
-											<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" href="https://www.instagram.com/qodeinteractive/" target="_blank">
+											<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" href="<?php echo $vk;?>" target="_blank">
 												<span class="mkdf-social-icon-widget ion-social-instagram"></span> 
 											</a>
-											<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" href="https://twitter.com/qodeinteractive/" target="_blank">
+										<?php 
+											endif;
+											if( $instagram ):
+										?>
+											<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" href="<?php echo $instagram;?>" target="_blank">
 												<span class="mkdf-social-icon-widget ion-social-twitter"></span> 
 											</a>
-											<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" href="https://www.facebook.com/QodeInteractive/" target="_blank">
-												<span class="mkdf-social-icon-widget ion-social-facebook"></span> 
-											</a>
-											<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" href="https://www.youtube.com/QodeInteractiveVideos" target="_blank">
-												<span class="mkdf-social-icon-widget ion-social-youtube"></span> 
-											</a>
 
+										<?php 
+											endif;
+											
+										?>
+										
 										</div>
 									
 								</div>
 							</div>
 						</div>
 
+						<?php if ( is_active_sidebar('footer-1') ) : ?>
 						<div class="mkdf-column-content mkdf-grid-col-2">
-							<div class="widget mkdf-blog-list-widget">
-								<div class="mkdf-widget-title-holder">
-									<h6 class="mkdf-widget-title" style="margin-bottom: 16px">Услуги</h6>
-								</div>
-								<div
-									class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-minimal mkdf-one-columns mkdf-disable-bottom-space mkdf-normal-space mkdf-bl-pag-no-pagination ">
-									<div class="mkdf-bl-wrapper mkdf-outer-space">
-										<ul class="mkdf-blog-list">
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							
+								<?php dynamic_sidebar('footer-1'); ?>	
+									
 						</div>
+						<?php endif; ?>	
 
+						<?php if ( is_active_sidebar('footer-2') ) : ?>
 						<div class="mkdf-column-content mkdf-grid-col-2">
-							<div class="widget mkdf-blog-list-widget">
-								<div class="mkdf-widget-title-holder">
-									<h6 class="mkdf-widget-title" style="margin-bottom: 16px">Блог</h6>
-								</div>
-								<div
-									class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-minimal mkdf-one-columns mkdf-disable-bottom-space mkdf-normal-space mkdf-bl-pag-no-pagination ">
-									<div class="mkdf-bl-wrapper mkdf-outer-space">
-										<ul class="mkdf-blog-list">
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							
+								<?php dynamic_sidebar('footer-2'); ?>	
+								
 						</div>
+						<?php endif; ?>	
 
+						<?php if ( is_active_sidebar('footer-3') ) : ?>
 						<div class="mkdf-column-content mkdf-grid-col-2">
-							<div class="widget mkdf-blog-list-widget">
-								<div class="mkdf-widget-title-holder">
-									<h6 class="mkdf-widget-title" style="margin-bottom: 16px">Клиентам</h6>
-								</div>
-								<div
-									class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-minimal mkdf-one-columns mkdf-disable-bottom-space mkdf-normal-space mkdf-bl-pag-no-pagination ">
-									<div class="mkdf-bl-wrapper mkdf-outer-space">
-										<ul class="mkdf-blog-list">
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-											<li class="mkdf-bl-item mkdf-item-space clearfix">
-												<div class="mkdf-bli-inner">
-													<div class="mkdf-bli-content">
-														
-														<p itemprop="name" class="entry-title mkdf-post-title">
-															<a itemprop="url" href="#"
-																title="Trip to Iceland">
-																Trip to Iceland </a>
-														</p>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+							
+								<?php dynamic_sidebar('footer-3'); ?>	
+							
 						</div>
+						<?php endif; ?>	
 
 
 					</div>

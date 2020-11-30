@@ -27,26 +27,65 @@ get_header('corporate');
                     <div class="mkdf-vertical-align-containers">
                       <div class="mkdf-position-left">
                         <div class="mkdf-position-left-inner">
-                          <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:+123%2045677%20789" target="_blank">
-                            <span class="mkdf-icon-element ion-android-call top-bar__phone-icon" style=""></span> <span class="mkdf-icon-text top-bar__phone-text" style="">+123 45677 789</span> 
+                        <?php 
+                                                                                            $phone = get_option('karjala_event_phone_field');
+                                                                                            if( $phone ):
+                        ?>
+                          <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo trim($phone); ?>" target="_blank">
+                            <span class="mkdf-icon-element ion-android-call top-bar__phone-icon" style=""></span> 
+                            <span class="mkdf-icon-text top-bar__phone-text" style="">
+                            <?php echo $phone; ?>
+                            </span> 
                           </a>
-                          <a class="mkdf-icon-widget-holder top-bar__email" href="mailto:wanderland@qodeinteractive.com" target="_blank" style="">
+                          <?php 
+                            endif;
+
+                          ?>
+                          <?php 
+                            $email = get_option('karjala_event_mail_field');
+
+                            if( $email ):
+                          
+                          ?>
+                          <a class="mkdf-icon-widget-holder top-bar__email" href="mailto:<?php echo trim($email); ?>" target="_blank" style="">
                             <span class="mkdf-icon-element ion-ios-email-outline top-bar__email-icon" style=""></span>
-                            <span class="mkdf-icon-text top-bar__email-text" style="">wanderland@qodeinteractive.com</span> </a>
+                            <span class="mkdf-icon-text top-bar__email-text" style="">
+                            <?php echo $email; ?>
+                            </span> 
+                          </a>
+                          <?php 
+                            endif;
+                            
+                          ?>
                         </div>
                       </div>
                       <div class="mkdf-position-right">
                         <div class="mkdf-position-right-inner">
+                        <?php 
+                          $vk = get_option('karjala_event_vk_field');
+
+                          $instagram = get_option('karjala_event_instagram_field');
+
+                        ?>
                           <div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
+                          <?php 
+                            if( $vk ):
+                          ?>
+                            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social" style="" href="<?php echo $vk;?>" target="_blank">
+                              <span class="mkdf-social-icon-widget ion-social-instagram top-bar__social-icon"></span> 
+                            </a>
+                            <?php 
+                              endif;
+                              if( $instagram ):
+                            ?>
+                            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social" style="" href="<?php echo $instagram;?>" target="_blank">
+                              <span class="mkdf-social-icon-widget ion-social-twitter top-bar__social-icon"></span> 
+                            </a>
+                            <?php 
+                              endif;
+                              
+                            ?>
                             
-                            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social" style="" href="https://www.instagram.com/qodeinteractive/" target="_blank">
-                              <span class="mkdf-social-icon-widget ion-social-instagram top-bar__social-icon"></span> </a>
-                            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social" style="" href="https://twitter.com/qodeinteractive/" target="_blank">
-                              <span class="mkdf-social-icon-widget ion-social-twitter top-bar__social-icon"></span> </a>
-                            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social" style="" href="https://www.facebook.com/QodeInteractive/" target="_blank">
-                              <span class="mkdf-social-icon-widget ion-social-facebook top-bar__social-icon"></span> </a>
-                            <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social" style="" href="https://www.youtube.com/QodeInteractiveVideos" target="_blank">
-                              <span class="mkdf-social-icon-widget ion-social-youtube top-bar__social-icon"></span> </a>
                           </div>
                         </div>
                       </div>

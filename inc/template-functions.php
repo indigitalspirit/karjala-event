@@ -61,3 +61,148 @@ function karjala_event_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'karjala_event_pingback_header' );
+
+
+
+
+/**
+ * Add custom fields (phone, address, email, social media) on admin-menu page
+ *
+ */
+function karjala_event_add_info_fields_to_admin_page(){
+
+
+	//$option_name = 'karjala_event_phone_field';
+
+	$options_names = array(
+		'karjala_event_phone_field',
+		//'karjala_event_shedule_field',
+		//'karjala_event_address_field',
+		'karjala_event_mail_field',
+		//'karjala_event_whatsapp_field',
+		'karjala_event_vk_field',
+		'karjala_event_instagram_field',
+		'karjala_event_thezis_field',
+		//'karjala_event_header_info_first',
+		//'karjala_event_header_info_second',
+		//'karjala_event_header_info_third',
+		//'karjala_event_header_icon_first',
+		//'karjala_event_header_icon_second',
+		//'karjala_event_header_icon_third',
+		//'karjala_event_checkout_field'
+	);
+
+	for($i = 0; $i < count($options_names); $i++ ) {
+			// регистрируем опцию
+			register_setting( 'general', $options_names[$i] );
+			// добавляем поле
+
+			switch ($options_names[$i]) {
+				case 'karjala_event_phone_field':
+					$this_option_name = "Телефон";
+					break;
+
+				// case 'karjala_event_shedule_field':
+				// 	$this_option_name = "Режим работы";
+				// 	break;
+
+				// case 'karjala_event_address_field':
+				// 	$this_option_name = "Адрес";
+				// 	break;
+
+				case 'karjala_event_mail_field':
+					$this_option_name = "E-mail";
+					break;
+
+				// case 'karjala_event_whatsapp_field':
+				// 	$this_option_name = "Ссылка на чат WhatsApp";
+				// 	break;
+
+				case 'karjala_event_vk_field':
+					$this_option_name = "Ссылка на группу в vk";
+					break;
+
+				case 'karjala_event_instagram_field':
+					$this_option_name = "Ссылка профиль в instagram";
+					break;
+
+				case 'karjala_event_thezis_field':
+					$this_option_name = "Цитата в подвале сайта";
+					break;
+
+					
+
+				// case 'karjala_event_footer_info_field':
+				// 	$this_option_name = "Текст в нижнем меню под логотипом";
+				// 	break;
+
+				// case 'karjala_event_header_info_first':
+				// 	$this_option_name = "Текст в хедере 1";
+				// 	break;
+
+				// case 'karjala_event_header_info_second':
+				// 	$this_option_name = "Текст в хедере 2";
+				// 	break;
+
+				// case 'karjala_event_header_info_third':
+				// 	$this_option_name = "Текст в хедере 3";
+				// 	break;
+
+				// case 'karjala_event_header_icon_first':
+				// 	$this_option_name = "Иконка в хедере 1";
+				// 	break;
+
+				// case 'karjala_event_header_icon_second':
+				// 	$this_option_name = "Иконка в хедере 2";
+				// 	break;
+
+				// case 'karjala_event_header_icon_third':
+				// 	$this_option_name = "Иконка в хедере 3";
+				// 	break;
+					
+				// case 'karjala_event_checkout_field':
+				// 	$this_option_name = "Сообщение на странице оформления заказа";
+				// 	break;
+			}
+
+			add_settings_field( 
+				"$options_names[$i]" . '_id', 
+				"$this_option_name", 
+				'karjala_event_extra_fields_callback', 
+				'general', 
+				'default', 
+				array( 
+					'id' => "$options_names[$i]" . '_id', 
+					'option_name' => "$options_names[$i]"
+				)
+			);
+	}
+
+	
+}
+
+function karjala_event_extra_fields_callback( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+
+	if( ($id === 'karjala_event_thezis_field_id') //|| 
+			// ($id === 'karjala_event_header_info_first_id') || 
+			// ($id === 'karjala_event_header_info_second_id') || 
+			// ($id === 'karjala_event_header_info_third_id')
+	 	) {
+	?>
+
+		<textarea rows="10" cols="45" name="<?echo $option_name ?>" id="<? echo $id ?>" class="regular-text code"><? echo esc_attr( get_option($option_name) );?></textarea>
+
+	<? }
+		else
+	{
+	?>
+	
+		<input type="text" name="<?echo $option_name ?>" id="<? echo $id ?>" value="<? echo esc_attr( get_option($option_name) ) ?>" class="regular-text code" >
+
+	<?
+	}
+}
+add_action('admin_menu', 'karjala_event_add_info_fields_to_admin_page');
+

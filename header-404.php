@@ -93,34 +93,61 @@
         <div class="mkdf-vertical-align-containers" style="border-bottom: 1px solid rgba(255, 255, 255, 75%);">
           <div class="mkdf-position-left">         
             <div class="mkdf-position-left-inner">
+            <?php 
+                                                                                  $phone = get_option('karjala_event_phone_field');
+                                                                                  if( $phone ):
+            ?>
 
-              <a class="mkdf-icon-widget-holder" href="tel:+123%2045677%20789" target="_blank">
-                <span class="mkdf-icon-element ion-android-call" style="color: #878787;font-size: 15px"></span> <span
-                  class="mkdf-icon-text " style="font-size: 18px;color: #878787">+123 45677 789</span> </a>
+              <a class="mkdf-icon-widget-holder" href="tel:<?php echo trim($phone); ?>" target="_blank">
+                <span class="mkdf-icon-element ion-android-call" style="color: #878787;font-size: 15px"></span> 
+                <span
+                  class="mkdf-icon-text " style="font-size: 18px;color: #878787"><?php echo $phone; ?></span> 
+              </a>
 
-              <a class="mkdf-icon-widget-holder" href="mailto:wanderland@qodeinteractive.com" target="_blank"
+              <?php 
+                endif;
+
+                $email = get_option('karjala_event_mail_field');
+
+                if( $email ):
+              
+              ?>
+
+              <a class="mkdf-icon-widget-holder" href="mailto:<?php echo trim($email); ?>" target="_blank"
                 style="margin: 0 0 0 25px">
                 <span class="mkdf-icon-element ion-ios-email-outline" style="color: #878787;font-size: 17px"></span>
                 <span class="mkdf-icon-text "
-                  style="font-size: 18px;color: #878787">wanderland@qodeinteractive.com</span> </a>
+                  style="font-size: 18px;color: #878787">
+                  <?php echo $email; ?>
+                </span> 
+              </a>
             </div>
           </div>
           <div class="mkdf-position-right">
             <div class="mkdf-position-right-inner">
               <div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
                 <h2 class="widgettitle">Socials</h2>
+                <?php 
+                  $vk = get_option('karjala_event_vk_field');
+
+                  $instagram = get_option('karjala_event_instagram_field');
+
+                ?>
+                <?php 
+                  if( $vk ):
+                ?>
                 <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" style="color: #878787;;font-size: 14px"
-                  href="https://www.instagram.com/qodeinteractive/" target="_blank">
+                  href="<?php echo $vk;?>" target="_blank">
                   <span class="mkdf-social-icon-widget ion-social-instagram"></span> </a>
+                <?php 
+                  endif;
+                  if( $instagram ):
+                ?>
                 <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" style="color: #878787;;font-size: 14px"
-                  href="https://twitter.com/qodeinteractive/" target="_blank">
-                  <span class="mkdf-social-icon-widget ion-social-twitter"></span> </a>
-                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" style="color: #878787;;font-size: 14px"
-                  href="https://www.facebook.com/QodeInteractive/" target="_blank">
-                  <span class="mkdf-social-icon-widget ion-social-facebook"></span> </a>
-                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" style="color: #878787;;font-size: 14px"
-                  href="https://www.youtube.com/QodeInteractiveVideos" target="_blank">
-                  <span class="mkdf-social-icon-widget ion-social-youtube"></span> </a>
+                  href="<?php echo $instagram;?>" target="_blank">
+                  <span class="mkdf-social-icon-widget ion-social-twitter"></span> 
+                </a>
+              
               </div>
             </div>
           </div>

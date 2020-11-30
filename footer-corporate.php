@@ -18,16 +18,18 @@
 											<div class="wpb_wrapper">
 												<div class="wpb_text_column wpb_content_element ">
 													<div class="wpb_wrapper">
+													<?php 
+															$thezis = get_option('karjala_event_thezis_field');
 
-														<p class="mkdf-st-text mkdf-text-highlight footer-phraze" style="font-family: Crimson text;font-style: italic;font-size: 25px;line-height: 30px;font-weight: 400;"> Based in Utah, USA, Wanderland is a blog by Markus <span class="mkdf-st-highlight-title-holder" style="color: #ecebe1">
-															<span class="mkdf-st-highlight-title" style="color: #59815b">Thompson.</span>
-															<span class="mkdf-st-highlight">
-															
-															<span class="mkdf-active-hover-middle"></span>
-															
-															</span>
-															</span> His posts <br>explore outdoor experiences through photos and diaries with tips &amp; tricks.
+															if( $thezis ):
+														
+														?>
+
+														<p class="mkdf-st-text mkdf-text-highlight footer-phraze" style="font-family: Crimson text;font-style: italic;font-size: 25px;line-height: 30px;font-weight: 400;"> 
+														<?php echo $thezis;?>
 															</p>
+
+															<?php endif;?>
 
 														<!-- footer-copy -->
 														<div class="footer-copyright">
