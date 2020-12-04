@@ -95,7 +95,7 @@
 
 
 .corporate-page__top {
-  background: url(../img/main/slider/h4-img-01.jpg) center center no-repeat;
+  /* background: url(../img/main/slider/h4-img-01.jpg) center center no-repeat; */
     background-size: cover;
     position: relative;
 
@@ -214,7 +214,7 @@
 }
 
 
-.corporate-services__block .corporate-services__block-items
+/* .corporate-services__block .corporate-services__block-items
 .corporate-services__block-item.block-item_1 {
   background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
   background-size: cover;
@@ -264,7 +264,7 @@
   background: url(../img/trips/slider/blog-post-img-10-1.jpg) center no-repeat;
   background-size: cover;
 
-}
+} */
 
 
 

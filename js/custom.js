@@ -188,6 +188,33 @@ $(document).ready(function () {
       ]
   });
 
+  $('.main-page__slider').slick({
+    dots: false,
+    prevArrow: $(".main-page__slider-arrow-right"),
+    nextArrow: $(".main-page__slider-arrow-left"),
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    //adaptiveHeight: true
+    fade: true,
+    cssEase: 'linear'
+  });
+
+  // $('.main-page__slider-mobile').slick({
+  //   dots: false,
+  //   //prevArrow: $(".mobile.main-page__slider-arrow-right"),
+  //   //nextArrow: $(".mobile.main-page__slider-arrow-left"),
+  //   infinite: true,
+  //   speed: 500,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   slidesToShow: 1,
+  //   //adaptiveHeight: true
+  //   fade: true,
+  //   cssEase: 'linear'
+  // });
 
 
   $('.filtering').on( 'click', 'span', function() {
@@ -235,6 +262,8 @@ $(document).ready(function () {
     }
 
 });
+
+
 
 
 

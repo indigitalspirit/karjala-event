@@ -14,11 +14,42 @@
 if ( is_home() || is_front_page() ) :
 
 	get_header('main');
+
+
+	$mp_history__title = get_field("mp_history__title");
+
+	$mp_history__text = get_field("mp_history__text");
+
+	$mp_video__link = get_field("mp_video__link");
+
+	$mp_services = get_field("mp_services");
+
+	$mp_form__title = get_field("mp_form__title");
+
+	$mp_form__shortcode = get_field("mp_form__shortcode");
+
+	$mp_slider = get_field("mp_slider");
+
+	$mp_slider_big = get_field("mp_slider_big");
+
+	// $;
+
+	// $;
+
+	// $;
+
+	// $;
+
+	// $;
+
+	// $;
+
+
+
 	?>
 
-
+											<?php if( $mp_history__title ): ?>
 											<!-- history -->
-											
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
 													<div class="mkdf-eh-item-inner">
@@ -28,11 +59,18 @@ if ( is_home() || is_front_page() ) :
 																			<div class="wpb_text_column wpb_content_element  vc_custom_1570712658299">
 																				<div class="wpb_wrapper">
 																					<div class="section-spacer-bt-70 main-page__history">
-																						<h1 style="text-align: center;">История</h1>
+																					
+																						<h1 style="text-align: center;">
+																							<?php echo $mp_history__title; ?>
+																						</h1>
+																					
+																					<?php if( $mp_history__text ): ?>
 																						<p class="mkdf-st-text " style="font-size: 18px;line-height: 28px">
-																							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-																							eiusmod tempor incididu nt ut labore et dolore adipisicing elit nus.
+																							<?php echo $mp_history__text; ?>
 																						</p>
+																					<?php endif; ?>
+																						
+																						
 																					</div>
 																					
 																				</div>
@@ -50,8 +88,6 @@ if ( is_home() || is_front_page() ) :
 											</div>
 											<!-- ./history -->
 
-											
-
 											<!-- separator -->
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
@@ -69,28 +105,22 @@ if ( is_home() || is_front_page() ) :
 													</div>
 												</div>
 											</div>
+											<?php endif; ?>
 
 
+											<?php if( $mp_video__link ): ?>										
 											<!-- video -->
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
 													<div class="mkdf-eh-item-inner">
 														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
 
-
-															<!-- <div
-																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination ">
-																<div class="mkdf-bl-wrapper  ">
-																	<div style="margin-bottom: 30px;"> -->
-
 															<div class="wpb_text_column wpb_content_element  vc_custom_1570712658299">
 																<div class="wpb_wrapper">
 																	<div class="main-page__video">
 
-																		<iframe
-																			src="//vk.com/video_ext.php?oid=-33155510&id=456239038&hash=9386f6bb2501c1ce&hd=2"
-																			width="853" height="480" frameborder="0" allowfullscreen></iframe>
-
+																	<?php echo $mp_video__link; ?>
+																		
 
 																	</div>
 																</div>
@@ -100,7 +130,8 @@ if ( is_home() || is_front_page() ) :
 												</div>
 											</div>
 											<!-- ./video -->
-
+											
+											
 											<!-- separator -->
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
@@ -119,6 +150,11 @@ if ( is_home() || is_front_page() ) :
 												</div>
 											</div>
 
+											<?php endif; ?>
+
+
+											<?php if( !empty($mp_services) ): ?>	
+											<?php //var_dump($mp_services); ?>
 											<!-- services -->
 											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
@@ -129,40 +165,57 @@ if ( is_home() || is_front_page() ) :
 																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination ">
 																<div class="mkdf-bl-wrapper mkdf-outer-space">
 																	<ul class="mkdf-blog-list">
+
+																	<?php 
+																		foreach( $mp_services as $mp_services__item ) {
+																			$service_title = $mp_services__item['mp_services__block-title'];
+																			$service_descr = $mp_services__item['mp_services__block-descr'];
+																			$service_btn_text = $mp_services__item['mp_services__block-btn_text'];
+																			$service_btn_link = $mp_services__item['mp_services__block-btn_link'];
+																			$service_img_link = $mp_services__item['mp_services__block-img_link'];
+																	?>
+															
+
+																	<?php if( $service_title && $service_descr && $service_btn_text && $service_btn_link && $service_img_link): ?>
 																		<li class="mkdf-bl-item mkdf-item-space">
 																			<div class="mkdf-bli-inner">
 																				<div class="mkdf-bli-wrapper">
 																					<div class="mkdf-post-image">
-																						<a itemprop="url"
-																							href="https://wanderland.qodeinteractive.com/ski-weekend/"
-																							title="Ski weekend">
-																							<img width="1300" height="999"
-																								src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-15.jpg"
-																								class="attachment-full size-full wp-post-image" alt="s"
-																								loading="lazy"
-																								srcset="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-15.jpg 1300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-15-600x461.jpg 600w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-15-300x231.jpg 300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-15-768x590.jpg 768w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-15-1024x787.jpg 1024w"
-																								sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
+																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?>">
+																							<img src="<?php echo $service_img_link; ?>" class="attachment-full size-full wp-post-image" alt="<?php echo $service_title;?>"/> 
+																						</a>
 																					</div>
 																				</div>
 																				<div class="mkdf-bli-content">
-																					<h5 itemprop="name" class="entry-title mkdf-post-title">
-																						<a itemprop="url" href="pohodi.html" title="Trip to Kos">
-																							Походы </a>
+																					<h5 class="entry-title mkdf-post-title">
+																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?> ">
+																							<?php echo $service_title;?> 
+																						</a>
 																					</h5>
 
 
 																					<div class="mkdf-bli-excerpt">
-																						<p>Небольшое описание</p>
+																						<p><?php echo $service_descr;?></p>
 																					</div>
-																					<a href="pohodi.html"
-																						class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-																						<span class="mkdf-btn-text">Подробнее</span>
+																					<a href="<?php echo $service_btn_link; ?>" class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
+																						<span class="mkdf-btn-text">
+																							<?php echo $service_btn_text; ?>
+																						</span>
 																					</a>
 
 																				</div>
 																			</div>
 																		</li>
-																		<li class="mkdf-bl-item mkdf-item-space">
+																	<?php endif; ?>
+
+
+																		<?php
+
+																		}
+
+
+																		?>
+																		<!-- <li class="mkdf-bl-item mkdf-item-space">
 																			<div class="mkdf-bli-inner">
 																				<div class="mkdf-bli-wrapper">
 																					<div class="mkdf-post-image">
@@ -258,7 +311,7 @@ if ( is_home() || is_front_page() ) :
 
 																				</div>
 																			</div>
-																		</li>
+																		</li> -->
 
 																	</ul>
 																</div>
@@ -271,78 +324,53 @@ if ( is_home() || is_front_page() ) :
 												</div>
 											</div>
 											<!-- ./services -->
+											<?php endif; ?>
+											
 
 										
+											<?php if( $mp_form__title || $mp_form__shortcode ): ?>	
 											<!-- form -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
+											<div class="mkdf-elements-holder mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item    ">
 													<div class="mkdf-eh-item-inner">
 														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
 
-															<div class="mkdf-section-title-holder  " style="text-align: left">
+															<div class="mkdf-section-title-holder" style="text-align: left">
 																<div class="mkdf-st-inner">
 																	<div class="mkdf-eh-item-content mkdf-eh-custom-6229" >
 
-																		<div class="section-spacer-bt-50 common__form">
-																			<div class="mkdf-section-title-holder   mkdf-st-highlight"
+
+																		<?php if( $mp_form__title || $mp_form__shortcode ): ?>	
+																		<div class="section-spacer-bt-50">
+																			<div class="mkdf-section-title-holder mkdf-st-highlight"
 																			style="text-align: left">
-																			<div class="mkdf-st-inner">
+																				<div class="mkdf-st-inner">
 
-																				<h3 class="mkdf-st-title">
-																					Оставьте <span class="mkdf-st-highlight-title-holder"
-																						style="color: #f2f1e7">
-																						<span class="mkdf-st-highlight-title"
-																							style="color: #59815b">заявку</span> !
-																						<span class="mkdf-st-highlight">
+																					<h3 class="mkdf-st-title">
+																					<?php echo $mp_form__title; ?>
+																					</h3>
 
-
-
-																							<span class="mkdf-active-hover-middle"></span>
-
-
-																						</span>
-																					</span> </h3>
+																				</div>
+																			</div>
+																		
+																			<?php if( $mp_form__shortcode ): ?>	
+																			<div role="form" class="wpcf7" id="wpcf7-f1433-p1182-o1 common__form">
+																			
+																				<?php 
+																					$mp_form__shortcode = "'" . $mp_form__shortcode . "'";
+																				
+																					echo do_shortcode($mp_form__shortcode); 
+																				?>
 
 																			</div>
-																		</div>
-
-																		<div class="vc_empty_space" style="height: 27px"><span
-																				class="vc_empty_space_inner"></span></div>
-
-																		<div role="form" class="wpcf7" id="wpcf7-f1433-p1182-o1 common__form" lang="en-US"
-																			dir="ltr">
-																			<div class="screen-reader-response" role="alert" aria-live="polite"></div>
-																			
-																			<!-- <form class="wpcf7-form init cf7_custom_style_1">
-
-																				<div class="contact-us">
-																				
-																					<input type="text" name="your-name" size="40"
-																						class="wpcf7-form-control wpcf7-text " placeholder="Имя"
-																						>
-																				
-																					<input type="email" name="your-email" size="40"
-																						class="wpcf7-form-control wpcf7-text wpcf7-email" placeholder="Телефон">
-																					
-																					<button type="submit"
-																						class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-																						<span class="mkdf-btn-text">Заказать звонок</span>
-																					</button>
-																					<span class="mkdf-btn-text form-caption">
-																						Нажимая на кнопку "Заказать звонок", вы соглашаетесь с <a
-																							href="/privacy-policy">Политикой конфиденциальности</a>
-																					</span>
-																					<span class="ajax-loader"></span>
-																				</div>
-																				<div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
-																			</form> -->
-																			<?php echo do_shortcode('[contact-form-7 id="784" title="Форма на главной"]'); ?>
+																			<?php endif; ?>
 
 																		</div>
 
-																		</div>
+																		<div class="separator-border section-spacer-bt-70"></div>
+																		<?php endif; ?>
 
-																		<div class="separator-border section-spacer-bt-70">													</div>
+																		
 
 																		
 																	</div>
@@ -353,66 +381,67 @@ if ( is_home() || is_front_page() ) :
 												</div>
 											</div>
 											<!-- ./form -->
+											<?php endif; ?>
 
 
+
+
+											<?php 
+											//var_dump($mp_slider);
+											if( !empty($mp_slider) && !empty($mp_slider['mp_slider__item_1']) && !empty($mp_slider['mp_slider__item_1']['mp_slider__item-img_link']) ): 
+												//echo $mp_slider['mp_slider__item_1']['mp_slider__item-img_link'];
+											?>	
 											<!-- mobile slider -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column  mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
 														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
 
-															<div class="mkdf-section-title-holder  " style="text-align: left">
+															<div class="mkdf-section-title-holder" style="text-align: left">
 																<div class="mkdf-st-inner">
 																	<div class="mkdf-eh-item-content mkdf-eh-custom-6229" >
 
 																		<div class="main-page__slider-wrapper mobile-slider ">
 
-																			<div class="main-page__slider">
-																				<div class="main-page__slider-item main-page__slider-item_1">
-																					<!-- <img src="img/main/slider/h4-img-01.jpg" alt=""> -->
-				
-																					<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="#">
+																			<div class="main-page__slider main-page__slider-mobile">
+																			<?php 
+																				foreach( $mp_slider as $mp_slider__item ) {
+																					$slider_btn_text = $mp_slider__item['mp_slider__item-btn_text'];
+																					$slider_btn_link = $mp_slider__item['mp_slider__item-btn_link'];
+																					$slider_img_link = $mp_slider__item['mp_slider__item-img_link'];
+																			?>
+																				<div class="main-page__slider-item main-page__slider-item_1" style="background: url(<?php echo $slider_img_link; ?>); background-size:cover;">
+
+																					<?php if( $slider_btn_text && $slider_btn_link ): ?>
+																					<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="<?php echo $slider_btn_link; ?>">
 																						<span class="mkdf-btn-text">
-																							Подробнее
+																							<?php echo $slider_btn_text; ?>
 																						</span>
 																					</a>
-																				</div>
-																				<div class="main-page__slider-item main-page__slider-item_2">
-																					<!-- <img src="img/main/slider/h4-img-02.jpg" alt=""> -->
-																					<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="#">
-																						<span class="mkdf-btn-text">
-																							Подробнее
-																						</span>
-																					</a>
-																				</div>
-																				<div class="main-page__slider-item main-page__slider-item_3">
-																					<!-- <img src="img/main/slider/h4-img-03.jpg" alt=""> -->
-																					<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="#">
-																						<span class="mkdf-btn-text">
-																							Подробнее
-																						</span>
-																					</a>
-																				</div>
-																			</div>
-
-
-																			<div class="common-slider-arrows main-page__slider-arrows">
-																				<div class="common-slider-arrow-left main-page__slider-arrow-left">
-																					<!-- <span class="mkdf-prev-icon ion-ios-arrow-thin-left"></span> -->
-																					<img class="arrow-white" src="img/slider/arrow-white.svg" alt="назад">
-																					<img class="arrow-green" src="img/slider/arrow-green.svg" alt="back">
-
-																					
-																				</div>
-
-																				<div class="common-slider-arrow-right main-page__slider-arrow-right">
-																					<!-- <span class="mkdf-next-icon ion-ios-arrow-thin-right"></span> -->
-																					<img class="arrow-white" src="img/slider/arrow-white.svg" alt="вперед">
-																					<img class="arrow-green" src="img/slider/arrow-green.svg" alt="forward">
+																					<?php endif; ?>
 
 																				</div>
+																			<?php 
+																				}
+																			?>
 																				
 																			</div>
+
+
+																			<!-- <div class="common-slider-arrows main-page__slider-arrows">
+																				<div class="common-slider-arrow-left main-page__slider-arrow-left mobile">
+																					
+																					<img class="arrow-white" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-white.svg'; ?>" alt="назад">
+																					<img class="arrow-green" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-green.svg'; ?>" alt="back">	
+																				</div>
+
+																				<div class="common-slider-arrow-right main-page__slider-arrow-right mobile">
+																				
+																					<img class="arrow-white" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-white.svg'; ?>" alt="вперед">
+																					<img class="arrow-green" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-green.svg'; ?>" alt="forward">
+																				</div>
+																				
+																			</div> -->
 				
 																		</div>
 
@@ -425,8 +454,10 @@ if ( is_home() || is_front_page() ) :
 												</div>
 											</div>
 											<!-- ./mobile slider -->
+											<?php endif; ?>
 
 											
+
 											<footer class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
 												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
@@ -452,34 +483,7 @@ if ( is_home() || is_front_page() ) :
 																	<div class="mkdf-section-title-holder   mkdf-st-highlight">
 																		<div class="mkdf-st-inner">
 																			<p class="mkdf-st-text mkdf-text-highlight" style="font-weight: 400">
-																				<!-- Based in Utah, USA, Wanderlust is a blog by Markus
 																				
-																				<span class="mkdf-st-highlight-title-holder"
-																					style="color: #ecebe1;">
-
-																					<span class="mkdf-st-highlight-title" style="color: #59815b">Thompson.</span>
-
-																					<span class="mkdf-st-highlight">
-																						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-																							y="0px" viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																							class="mkdf-active-hover-left">
-																							<polygon class="st0"
-																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																							</polygon>
-																						</svg>
-																						<span class="mkdf-active-hover-middle"></span>
-																						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-																							y="0px" viewBox="0 0 13.3 30" style="enable-background:new 0 0 13.3 30;" xml:space="preserve"
-																							class="mkdf-active-hover-right">
-																							<polygon class="st0"
-																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 	11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																							</polygon>
-																						</svg>
-																					</span>
-
-																				</span> 
-																				
-																				His posts explore outdoor exeriences through photos and diaries with tips  -->
 																				<?php echo $thezis; ?>
 
 																			</p>
@@ -491,63 +495,7 @@ if ( is_home() || is_front_page() ) :
 																<?php endif; ?>
 															
 																<div class="footer-menu">
-																	<!-- <ul>
-																		<li>
-																			<a class="mkdf-link-with-svg" href="o-nas.html"><span><span class="mkdf-active-hover"><svg version="1.1"
-																							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																							viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																							class="mkdf-active-hover-left">
-																							<polygon class="st0"
-																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																							</polygon>
-																						</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-																							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
-																							style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-																							<polygon class="st0"
-																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																							</polygon>
-																						</svg></span><span class="mkdf-link-with-svg-text">О
-																						нас</span></span>
-																			</a>
-																		</li>
-																		<li>
-																			<a class="mkdf-link-with-svg" href="blog.html"><span><span class="mkdf-active-hover"><svg version="1.1"
-																							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																							viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																							class="mkdf-active-hover-left">
-																							<polygon class="st0"
-																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																							</polygon>
-																						</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-																							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
-																							style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-																							<polygon class="st0"
-																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																							</polygon>
-																						</svg></span><span class="mkdf-link-with-svg-text">Блог</span></span>
-																			</a>
-																		</li>
-																		<li>
-																			<a class="mkdf-link-with-svg" href="magazin.html"><span><span class="mkdf-active-hover"><svg version="1.1"
-																							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-																							viewBox="0 0 15.7 30" style="enable-background:new 0 0 15.7 30;" xml:space="preserve"
-																							class="mkdf-active-hover-left">
-																							<polygon class="st0"
-																								points="2.6,1 0.7,3.3 2,5.8 2.3,7.6 2.9,8.7 4.4,10.5 3.9,10.8 4.4,11.9 4.4,12.8 4.1,13.8 3.3,14.7 3.9,15.8 4.4,16.8 4,17.5 3.5,18.1 2.2,20.2 3.4,21.5 4.2,24.1 3.4,25.4 2.5,27.4 2.5,27.8 3.2,28.3 4.1,28.5 4.9,29 14.8,29 14.8,1 ">
-																							</polygon>
-																						</svg><span class="mkdf-active-hover-middle"></span><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-																							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 13.3 30"
-																							style="enable-background:new 0 0 13.3 30;" xml:space="preserve" class="mkdf-active-hover-right">
-																							<polygon class="st0"
-																								points="10,1 10.2,2.1 10.6,2.9 10.6,3.3 10.8,3.7 10.8,4.3 11,5 11,5.7 11,6.3 10.5,6.7 10.8,7.3 11,7.8 11.6,8.3 11.6,8.6 11.5,8.9 11.6,9.9 11.6,10.5 12.4,11.6 12.1,12 12.4,12.2 11.8,12.8 11.4,13.5 11.6,13.7 11.9,13.7 12,13.9 11.5,15.1 10.8,16 9.1,17.7 9.7,18.2 9.3,19 9.7,19.8 9.6,20.6 9.7,21.5 9.6,21.9 9.6,22.3 10.1,22.8 9.6,23.6 9.7,24 9.7,24.2 9.9,24.4 9.5,24.7 9.3,25.4 9.3,25.9 8.8,26.2 8.5,27.1 8.8,27.8 9.4,28.6 7.8,29 0.9,29 0.9,1 ">
-																							</polygon>
-																						</svg></span><span class="mkdf-link-with-svg-text">
-																						Магазин
-																					</span></span>
-																			</a>
-																		</li>
 																
-																	</ul> -->
 
 																	<?php
 																		wp_nav_menu(
@@ -682,60 +630,63 @@ if ( is_home() || is_front_page() ) :
 												<div class="wpb_column vc_column_container vc_col-sm-12">
 													<div class="vc_column-inner">
 														<div class="wpb_wrapper">
+
+															<?php 
+																
+																//var_dump($mp_slider_big['mp_slider_big__item_1']);
+																if( !empty($mp_slider_big) && !empty($mp_slider_big['mp_slider_big__item_1']) && !empty($mp_slider_big['mp_slider_big__item_1']['mp_slider_big__item_img_link']) ): 
+																	//echo $mp_slider_big['mp_slider_big__item_1']['mp_slider_big__item_img_link'];
+														
+															?>	
 															
 															<div class="main-page__slider-wrapper desktop-slider">
 
 															
 																<div class="main-page__slider">
-																	<div class="main-page__slider-item main-page__slider-item_1">
-																		<!-- <img src="img/main/slider/h4-img-01.jpg" alt=""> -->
+																	<?php 
+																		foreach( $mp_slider_big as $mp_slider_big__item ) {
+																			$slider_big_btn_text = $mp_slider_big__item['mp_slider_big__item_btn_text'];
+																			$slider_big_btn_link = $mp_slider_big__item['mp_slider_big__item_btn_link'];
+																			$slider_big_img_link = $mp_slider_big__item['mp_slider_big__item_img_link'];
+																	?>
+																	<div class="main-page__slider-item" style="background: url(<?php echo $slider_big_img_link; ?>); background-size:cover;">
+
+																		<?php if( $slider_big_btn_text && $slider_big_btn_link ): ?>
+																		<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="<?php echo $slider_big_btn_link; ?>">
+																			<span class="mkdf-btn-text">
+																				<?php echo $slider_big_btn_text; ?>
+																			</span>
+																		</a>
+																		<?php endif; ?>
 																		
-	
-																		<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="#">
-																			<span class="mkdf-btn-text">
-																				Подробнее
-																			</span>
-																		</a>
 																	</div>
-																	<div class="main-page__slider-item main-page__slider-item_2">
-																		<!-- <img src="img/main/slider/h4-img-02.jpg" alt=""> -->
-																		<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="#">
-																			<span class="mkdf-btn-text">
-																				Подробнее
-																			</span>
-																		</a>
-																	</div>
-																	<div class="main-page__slider-item main-page__slider-item_3">
-																		<!-- <img src="img/main/slider/h4-img-03.jpg" alt=""> -->
-																		<a class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__slider-item__btn" href="#">
-																			<span class="mkdf-btn-text">
-																				Подробнее
-																			</span>
-																		</a>
-																	</div>
+																	<?php 
+																		}
+																	?>
+																	
 																</div>
 
+
+																
 
 
 																<div class="common-slider-arrows main-page__slider-arrows">
 																	<div class="common-slider-arrow-left main-page__slider-arrow-left">
 																		<!-- <span class="mkdf-prev-icon ion-ios-arrow-thin-left"></span> -->
-																		<img class="arrow-white" src="img/slider/arrow-white.svg" alt="назад">
-																		<img class="arrow-green" src="img/slider/arrow-green.svg" alt="back">
-
-																		
+																		<img class="arrow-white" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-white.svg'; ?>" alt="назад">
+																		<img class="arrow-green" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-green.svg'; ?>" alt="back">
 																	</div>
 
 																	<div class="common-slider-arrow-right main-page__slider-arrow-right">
 																		<!-- <span class="mkdf-next-icon ion-ios-arrow-thin-right"></span> -->
-																		<img class="arrow-white" src="img/slider/arrow-white.svg" alt="вперед">
-																		<img class="arrow-green" src="img/slider/arrow-green.svg" alt="forward">
-
+																		<img class="arrow-white" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-white.svg'; ?>" alt="вперед">
+																		<img class="arrow-green" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-green.svg'; ?>" alt="forward">
 																	</div>
-																	
 																</div>
 
 															</div>
+
+															<?php endif; ?>
 															
 
 
