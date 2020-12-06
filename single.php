@@ -10,43 +10,42 @@
 get_header();
 ?>
 
-	<!-- <main id="primary" class="site-main single"> -->
-	<div class="mkdf-content">
-		<div class="mkdf-content-inner">
+<!-- <main id="primary" class="site-main single"> -->
+<div class="mkdf-content">
+  <div class="mkdf-content-inner">
 
-		
-			<!-- BLOG TOP -->
-			<div
-				class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"
-				style="">
-				<div class="mkdf-title-image">
-					<!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
+
+    <!-- BLOG TOP -->
+    <div
+      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
+      <div class="mkdf-title-image">
+        <!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
 						alt="s"> -->
-						<?php karjala_event_post_thumbnail(); ?>
-				</div>
-				<div class="mkdf-title-wrapper" style="">
-					<div class="mkdf-title-inner">
-						<div class="mkdf-grid">
-							<h2 class="mkdf-page-title entry-title">
-							<?php the_title(); ?>
-SINGLE
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
+        <?php karjala_event_post_thumbnail(); ?>
+      </div>
+      <div class="mkdf-title-wrapper">
+        <div class="mkdf-title-inner">
+          <div class="mkdf-grid">
+            <h2 class="mkdf-page-title entry-title">
+              <?php the_title(); ?>
+             
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			<div class="mkdf-full-width">
-				<div class="mkdf-full-width-inner">
+    <div class="mkdf-full-width">
+      <div class="mkdf-full-width-inner">
 
-					<div class="mkdf-container-inner clearfix">
-						<div class="mkdf-grid-row mkdf-content-has-sidebar mkdf-grid-large-gutter">
+        <div class="mkdf-container-inner clearfix">
+          <div class="mkdf-grid-row mkdf-content-has-sidebar mkdf-grid-large-gutter">
 
-							<!-- blog-content -->
-							<div class="mkdf-page-content-holder mkdf-grid-col-9">
-								<div class="mkdf-blog-holder mkdf-blog-single mkdf-blog-single-standard">
+            <!-- blog-content -->
+            <div class="mkdf-page-content-holder mkdf-grid-col-9">
+              <div class="mkdf-blog-holder mkdf-blog-single mkdf-blog-single-standard">
 
-								<?php
+                <?php
 										while ( have_posts() ) :
 											the_post();
 
@@ -54,28 +53,11 @@ SINGLE
 											get_template_part( 'template-parts/content');
 								?>
 
-								<div class="mkdf-blog-single-navigation">
-									<div class="mkdf-blog-single-navigation-inner clearfix">
-										<!-- <a itemprop="url" class="mkdf-blog-single-prev"
-											href="https://wanderland.qodeinteractive.com/sometimes-the-hike-is-better-than-the-top-02/">
-											<span class="mkdf-blog-single-nav-mark ion-ios-arrow-thin-left"></span> <span
-												class="mkdf-blog-single-nav-label">previous post</span>
-											<div class="mkdf-blog-single-nav-thumbnail"><img width="87" height="40"
-													src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-08.jpg"
-													class="attachment-wanderland_post_thumb_size size-wanderland_post_thumb_size wp-post-image" alt="s"
-													loading="lazy"></div>
-										</a>
-										<a itemprop="url" class="mkdf-blog-single-next"
-											href="https://wanderland.qodeinteractive.com/sometimes-the-hike-is-better-than-the-top/">
-											<span class="mkdf-blog-single-nav-mark ion-ios-arrow-thin-right"></span> <span
-												class="mkdf-blog-single-nav-label">next post</span>
-											<div class="mkdf-blog-single-nav-thumbnail"><img width="87" height="45"
-													src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-34.jpg"
-													class="attachment-wanderland_post_thumb_size size-wanderland_post_thumb_size wp-post-image" alt="s"
-													loading="lazy"></div>
-										</a> -->
-								
-										<?php
+                <div class="mkdf-blog-single-navigation">
+                  <div class="mkdf-blog-single-navigation-inner clearfix">
+                    
+
+                    <?php
 												the_post_navigation(
 													array(
 														'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'karjala_event' ) . '</span> <span class="nav-title">%title</span>',
@@ -84,12 +66,12 @@ SINGLE
 												);
 										?>
 
-									</div>
-								</div>
+                  </div>
+                </div>
 
 
-											
-									<?php 
+
+                <?php 
 											// If comments are open or we have at least one comment, load up the comment template.
 											if ( comments_open() || get_comments_number() ) :
 												comments_template();
@@ -99,36 +81,33 @@ SINGLE
 									?>
 
 
-									
 
 
-								</div>
-							</div>
-							<!-- ./blog-content -->
 
-							<?php
+              </div>
+            </div>
+            <!-- ./blog-content -->
+
+            <?php
 								get_sidebar('blog');
 							?>
 
 
-						</div>
-					</div>
+          </div>
+        </div>
 
 
-				</div>
-			</div>
-			
-		</div>
-	</div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 
 
-
-		
-
-	<!-- </main> -->
-	<!-- #main -->
+<!-- </main> -->
+<!-- #main -->
 
 <?php
 

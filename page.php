@@ -32,56 +32,37 @@ if ( is_home() || is_front_page() ) :
 
 	$mp_slider_big = get_field("mp_slider_big");
 
-	// $;
-
-	// $;
-
-	// $;
-
-	// $;
-
-	// $;
-
-	// $;
-
-
-
 	?>
 
 											<?php if( $mp_history__title ): ?>
 											<!-- history -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 
 
-																			<div class="wpb_text_column wpb_content_element  vc_custom_1570712658299">
-																				<div class="wpb_wrapper">
-																					<div class="section-spacer-bt-70 main-page__history">
-																					
-																						<h1 style="text-align: center;">
-																							<?php echo $mp_history__title; ?>
-																						</h1>
-																					
-																					<?php if( $mp_history__text ): ?>
-																						<p class="mkdf-st-text " style="font-size: 18px;line-height: 28px">
-																							<?php echo $mp_history__text; ?>
-																						</p>
-																					<?php endif; ?>
-																						
-																						
-																					</div>
-																					
-																				</div>
-																			</div>
-
-																		<!-- </div>
+															<div class="wpb_text_column wpb_content_element vc_custom_1570712658299">
+																<div class="wpb_wrapper">
+																	<div class="section-spacer-bt-70 main-page__history">
+																	
+																		<h1>
+																			<?php echo $mp_history__title; ?>
+																		</h1>
+																	
+																		<?php if( $mp_history__text ): ?>
+																			<p class="mkdf-st-text">
+																				<?php echo $mp_history__text; ?>
+																			</p>
+																		<?php endif; ?>
+																		
+																		
 																	</div>
+																	
 																</div>
-															</div> -->
-															<!-- <div class="vc_empty_space" style="height: 114px"><span
-																	class="vc_empty_space_inner"></span></div> -->
+															</div>
+
+																
 														</div>
 													</div>
 												</div>
@@ -89,13 +70,13 @@ if ( is_home() || is_front_page() ) :
 											<!-- ./history -->
 
 											<!-- separator -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 															<div
-																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination ">
-																<div class="mkdf-bl-wrapper  ">
+																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination">
+																<div class="mkdf-bl-wrapper">
 																	<div class="separator-border section-spacer-bt-70">
 																		
 																	</div>
@@ -110,12 +91,12 @@ if ( is_home() || is_front_page() ) :
 
 											<?php if( $mp_video__link ): ?>										
 											<!-- video -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 
-															<div class="wpb_text_column wpb_content_element  vc_custom_1570712658299">
+															<div class="wpb_text_column wpb_content_element vc_custom_1570712658299">
 																<div class="wpb_wrapper">
 																	<div class="main-page__video">
 
@@ -133,13 +114,13 @@ if ( is_home() || is_front_page() ) :
 											
 											
 											<!-- separator -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 															<div
-																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination ">
-																<div class="mkdf-bl-wrapper  ">
+																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination">
+																<div class="mkdf-bl-wrapper">
 																	<div class="separator-border section-spacer-bt-70">
 																		
 																	</div>
@@ -156,13 +137,13 @@ if ( is_home() || is_front_page() ) :
 											<?php if( !empty($mp_services) ): ?>	
 											<?php //var_dump($mp_services); ?>
 											<!-- services -->
-											<div class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 															<div class="section-spacer-bt-50 main-page__blog">
 																<div
-																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination ">
+																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination">
 																<div class="mkdf-bl-wrapper mkdf-outer-space">
 																	<ul class="mkdf-blog-list">
 
@@ -188,7 +169,7 @@ if ( is_home() || is_front_page() ) :
 																				</div>
 																				<div class="mkdf-bli-content">
 																					<h5 class="entry-title mkdf-post-title">
-																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?> ">
+																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?>">
 																							<?php echo $service_title;?> 
 																						</a>
 																					</h5>
@@ -215,103 +196,7 @@ if ( is_home() || is_front_page() ) :
 
 
 																		?>
-																		<!-- <li class="mkdf-bl-item mkdf-item-space">
-																			<div class="mkdf-bli-inner">
-																				<div class="mkdf-bli-wrapper">
-																					<div class="mkdf-post-image">
-																						<a itemprop="url"
-																							href="https://wanderland.qodeinteractive.com/breathless-routs/"
-																							title="Breathless routs">
-																							<img width="1300" height="999"
-																								src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-16.jpg"
-																								class="attachment-full size-full wp-post-image" alt="s"
-																								loading="lazy"
-																								srcset="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-16.jpg 1300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-16-600x461.jpg 600w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-16-300x231.jpg 300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-16-768x590.jpg 768w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-16-1024x787.jpg 1024w"
-																								sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
-																					</div>
-																				</div>
-																				<div class="mkdf-bli-content">
-																					<h5 itemprop="name" class="entry-title mkdf-post-title">
-																						<a itemprop="url" href="korporativy.html" title="Trip to Kos">
-																							Корпоративы </a>
-																					</h5>
-
-
-																					<div class="mkdf-bli-excerpt">
-																						<p>Небольшое описание</p>
-																					</div>
-																					<a href="korporativy.html"
-																						class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-																						<span class="mkdf-btn-text">Подробнее</span>
-																					</a>
-
-																				</div>
-																			</div>
-																		</li>
-																		<li class="mkdf-bl-item mkdf-item-space">
-																			<div class="mkdf-bli-inner">
-																				<div class="mkdf-bli-wrapper">
-																					<div class="mkdf-post-image">
-																						<a itemprop="url"
-																							href="https://wanderland.qodeinteractive.com/rock-climbing/"
-																							title="Rock climbing">
-																							<img width="1300" height="999"
-																								src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-17.jpg"
-																								class="attachment-full size-full wp-post-image" alt="s"
-																								loading="lazy"
-																								srcset="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-17.jpg 1300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-17-600x461.jpg 600w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-17-300x231.jpg 300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-17-768x590.jpg 768w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-17-1024x787.jpg 1024w"
-																								sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
-																					</div>
-																				</div>
-																				<div class="mkdf-bli-content">
-																					<h5 itemprop="name" class="entry-title mkdf-post-title">
-																						<a itemprop="url" href="svadby.html" title="Trip to Kos">
-																							Свадьбы </a>
-																					</h5>
-
-																					<div class="mkdf-bli-excerpt">
-																						<p>Небольшое описание</p>
-																					</div>
-																					<a href="svadby.html"
-																						class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-																						<span class="mkdf-btn-text">Подробнее</span>
-																					</a>
-
-																				</div>
-																			</div>
-																		</li>
-																		<li class="mkdf-bl-item mkdf-item-space">
-																			<div class="mkdf-bli-inner">
-																				<div class="mkdf-bli-wrapper">
-																					<div class="mkdf-post-image">
-																						<a itemprop="url"
-																							href="https://wanderland.qodeinteractive.com/hidden-greece/"
-																							title="Hidden Greece">
-																							<img width="1300" height="994"
-																								src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-18.jpg"
-																								class="attachment-full size-full wp-post-image" alt="s"
-																								loading="lazy"
-																								srcset="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-18.jpg 1300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-18-600x459.jpg 600w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-18-300x229.jpg 300w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-18-768x587.jpg 768w, https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-18-1024x783.jpg 1024w"
-																								sizes="(max-width: 1300px) 100vw, 1300px" /> </a>
-																					</div>
-																				</div>
-																				<div class="mkdf-bli-content">
-																					<h5 itemprop="name" class="entry-title mkdf-post-title">
-																						<a itemprop="url" href="prazdniki.html" title="Trip to Kos">
-																							Праздники </a>
-																					</h5>
-
-																					<div class="mkdf-bli-excerpt">
-																						<p>Небольшое описание</p>
-																					</div>
-																					<a href="prazdniki.html"
-																						class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-																						<span class="mkdf-btn-text">Подробнее</span>
-																					</a>
-
-																				</div>
-																			</div>
-																		</li> -->
+																	
 
 																	</ul>
 																</div>
@@ -330,20 +215,19 @@ if ( is_home() || is_front_page() ) :
 										
 											<?php if( $mp_form__title || $mp_form__shortcode ): ?>	
 											<!-- form -->
-											<div class="mkdf-elements-holder mkdf-one-column  mkdf-responsive-mode-768 ">
-												<div class="mkdf-eh-item    ">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 
-															<div class="mkdf-section-title-holder" style="text-align: left">
+															<div class="mkdf-section-title-holder">
 																<div class="mkdf-st-inner">
-																	<div class="mkdf-eh-item-content mkdf-eh-custom-6229" >
+																	<div class="mkdf-eh-item-content mkdf-eh-custom-6229">
 
 
 																		<?php if( $mp_form__title || $mp_form__shortcode ): ?>	
 																		<div class="section-spacer-bt-50">
-																			<div class="mkdf-section-title-holder mkdf-st-highlight"
-																			style="text-align: left">
+																			<div class="mkdf-section-title-holder mkdf-st-highlight">
 																				<div class="mkdf-st-inner">
 
 																					<h3 class="mkdf-st-title">
@@ -354,7 +238,7 @@ if ( is_home() || is_front_page() ) :
 																			</div>
 																		
 																			<?php if( $mp_form__shortcode ): ?>	
-																			<div role="form" class="wpcf7" id="wpcf7-f1433-p1182-o1 common__form">
+																			<div role="form" class="wpcf7 common__form">
 																			
 																				<?php 
 																					$mp_form__shortcode = "'" . $mp_form__shortcode . "'";
@@ -392,16 +276,16 @@ if ( is_home() || is_front_page() ) :
 												//echo $mp_slider['mp_slider__item_1']['mp_slider__item-img_link'];
 											?>	
 											<!-- mobile slider -->
-											<div class="mkdf-elements-holder mkdf-one-column  mkdf-responsive-mode-768">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
 												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 
-															<div class="mkdf-section-title-holder" style="text-align: left">
+															<div class="mkdf-section-title-holder">
 																<div class="mkdf-st-inner">
-																	<div class="mkdf-eh-item-content mkdf-eh-custom-6229" >
+																	<div class="mkdf-eh-item-content mkdf-eh-custom-6229">
 
-																		<div class="main-page__slider-wrapper mobile-slider ">
+																		<div class="main-page__slider-wrapper mobile-slider">
 
 																			<div class="main-page__slider main-page__slider-mobile">
 																			<?php 
@@ -458,10 +342,10 @@ if ( is_home() || is_front_page() ) :
 
 											
 
-											<footer class="mkdf-elements-holder   mkdf-one-column  mkdf-responsive-mode-768 ">
+											<footer class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
 												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
-														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd" >
+														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
 
 															<div class="footer-wrapper">
 																
@@ -480,9 +364,9 @@ if ( is_home() || is_front_page() ) :
 
 																<div class="footer-text">
 
-																	<div class="mkdf-section-title-holder   mkdf-st-highlight">
+																	<div class="mkdf-section-title-holder mkdf-st-highlight">
 																		<div class="mkdf-st-inner">
-																			<p class="mkdf-st-text mkdf-text-highlight" style="font-weight: 400">
+																			<p class="mkdf-st-text mkdf-text-highlight">
 																				
 																				<?php echo $thezis; ?>
 
@@ -500,15 +384,17 @@ if ( is_home() || is_front_page() ) :
 																	<?php
 																		wp_nav_menu(
 																			array(
-																				'theme_location' => 'menu-1',
+																				'theme_location' => 'menu-main-bottom',
 																				'menu' => '',
 																				'container'       => 'nav', 
-																				//'container_class' => 'container', 
+																				'container_class' => 'mkdf-main-menu mkdf-drop-down mkdf-default-nav', 
 																				//'container_id'    => 'container-id',
 																				'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-default-nav', 
 																				//'menu_class'      => 'menu', 
 																				'menu_id'        => 'primary-menu',
-																				'items_wrap'      => '<ul class="main-page__header-menu">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+																				'link_before' => '<div class="menu-svg__left"></div>',
+																				'link_after' => '<div class="menu-svg__right"></div>',
+																				'items_wrap'      => '<ul class="">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
 																				'echo'            => true,
 																				'depth'           => 0,
 																				//'walker'          => '',
@@ -672,13 +558,11 @@ if ( is_home() || is_front_page() ) :
 
 																<div class="common-slider-arrows main-page__slider-arrows">
 																	<div class="common-slider-arrow-left main-page__slider-arrow-left">
-																		<!-- <span class="mkdf-prev-icon ion-ios-arrow-thin-left"></span> -->
 																		<img class="arrow-white" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-white.svg'; ?>" alt="назад">
 																		<img class="arrow-green" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-green.svg'; ?>" alt="back">
 																	</div>
 
 																	<div class="common-slider-arrow-right main-page__slider-arrow-right">
-																		<!-- <span class="mkdf-next-icon ion-ios-arrow-thin-right"></span> -->
 																		<img class="arrow-white" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-white.svg'; ?>" alt="вперед">
 																		<img class="arrow-green" src="<?php echo get_template_directory_uri() . '/img/slider/arrow-green.svg'; ?>" alt="forward">
 																	</div>
@@ -738,8 +622,7 @@ else:
 
 			<!-- BLOG TOP -->
 			<div
-				class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"
-				style="">
+				class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
 				<div class="mkdf-title-image">
 					<!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
 						alt="s"> -->
@@ -747,12 +630,14 @@ else:
 						the_post_thumbnail();
 						?>
 				</div>
-				<div class="mkdf-title-wrapper" style="">
+				<div class="mkdf-title-wrapper">
 					<div class="mkdf-title-inner">
 						<div class="mkdf-grid">
-							<h2 class="mkdf-page-title entry-title"><?php
-						the_title();
-						?></h2>
+							<h2 class="mkdf-page-title entry-title">
+								<?php
+									the_title();
+								?>
+							</h2>
 						</div>
 					</div>
 				</div>
@@ -764,7 +649,7 @@ else:
 				<div class="mkdf-full-width-inner">
 
 					<div class="mkdf-container-inner clearfix">
-						<div class="mkdf-grid-row  mkdf-grid-large-gutter">
+						<div class="mkdf-grid-row mkdf-grid-large-gutter">
 							<div class="mkdf-page-content-holder mkdf-grid-col-12">
 								<div class="mkdf-blog-holder mkdf-blog-single mkdf-blog-single-standard">
 

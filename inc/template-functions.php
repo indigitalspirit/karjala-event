@@ -83,6 +83,7 @@ function karjala_event_add_info_fields_to_admin_page(){
 		'karjala_event_vk_field',
 		'karjala_event_instagram_field',
 		'karjala_event_thezis_field',
+		'karjala_event_404_field',
 		//'karjala_event_header_info_first',
 		//'karjala_event_header_info_second',
 		//'karjala_event_header_info_third',
@@ -128,6 +129,10 @@ function karjala_event_add_info_fields_to_admin_page(){
 
 				case 'karjala_event_thezis_field':
 					$this_option_name = "Цитата в подвале сайта";
+					break;
+
+				case 'karjala_event_404_field':
+					$this_option_name = "Ссылка на фото на странице 404";
 					break;
 
 					

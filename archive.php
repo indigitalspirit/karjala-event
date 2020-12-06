@@ -9,51 +9,54 @@
 
 get_header();
 ?>
-	<div class="mkdf-content">
-		<div class="mkdf-content-inner">
+<div class="mkdf-content">
+  <div class="mkdf-content-inner">
 
-		
 
-			<!-- BLOG TOP -->
-			<div
-				class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"
-				style="">
-				<div class="mkdf-title-image">
-					<img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
-						alt="s">
-				</div>
-				<div class="mkdf-title-wrapper" style="">
-					<div class="mkdf-title-inner">
-						<div class="mkdf-grid">
-						
-							<h2 class="mkdf-page-title entry-title">
-							<?php
+    <!-- BLOG TOP -->
+    <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
+      <div class="mkdf-title-image">
+				<?php 
+					$blog_main_img = get_field("blog_main_img");
+					if( $blog_main_img ):
+				?>
+				<img src="<?php echo $blog_main_img;?>" alt="блог">
+				<?php 
+					endif;
+				?>
+      </div>
+      <div class="mkdf-title-wrapper">
+        <div class="mkdf-title-inner">
+          <div class="mkdf-grid">
+
+            <h2 class="mkdf-page-title entry-title">
+              <?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
 							//the_archive_description( '<div class="archive-description">', '</div>' );
 							?>
-							ARCHIVE
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
+              ARCHIVE
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
-			<div class="mkdf-full-width">
-				<div class="mkdf-full-width-inner">
+    <div class="mkdf-full-width">
+      <div class="mkdf-full-width-inner">
 
-					<div class="mkdf-container-inner clearfix">
-						<div class="mkdf-grid-row mkdf-content-has-sidebar mkdf-grid-large-gutter">
+        <div class="mkdf-container-inner clearfix">
+          <div class="mkdf-grid-row mkdf-content-has-sidebar mkdf-grid-large-gutter">
 
-							
-							<!-- blog-content -->
-							<div class="mkdf-page-content-holder mkdf-grid-col-9">
-								<div class="mkdf-blog-holder mkdf-blog-standard mkdf-blog-pagination-standard">
-									<div class="mkdf-blog-holder-inner">
-										<?php if ( have_posts() ) : ?>
 
-										<?php
+            <!-- blog-content -->
+            <div class="mkdf-page-content-holder mkdf-grid-col-9">
+              <div class="mkdf-blog-holder mkdf-blog-standard mkdf-blog-pagination-standard">
+                <div class="mkdf-blog-holder-inner">
+                  <?php if ( have_posts() ) : ?>
+
+                  <?php
 											/* Start the Loop */
 											while ( have_posts() ) :
 												the_post();
@@ -69,16 +72,16 @@ get_header();
 
 										?>
 
-									
 
-										<div class="mkdf-blog-pagination">
-											<?php 
+
+                  <div class="mkdf-blog-pagination">
+                    <?php 
 
 												the_posts_navigation();
 
 											?>
 
-											<!-- <ul>
+                    <!-- <ul>
 												<li class="mkdf-pag-number mkdf-pag-active">
 													<a href="#">1</a>
 												</li>
@@ -102,13 +105,13 @@ get_header();
 													</a>
 												</li>
 											</ul> -->
-										</div>
+                  </div>
 
-										<!-- <div class="mkdf-blog-pagination-wp">
+                  <!-- <div class="mkdf-blog-pagination-wp">
 										</div> -->
 
 
-										<?php 
+                  <?php 
 
 											//the_posts_navigation();
 
@@ -118,25 +121,25 @@ get_header();
 
 										endif;
 										?>
-									</div>
-											
-									
+                </div>
 
-								</div>
-							</div>
-							<!-- ./blog-content -->
 
-							<?php
+
+              </div>
+            </div>
+            <!-- ./blog-content -->
+
+            <?php
 								get_sidebar('blog');
 							?>
 
-						</div>
-					</div>
-									
-				</div>
-			</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
-	
-<?php
+
+    <?php
 get_footer();

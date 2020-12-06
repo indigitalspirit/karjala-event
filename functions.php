@@ -50,9 +50,16 @@ if ( ! function_exists( 'karjala_event_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'karjala_event' ),
+				'menu-1' => esc_html__( 'По умолчанию', 'karjala_event' ),
+				'menu-main-top' => esc_html__( 'Главная страница (заголовок)', 'karjala_event_main_top' ),
+				'menu-main-bottom' => esc_html__( 'Главная страница (подвал)', 'karjala_event_main_bottom' ),
+				'menu-common-top-left' => esc_html__( 'Общее слева (внутренние страницы)', 'karjala_event_common_top_left' ),
+				'menu-common-top-right' => esc_html__( 'Общее справа (внутренние страницы)', 'karjala_event_common_top_right' ),
+				'menu-aside' => esc_html__( 'Боковое меню (стр. Корпоративы)', 'karjala_event_aside' ),
 			)
 		);
+
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -124,15 +131,19 @@ add_action( 'after_setup_theme', 'karjala_event_content_width', 0 );
 function karjala_event_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'karjala_event' ),
+			'name'          => esc_html__( 'Sidebar', 'karjala_event_sidebar' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'karjala_event' ),
+			'description'   => esc_html__( 'Add widgets here.', 'karjala_event_sidebar' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		)
 	);
+
+	
+
+
 	register_sidebar( array(
 		'name'          => 'Подвал меню-блок левый',
 		'id'            => 'footer-1',

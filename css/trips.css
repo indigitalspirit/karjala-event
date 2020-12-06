@@ -19,6 +19,16 @@ footer .widget_text img {
 
 /************* TRIPS PAGE ***********/
 
+.mkdf-content .mkdf-content-inner .mkdf-full-width-inner.trips {
+  padding-top: 0;
+}
+
+
+/************/
+
+
+
+
 .trips-page__slider-wrapper {
   position: relative;
 }

@@ -10,6 +10,85 @@ footer .widget_text img {
   width: 100%;
 }
 
+
+
+/**** header links and page bars****/
+.mkdf-menu-area .mkdf-position-left,
+.mkdf-menu-area .mkdf-position-right {
+  max-width: 458px;
+}
+
+.mkdf-top-bar.top-bar .top-bar__phone-icon,
+.mkdf-top-bar.top-bar .top-bar__email-icon,
+.mkdf-top-bar.top-bar .top-bar__social-icon
+ {
+  color: #ffffff!important;
+
+  font-size: 15px
+
+}
+
+.mkdf-top-bar.top-bar .top-bar__phone-text,
+.mkdf-top-bar.top-bar .top-bar__email-text,
+.mkdf-top-bar.top-bar .top-bar__social-text
+ {
+  font-size: 19px;
+  color: #ffffff!important;
+  
+  font-weight: 500;
+}
+
+.mkdf-top-bar.top-bar .top-bar__social-icon {
+  font-size: 20px;
+}
+
+
+.mkdf-top-bar.top-bar .mkdf-vertical-align-containers,
+header.mkdf-page-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 75%);
+}
+
+
+
+/**** content ****/
+
+.mkdf-content {
+  margin-top: -150px;
+}
+
+
+.error404.admin-bar .mkdf-content {
+  height: 100vh;
+}
+
+
+/***** bottom bar ***/
+.error404 .bottom-bar {
+  
+}
+
+.error404 .mkdf-top-bar.bottom-bar p {
+  color: #ffffff;
+}
+
+.error404 .mkdf-top-bar.bottom-bar a{
+  color: #ffffff !important;
+}
+
+.error404 .mkdf-top-bar.bottom-bar p span{
+  color: #ffffff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
 /**** ./logo ******/
 
 
@@ -17,7 +96,7 @@ footer .widget_text img {
 
 /*** PAGE IMG ***/
 .error404 .mkdf-content {
-  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/error-page-bckg-01.jpg);
+  background-image: none;
   background-position: center 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -66,6 +145,7 @@ text-align: center;
   bottom: 0;
   left: 0;
   border-top: 1px solid rgba(255, 255, 255, 75%);
+  border-bottom: 1px solid rgba(255, 255, 255, 75%);
 }
 
 /**** BOTTOM BAR ****/
@@ -92,4 +172,19 @@ text-align: center;
 .vc_custom_1576680478451 {
   padding-top: 100px !important;
   padding-bottom: 81px !important;
+}
+
+
+/****** SEARCH FORM ****/
+
+form.search-form {
+margin-top: 40px;
+}
+
+form.search-form input.search-submit {
+  margin-left: 20px;
+}
+
+form.search-form input.search-field {
+width: 350px;
 }

@@ -217,3 +217,14 @@ text-align: center;
 
 /**** ./PAGINATION *****/
 
+.blog-page__block_top {
+  
+}
+
+.trips-page__block_blog .mkdf-section-title-holder {
+  text-align: center;
+}
+
+.mkdf-blog-list-holder ul.mkdf-blog-list {
+  position: relative; height: 1129.38px; opacity: 1;
+}

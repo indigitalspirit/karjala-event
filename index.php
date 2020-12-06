@@ -15,7 +15,7 @@
 get_header('main');
 ?>
 
-	<!-- <main id="primary" class="site-main">
+<!-- <main id="primary" class="site-main">
 
 		<?php
 		if ( have_posts() ) :
@@ -53,7 +53,7 @@ get_header('main');
 		?>
 
 	</main> -->
-	<!-- #main -->
+<!-- #main -->
 
 <?php
 //get_sidebar();
