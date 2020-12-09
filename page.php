@@ -34,6 +34,7 @@ if ( is_home() || is_front_page() ) :
 
 	?>
 
+
 											<?php if( $mp_history__title ): ?>
 											<!-- history -->
 											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">

@@ -213,6 +213,16 @@ a.custom-logo-link img {
 
 }
 
+.mkdf-mobile-header .mkdf-mobile-logo-wrapper a {
+  max-height: 110px;
+}
+
+.mkdf-mobile-header .mkdf-mobile-logo-wrapper a img {
+  width: auto;
+  max-width: 150px;
+  height: auto;
+}
+
 
 /*** MENU **/
 
@@ -268,6 +278,21 @@ ul li.menu-item a:hover .menu-svg__right,
   background: url(../img/menu_item_right.svg) center no-repeat;
   right: -8px;
   
+}
+
+
+header.mkdf-mobile-header nav.mkdf-mobile-nav {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s;
+
+}
+
+header.mkdf-mobile-header nav.mkdf-mobile-nav.active {
+  opacity: 1;
+  visibility: visible;
+  /* display: block; */
 }
 
 
@@ -786,21 +811,32 @@ background: #59815b;
 /****************/
 
 
-.common__form form .contact-us input:first-child {
-  margin-right: 15px;
-}
+
 
 .common__form form .contact-us input {
   margin-bottom: 10px;
 }
 
 .common__form form  .contact-us .wpcf7-form-control.wpcf7-text {
+  /* width: calc(100%/2 - 10px); */
+  width: 100%;
+}
+
+.common__form form  .contact-us span.wpcf7-form-control-wrap {
   width: calc(100%/2 - 10px);
+  display: inline-block;
+  
+}
+
+.common__form form .contact-us span.wpcf7-form-control-wrap:first-child {
+  margin-right: 10px;
 }
 
 /* form.common__form_big .contact-us input {
   max-width: 70%;
 } */
+
+
 
 
   
@@ -836,6 +872,20 @@ form.wide-form span.your-email {
 }
 
 
+
+.common__form form .form-caption {
+  display: block;
+  width: 100%;
+  /* max-width: 100%!important; */
+  margin-top: 10px;
+  margin-left: 0;
+
+}
+.common__form button {
+  display: block;
+  width: 100%;
+  
+}
 
 
 
@@ -1623,6 +1673,10 @@ form.search-form input.search-field {
 
   /********** MEDIA **************/
 
+@media(max-width: 1024px) {
+  
+}
+
 
 @media only screen and (max-width: 1399px) and (min-width: 1025px) {
 
@@ -1645,19 +1699,7 @@ form.search-form input.search-field {
 
 
 @media(max-width: 1399px) {
-  .common__form form .form-caption {
-    display: block;
-    width: 100%;
-    max-width: 100%!important;
-    margin-top: 10px;
-    margin-left: 0;
-
-  }
-  .common__form button {
-    display: block;
-    width: 100%;
-    
-  }
+  
 }
 
 
@@ -1689,6 +1731,162 @@ form.search-form input.search-field {
   }
   
 }
+
+
+/***** COMMENTS ******/
+
+#comments .comment-body {
+  margin-bottom: 40px;
+}
+
+
+#comments .comment-body .comment-author .fn  {
+vertical-align: top;
+}
+
+#comments .comment-body .comment-author .fn a {
+
+  font-size: 29px;
+  line-height: 1.2em;
+  color: #1e1e1e;
+  font-family: Oswald,sans-serif;
+  letter-spacing: -.02em;
+  margin-left: 20px;
+  font-weight: 700;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  text-transform: uppercase;
+
+
+}
+
+#comments .comment-body .comment-author .says {
+  display: none;
+}
+
+#comments .comment-body .comment-metadata {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+}
+
+#comments .comment-body .comment-metadata a {
+  margin: 0 0 0 15px;
+  font-size: 18px;
+    display: inline-block;
+    color: #878787;
+    font-family: crimson text,serif;
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+
+#comments .comment-body .reply {
+  position: absolute;
+  top: 0;
+  left: 320px;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-family: Oswald,sans-serif;
+   
+    
+}
+
+
+.mkdf-comment-form {
+  margin-top: 20px;
+}
+
+.mkdf-comment-form .comment-respond form .comment-form-comment label {
+
+
+  font-family: crimson text,serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: calc(50px - (24px - 2px));
+
+}
+
+.mkdf-comment-form .comment-respond form .comment-form-comment textarea {
+margin-top: 30px;
+}
+
+.mkdf-comment-form .comment-respond form .form-submit input.submit {
+  color: #fff;
+  background-color: #59815b;
+  border: 1px solid transparent;
+  font-family: Oswald,sans-serif;
+    font-size: 16px;
+    line-height: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 40px;
+}
+
+
+
+/***** SIDEBAR ****/
+aside .widget.widget_search {
+
+}
+
+aside .widget ol, aside .widget ul, .widget ul:not(.mkdf-shortcode-list), .widget ol:not(.mkdf-shortcode-list) {
+  padding-left: 20px;
+}
+
+
+aside .widget ol li, aside .widget ul li {
+  list-style-type: disc;
+  
+}
+
+
+aside .widget.widget_search input.search-field {
+  padding: 12px 16px;
+    font-family: crimson text,serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: inherit;
+    line-height: calc(50px - (24px - 2px));
+    color: #1e1e1e;
+    background-color: transparent;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+    outline: 0;
+    cursor: text;
+    width: 100%;
+}
+
+aside .widget.widget_search input.search-submit {
+  width: 100%;
+  margin-top: 15px;
+}
+
+aside .widget.widget_text form input,
+aside .widget.widget_text form input.wpcf7-form-control.wpcf7-text {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+aside .widget.widget_text form .form-caption {
+  display: block !important;
+  max-width: 100% !important;
+  width: 100%;
+  line-height: 16px;
+  font-size: 13px;
+  margin-left: 0px;
+}
+
+
+
+
+
+    
 
 
 

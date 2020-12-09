@@ -60,6 +60,9 @@ get_header();
     $mg_blog__btn_text = get_field("mg-blog__btn-text");
     $mg_blog__btn_link = get_field("mg-blog__btn-link");
 
+    $mg_form__title = get_field("mg-form__title");
+    $mg_form__shortcode = get_field("mg-form__shortcode");
+
 
   ?>
 

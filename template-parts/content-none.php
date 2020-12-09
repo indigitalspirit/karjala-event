@@ -9,28 +9,58 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
+
+<!-- <div class="mkdf-full-width">
+	<div class="mkdf-full-width-inner">
+		<div class="mkdf-grid-row">
+			<div class="mkdf-page-content-holder mkdf-grid-col-12">
+
+				
+				<div class="mkdf-row-grid-section-wrapper trips-page__block_blog">
+					<div class="mkdf-row-grid-section">
+						<div class="vc_row wpb_row vc_row-fluid vc_custom_1571996104789">
+							<div class="wpb_column vc_column_container vc_col-sm-12">
+								<div class="vc_column-inner">
+									<div class="wpb_wrapper">
+										<div class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-three-columns mkdf-normal-space mkdf-bl-pag-load-more">
+											<div class="mkdf-bl-wrapper mkdf-outer-space">
+												 -->
+
+											
+
+			
+
+<!-- <section class="no-results not-found"> -->
+	<!-- <header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'karjala_event' ); ?></h1>
-	</header>
+	</header> -->
 	<!-- .page-header -->
 
-	<div class="page-content">
+	<!-- <div class="page-content"> -->
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
+		if ( is_home() ) ://( is_home() && current_user_can( 'publish_posts' ) ) :
 
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'karjala_event' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
+			//echo 'IS HOME';
+
+		?>
+			<h2 class="page-title">
+				Ничего не найдено.
+			</h2>
+
+		<?php
+
+			// printf(
+			// 	'<p>' . wp_kses(
+			// 		/* translators: 1: link to WP admin new post page. */
+			// 		__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'karjala_event' ),
+			// 		array(
+			// 			'a' => array(
+			// 				'href' => array(),
+			// 			),
+			// 		)
+			// 	) . '</p>',
+			// 	esc_url( admin_url( 'post-new.php' ) )
+			// );
 
 		elseif ( is_search() ) :
 			?>
@@ -41,12 +71,6 @@
 
 			<?php
 			get_search_form();
-
-		?>
-
-
-<?php
-
 
 		else :
 			?>
@@ -71,5 +95,20 @@
 
 		endif;
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+
+	<!-- </div> -->
+	<!-- .page-content -->
+<!-- </section> -->
+<!-- .no-results -->
+											<!-- </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->

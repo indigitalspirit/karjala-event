@@ -18,6 +18,17 @@ footer .widget_text img {
   max-width: 458px;
 }
 
+.mkdf-dark-header .mkdf-page-header>div:not(.mkdf-sticky-header):not(.fixed) .mkdf-main-menu>ul>li>a,
+.mkdf-menu-area .mkdf-position-left .mkdf-main-menu>ul>li>a,
+.mkdf-menu-area .mkdf-position-right .mkdf-main-menu>ul>li>a {
+  color: #ffffff;
+}
+
+
+
+
+
+
 .mkdf-top-bar.top-bar .top-bar__phone-icon,
 .mkdf-top-bar.top-bar .top-bar__email-icon,
 .mkdf-top-bar.top-bar .top-bar__social-icon
@@ -175,6 +186,9 @@ text-align: center;
 }
 
 
+
+
+
 /****** SEARCH FORM ****/
 
 form.search-form {
@@ -188,3 +202,26 @@ form.search-form input.search-submit {
 form.search-form input.search-field {
 width: 350px;
 }
+
+
+form.search-form input::-webkit-input-placeholder { /* Edge */
+  color: #ffffff;
+}
+
+form.search-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+
+form.search-form input::placeholder {
+  color: #ffffff;
+}
+
+/**** par content ****/
+.error404 .mkdf-content .mkdf-page-not-found p.mkdf-404-text {
+  font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+

@@ -311,6 +311,29 @@ color: #ffffff;
 }
 
 
+
+/******** FORM *****/
+
+.common__form form  .contact-us .wpcf7-form-control.wpcf7-text {
+  /* width: calc(100%/2 - 10px); */
+  width: 100%;
+}
+
+.common__form form  .contact-us span.wpcf7-form-control-wrap {
+  width: calc(100%/2 - 10px);
+  display: inline-block;
+  
+}
+
+.common__form form .contact-us span.wpcf7-form-control-wrap:first-child {
+  margin-right: 10px;
+}
+
+
+
+
+/*** MEDIA ****/
+
 @media (max-width: 1299px) { 
   .main-page__header-row {
     flex-wrap: wrap;

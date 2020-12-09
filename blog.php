@@ -24,12 +24,15 @@ get_header();
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
             <h2 class="mkdf-page-title entry-title">
+            BLOG 
               <?php echo the_title(); ?>
             </h2>
           </div>
         </div>
       </div>
     </div>
+
+
 
     <div class="mkdf-full-width">
       <div class="mkdf-full-width-inner">
@@ -44,7 +47,12 @@ get_header();
                   <div class="wpb_column vc_column_container vc_col-sm-12">
                     <div class="vc_column-inner">
                       <div class="wpb_wrapper">
-                        <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1572440552355">
+
+                      <?php
+                        
+                      ?>
+
+                        <!-- <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1572440552355">
                           <div
                             class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-offset-3 vc_col-lg-6 vc_col-md-offset-1 vc_col-md-10 vc_col-sm-offset-0">
                             <div class="vc_column-inner">
@@ -65,7 +73,7 @@ get_header();
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> -->
 
                         <div
                           class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-three-columns  mkdf-normal-space mkdf-bl-pag-load-more ">

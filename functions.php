@@ -56,6 +56,7 @@ if ( ! function_exists( 'karjala_event_setup' ) ) :
 				'menu-common-top-left' => esc_html__( 'Общее слева (внутренние страницы)', 'karjala_event_common_top_left' ),
 				'menu-common-top-right' => esc_html__( 'Общее справа (внутренние страницы)', 'karjala_event_common_top_right' ),
 				'menu-aside' => esc_html__( 'Боковое меню (стр. Корпоративы)', 'karjala_event_aside' ),
+				'menu-mobile' => esc_html__( 'Мобильное меню', 'karjala_event_mobile' ),
 			)
 		);
 
@@ -131,46 +132,65 @@ add_action( 'after_setup_theme', 'karjala_event_content_width', 0 );
 function karjala_event_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'karjala_event_sidebar' ),
+			'name'          => esc_html__( 'Боковое меню блога', 'karjala_event_sidebar' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'karjala_event_sidebar' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="mkdf-st-title">',
+			'after_title'   => '</h5>',
 		)
 	);
 
-	
-
-
 	register_sidebar( array(
-		'name'          => 'Подвал меню-блок левый',
-		'id'            => 'footer-1',
+		'name'          => 'Подвал блок с лого',
+		'id'            => 'footer-logo',
 		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
 		'after_title'   => '</h4>',
+	) );
+
+	// register_sidebar( array(
+	// 	'name'          => 'Подвал блок с описанием сайта',
+	// 	'id'            => 'footer-descr',
+	// 	'before_widget' => '<div class="widget mkdf-blog-list-widget">',
+	// 	'after_widget'  => '</div>',
+	// 	'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
+	// 	'after_title'   => '</h4>',
+	// ) );
+
+
+	register_sidebar( array(
+		'name'          => 'Подвал меню-блок левый',
+		'id'            => 'footer-left',
+		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="mkdf-widget-title-holder">
+		<h6 class="mkdf-widget-title">',
+		'after_title'   => '</h6></div>',
 	) );
 
 	
 
 	register_sidebar( array(
 		'name'          => 'Подвал меню-блок центр',
-		'id'            => 'footer-2',
+		'id'            => 'footer-center',
 		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
-		'after_title'   => '</h4>',
+		'before_title'  => '<div class="mkdf-widget-title-holder">
+		<h6 class="mkdf-widget-title">',
+		'after_title'   => '</h6></div>',
 	) );
 
 	register_sidebar( array(
 		'name'          => 'Подвал меню-блок правый',
-		'id'            => 'footer-3',
+		'id'            => 'footer-right',
 		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="footer-widget-title mt-sm-20 mb-sm-10">',
-		'after_title'   => '</h4>',
+		'before_title'  => '<div class="mkdf-widget-title-holder">
+		<h6 class="mkdf-widget-title">',
+		'after_title'   => '</h6></div>',
 	) );
 }
 add_action( 'widgets_init', 'karjala_event_widgets_init' );
@@ -219,7 +239,7 @@ function karjala_event_scripts() {
 
 	}
 
-	if( is_page('Блог') ) {
+	if( is_page('Блог') || is_home() ) {
 		wp_enqueue_style( 'karjala_event-blog', get_template_directory_uri() . '/css/blog.css', array(), _S_VERSION );
 
 	}

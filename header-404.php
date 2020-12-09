@@ -111,27 +111,22 @@
           <div class="mkdf-vertical-align-containers">
             <div class="mkdf-position-left">
 
-              <div class="mkdf-divided-left-widget-area">
-                <div class="mkdf-divided-left-widget-area-inner">
-                  <div class="mkdf-position-left-inner-wrap">
-                  </div>
-                </div>
-              </div>
+              
 
 
               <div class="mkdf-position-left-inner">
                 <?php
                     wp_nav_menu(
                       array(
-                        'theme_location' => 'menu-1',
+                        'theme_location' => 'menu-common-top-left',
                         'menu' => '',
                         'container'       => 'nav', 
-                        //'container_class' => 'container', 
-                        //'container_id'    => 'container-id',
-                        'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav', 
-                        //'menu_class'      => 'menu', 
-                        'menu_id'        => 'primary-menu',
-                        'items_wrap'      => '<ul id="menu-divided-left" class="clearfix">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'container_class' => 'mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav centered-nav', 
+                        'menu_class'      => 'clearfix',  
+                        'menu_id'        => 'menu-divided-left',
+                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'link_before' => '<div class="menu-svg__left"></div>',
+                        'link_after' => '<div class="menu-svg__right"></div>',
                         'echo'            => true,
                         'depth'           => 0,
                         //'walker'          => '',
@@ -139,6 +134,13 @@
                     );
                   ?>
 
+              </div>
+
+              <div class="mkdf-divided-left-widget-area">
+                <div class="mkdf-divided-left-widget-area-inner">
+                  <div class="mkdf-position-left-inner-wrap">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="mkdf-position-center">
@@ -163,15 +165,15 @@
                 <?php
                   wp_nav_menu(
                     array(
-                      'theme_location' => 'menu-1',
+                      'theme_location' => 'menu-common-top-right',
                       'menu' => '',
                       'container'       => 'nav', 
-                      //'container_class' => 'container', 
-                      //'container_id'    => 'container-id',
-                      'menu_class'      => 'mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav centered-nav', 
-                      //'menu_class'      => 'menu', 
-                      'menu_id'        => 'primary-menu',
-                      'items_wrap'      => '<ul id="menu-divided-left" class="clearfix">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                      'container_class' => 'mkdf-main-menu mkdf-drop-down mkdf-divided-left-part mkdf-default-nav', 
+                      'menu_class'      => 'clearfix',  
+                      'menu_id'        => 'menu-divided-right',
+                      'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                      'link_before' => '<div class="menu-svg__left"></div>',
+                      'link_after' => '<div class="menu-svg__right"></div>',
                       'echo'            => true,
                       'depth'           => 0,
                       //'walker'          => '',
@@ -335,7 +337,7 @@
                   <div class="mkdf-position-right-inner">
                     <div class="mkdf-mobile-menu-opener mkdf-mobile-menu-opener-predefined">
                       <a href="#">
-                        <h5 class="mkdf-mobile-menu-text">Menu</h5>
+                        <h5 class="mkdf-mobile-menu-text">Меню</h5>
                         <span class="mkdf-mobile-menu-icon">
                           <span class="mkdf-hm-lines">
                             <span class="mkdf-hm-line mkdf-line-1"></span>
@@ -351,19 +353,36 @@
               </div>
             </div>
           </div>
+
+          <nav class="mkdf-mobile-nav" role="navigation" aria-label="Mobile Menu">
+            <!-- <div class="mkdf-grid"> -->
+            <?php
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'menu-mobile',
+                  'menu' => '',
+                  'container'       => 'div', 
+                  'container_class' => 'mkdf-grid', 
+                  //'menu_class'      => 'clearfix',  
+                  //'menu_id'        => 'menu-standard-1',
+                  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  //'link_before' => '<div class="menu-svg__left"></div>',
+                  //'link_after' => '<div class="menu-svg__right"></div>',
+                  'echo'            => true,
+                  'depth'           => 0,
+                  //'walker'          => '',
+                )
+              );
+            ?>
+              
+            <!-- </div> -->
+          </nav>
         
 
           <nav id="site-navigation" class="main-navigation">
             <button class="menu-toggle" aria-controls="primary-menu"
               aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'karjala_event' ); ?></button>
-            <?php
-            wp_nav_menu(
-              array(
-                'theme_location' => 'menu-1',
-                'menu_id'        => 'primary-menu',
-              )
-            );
-            ?>
+           
           </nav><!-- #site-navigation -->
 
         </div>

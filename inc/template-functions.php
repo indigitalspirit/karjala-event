@@ -211,3 +211,11 @@ function karjala_event_extra_fields_callback( $val ){
 }
 add_action('admin_menu', 'karjala_event_add_info_fields_to_admin_page');
 
+
+
+/*****
+ * Remove Contact Form 7 <br>'s
+ * 
+ */
+
+add_filter( 'wpcf7_autop_or_not', '__return_false' );

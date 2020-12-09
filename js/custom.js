@@ -21,6 +21,16 @@ $(document).ready(function () {
 
 
 
+  /**** MOBILE MENU  */
+  $("header.mkdf-mobile-header .mkdf-mobile-menu-opener a").on("click", function(e){
+    e.preventDefault();
+    
+    console.log("click mobile menu");
+
+    $("nav.mkdf-mobile-nav").toggleClass("active");
+
+  });
+
 
   /**** SLIDERS */
   $('.trips-page__slider').slick({

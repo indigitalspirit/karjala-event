@@ -15,13 +15,15 @@
 			<div class="mkdf-footer-top-holder">
 				<div class="mkdf-footer-top-inner mkdf-grid">
 					<div class="mkdf-grid-row mkdf-footer-top-alignment-left">
-						<div class="mkdf-column-content mkdf-grid-col-3">
-							<div id="custom_html-3" class="widget_text widget mkdf-footer-column-1 widget_custom_html">
-								<div class="textwidget custom-html-widget">
-									<?php the_custom_logo(); ?>
-								</div>
+						<?php if ( is_active_sidebar('footer-logo') ) : ?>
+							<div class="mkdf-column-content mkdf-grid-col-3">
+						
+							
+								<?php dynamic_sidebar('footer-logo'); ?>	
+									
 							</div>
-						</div>
+						<?php endif; ?>	
+						
 						<div class="mkdf-column-content mkdf-grid-col-9">
 							<div id="custom_html-2" class="widget_text widget mkdf-footer-column-2 widget_custom_html">
 								<div class="textwidget custom-html-widget">
@@ -105,26 +107,26 @@
 							</div>
 						</div>
 
-						<?php if ( is_active_sidebar('footer-1') ) : ?>
+						<?php if ( is_active_sidebar('footer-left') ) : ?>
 						<div class="mkdf-column-content mkdf-grid-col-2">
 							
-								<?php dynamic_sidebar('footer-1'); ?>	
+								<?php dynamic_sidebar('footer-left'); ?>	
 									
 						</div>
 						<?php endif; ?>	
 
-						<?php if ( is_active_sidebar('footer-2') ) : ?>
+						<?php if ( is_active_sidebar('footer-center') ) : ?>
 						<div class="mkdf-column-content mkdf-grid-col-2">
 							
-								<?php dynamic_sidebar('footer-2'); ?>	
+								<?php dynamic_sidebar('footer-center'); ?>	
 								
 						</div>
 						<?php endif; ?>	
 
-						<?php if ( is_active_sidebar('footer-3') ) : ?>
+						<?php if ( is_active_sidebar('footer-right') ) : ?>
 						<div class="mkdf-column-content mkdf-grid-col-2">
 							
-								<?php dynamic_sidebar('footer-3'); ?>	
+								<?php dynamic_sidebar('footer-right'); ?>	
 							
 						</div>
 						<?php endif; ?>	
@@ -179,7 +181,7 @@
 	</div>
 </div>
   
-<?php get_template_part('template-parts/side-menu'); ?>
+<?php //get_template_part('template-parts/side-menu'); ?>
 
  <?php get_template_part('template-parts/back-totop'); ?>
 

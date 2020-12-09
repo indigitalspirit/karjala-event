@@ -9,6 +9,7 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" class="mkdf-post-has-media post-506 post type-post status-publish format-standard has-post-thumbnail hentry category-trips tag-adventure tag-explore tag-guides">
 	<div class="mkdf-post-content">
 		<div class="mkdf-post-heading">

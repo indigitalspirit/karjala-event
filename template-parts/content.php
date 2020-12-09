@@ -9,55 +9,95 @@
 
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<div class="mkdf-post-content">
+		<div class="mkdf-post-text">
+			<div class="mkdf-post-text-inner">
+			<?php
+			
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				karjala_event_posted_on();
-				karjala_event_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+				if ( 'post' === get_post_type() ) :
+					?>
+					<div class="mkdf-post-info-top">
+						<div itemprop="dateCreated" class="mkdf-post-info-date entry-date published updated">
+							<!-- <span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar "></span> <a href="https://wanderland.qodeinteractive.com/2019/10/">
+								October 11, 2019 </a>
+							<meta itemprop="interactionCount" content="UserComments: 3"> -->
+							<span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar"></span>
+							<?php
+								the_date();
+								//karjala_event_posted_on();
+								//karjala_event_posted_by();
+							?>
+						</div>
+					</div>
+			<?php endif; ?>
+				
+				<div class="mkdf-post-text-main">
+					<?php the_content(); ?>
+				</div>
 
-	<?php karjala_event_post_thumbnail(); ?>
+				<div class="mkdf-post-info-bottom clearfix">
+					<div class="mkdf-post-info-bottom-left">
+						<div class="mkdf-tags-holder">
+							<div class="mkdf-tags">
+								<?php
+									$posttags = get_the_tags();
+									if( $posttags ){
+										foreach( $posttags as $posttag ){
+									
+											$posttag_link = get_tag_link($posttag->term_id);
+											$posttag_name = $posttag->name; 
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'karjala_event' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+								?>
+								<!-- <a href="https://wanderland.qodeinteractive.com/tag/adventure/" rel="tag">Adventure</a>, 
+								<a href="https://wanderland.qodeinteractive.com/tag/explore/" rel="tag">Explore</a>, <a href="https://wanderland.qodeinteractive.com/tag/guides/" rel="tag">Guides</a>  -->
+								<a href="<?php echo $posttag_link;?>">
+									<?php echo $posttag_name;?>
+								</a>  
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'karjala_event' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+								<?php 
+										}
+									}
+								?>
+							</div>
+						</div>
+					</div>
+					<!-- TODO SHARE -->
+					<!-- <div class="mkdf-post-info-bottom-right">
+						<div class="mkdf-blog-share">
+							<div class="mkdf-social-share-holder mkdf-list">
+								<ul>
+									<li class="mkdf-facebook-share">
+										<a class="mkdf-share-link" href="#">
+											<span class="mkdf-social-network-icon social_facebook"></span>
+										</a>
+									</li>
+									<li class="mkdf-twitter-share">
+										<a class="mkdf-share-link" href="#">
+											<span class="mkdf-social-network-icon social_twitter"></span>
+										</a>
+									</li>
+									<li class="mkdf-tumblr-share">
+										<a class="mkdf-share-link" href="#">
+											<span class="mkdf-social-network-icon social_tumblr"></span>
+										</a>
+									</li>
+									<li class="mkdf-pinterest-share">
+										<a class="mkdf-share-link" href="#">
+											<span class="mkdf-social-network-icon social_pinterest"></span>
+										</a>
+									</li>
+								</ul>
+								<p class="mkdf-social-title">Share</p>
+							</div>
+						</div>
+					</div> -->
+				</div>
 
-	<footer class="entry-footer">
-		<?php karjala_event_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+			</div>
+		</div>
+	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
+
