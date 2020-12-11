@@ -38,7 +38,7 @@
                                                                                         $phone = get_option('karjala_event_phone_field');
                                                                                         if( $phone ):
             ?>
-              <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo trim($phone); ?>">
+              <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo str_replace(" ", "", $phone); ?>">
                 <span class="mkdf-icon-element ion-android-call top-bar__phone-icon"></span>
                 <span class="mkdf-icon-text top-bar__phone-text">
                   <?php echo $phone; ?>
@@ -212,7 +212,7 @@
               </div>
             </div>
           </div>
-          <nav class="mkdf-mobile-nav" role="navigation" aria-label="Mobile Menu">
+          <nav class="mkdf-mobile-nav">
             <!-- <div class="mkdf-grid"> -->
             <?php
               wp_nav_menu(
@@ -236,11 +236,12 @@
             <!-- </div> -->
           </nav>
 
-          <nav id="site-navigation" class="main-navigation">
+          <!-- <nav id="site-navigation" class="main-navigation">
             <button class="menu-toggle" aria-controls="primary-menu"
               aria-expanded="false"><?php esc_html_e( 'Меню', 'karjala_event_mobile' ); ?></button>
             
-          </nav><!-- #site-navigation -->
+          </nav> -->
+          <!-- #site-navigation -->
         </div>
       </header>
       <!-- ./headers -->

@@ -33,70 +33,62 @@
         <div class="mkdf-vertical-menu-area-inner">
           <div class="mkdf-vertical-area-background"></div>
           <div class="mkdf-logo-wrapper">
-
-
             <?php the_custom_logo(); ?>
           </div>
           <div class="mkdf-vertical-menu-outer">
-
             <?php
-            wp_nav_menu(
-              array(
-                'theme_location' => 'menu-aside',
-                'menu' => '',
-                'container'       => 'nav', 
-                'container_class' => 'mkdf-vertical-menu mkdf-vertical-dropdown-below', 
-                'link_before' => '<div class="menu-svg__left"></div>',
-                'link_after' => '<div class="menu-svg__right"></div>',
-                //'container_id'    => 'container-id',
-                'menu_class'      => '', 
-                //'menu_class'      => 'menu', 
-                'menu_id'        => 'menu-vertical',
-                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'echo'            => true,
-                'depth'           => 0,
-                //'walker'          => '',
-              )
-            );
-          ?>
+              wp_nav_menu(
+                array(
+                  'theme_location' => 'menu-aside',
+                  'menu' => '',
+                  'container'       => 'nav', 
+                  'container_class' => 'mkdf-vertical-menu mkdf-vertical-dropdown-below', 
+                  'link_before' => '<div class="menu-svg__left"></div>',
+                  'link_after' => '<div class="menu-svg__right"></div>',
+                  //'container_id'    => 'container-id',
+                  'menu_class'      => '', 
+                  //'menu_class'      => 'menu', 
+                  'menu_id'        => 'menu-vertical',
+                  'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                  'echo'            => true,
+                  'depth'           => 0,
+                  //'walker'          => '',
+                )
+              );
+            ?>
           </div>
           <div class="mkdf-vertical-area-widget-holder">
             <div class="widget mkdf-social-icons-group-widget text-align-center aside-contacts">
 
               <?php 
-              $vk = get_option('karjala_event_vk_field');
+                $vk = get_option('karjala_event_vk_field');
 
-              $instagram = get_option('karjala_event_instagram_field');
-            ?>
+                $instagram = get_option('karjala_event_instagram_field');
+              ?>
               <div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
                 <?php 
-                if( $vk ):
-              ?>
-
+                  if( $vk ):
+                ?>
                 <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item"
                   href="<?php echo $vk;?>" target="_blank">
                   <span class="mkdf-social-icon-widget ion-social-instagram"></span>
                 </a>
                 <?php 
-                endif;
-                if( $instagram ):
-              ?>
+                  endif;
+                  if( $instagram ):
+                ?>
                 <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover aside-contacts__item"
                   href="<?php echo $instagram;?>" target="_blank">
                   <span class="mkdf-social-icon-widget ion-social-twitter"></span>
                 </a>
-
                 <?php 
                   endif;
-                  
                 ?>
-
-
-
-
               </div>
+
             </div>
           </div>
+        </div>
       </aside>
 
       <header class="mkdf-mobile-header">
@@ -128,7 +120,7 @@
               </div>
             </div>
           </div>
-          <nav class="mkdf-mobile-nav" role="navigation" aria-label="Mobile Menu">
+          <nav class="mkdf-mobile-nav">
             <!-- <div class="mkdf-grid">
               
             </div> -->

@@ -52,9 +52,9 @@ if ( is_home() || is_front_page() ) :
 																		</h1>
 																	
 																		<?php if( $mp_history__text ): ?>
-																			<p class="mkdf-st-text">
+																			<div class="mkdf-st-text">
 																				<?php echo $mp_history__text; ?>
-																			</p>
+																		</div>
 																		<?php endif; ?>
 																		
 																		
@@ -169,15 +169,17 @@ if ( is_home() || is_front_page() ) :
 																					</div>
 																				</div>
 																				<div class="mkdf-bli-content">
-																					<h5 class="entry-title mkdf-post-title">
+																					<h2 class="entry-title mkdf-post-title">
 																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?>">
 																							<?php echo $service_title;?> 
 																						</a>
-																					</h5>
+																					</h2>
 
 
 																					<div class="mkdf-bli-excerpt">
-																						<p><?php echo $service_descr;?></p>
+																						<p>
+																							<?php echo $service_descr;?>
+																						</p>
 																					</div>
 																					<a href="<?php echo $service_btn_link; ?>" class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
 																						<span class="mkdf-btn-text">
@@ -231,9 +233,9 @@ if ( is_home() || is_front_page() ) :
 																			<div class="mkdf-section-title-holder mkdf-st-highlight">
 																				<div class="mkdf-st-inner">
 
-																					<h3 class="mkdf-st-title">
+																					<h2 class="mkdf-st-title">
 																					<?php echo $mp_form__title; ?>
-																					</h3>
+																					</h2>
 
 																				</div>
 																			</div>
@@ -472,11 +474,21 @@ if ( is_home() || is_front_page() ) :
 
 
 																	</div>
+																	
+																	<?php
+																		$privacy_policy_link = get_privacy_policy_url();
+
+																		if( $privacy_policy_link ):
+																	?>
 																	<div
 																		class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-right footer-copyright__right">
-																		<a href="/privacy-policy" target="_blank">Политика конфиденциальности
+																		<a href="<?php echo $privacy_policy_link; ?>" target="_blank">Политика конфиденциальности
 																		</a>
 																	</div>
+																	<?php 
+																		endif;
+																	?>
+
 																</div>
 
 																<div class="footer-author">
@@ -625,10 +637,10 @@ else:
 			<div
 				class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
 				<div class="mkdf-title-image">
-					<!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
-						alt="s"> -->
+					
 						<?php
-						the_post_thumbnail();
+						
+						karjala_event_post_thumbnail()
 						?>
 				</div>
 				<div class="mkdf-title-wrapper">

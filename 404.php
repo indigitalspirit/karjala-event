@@ -20,9 +20,7 @@ $main_bg = get_option('karjala_event_404_field');
 			<h1 class="mkdf-404-title">
 				Ой ... страница не найдена </h1>
 
-			<h3 class="mkdf-404-subtitle">
-			</h3>
-
+			
 			<p class="mkdf-404-text">
 			Попробуйте воспользоваться поиском. </p>
 

@@ -175,7 +175,8 @@ footer .widget_text img {
 
 /****** BLOG TOP *****/
 .blog-page__block_top {
-  height: 452px;background-image:url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg);
+  height: 452px;
+  /* background-image:url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg); */
 
   margin-bottom: 90px;
 
@@ -198,7 +199,11 @@ footer .widget_text img {
 }
 
 .blog-page__block_top h2.mkdf-page-title {
-text-align: center;
+/* text-align: center; */
+}
+
+.mkdf-title-holder .mkdf-title-image {
+  display: block;
 }
 
 

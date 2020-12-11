@@ -91,7 +91,7 @@ if ( post_password_required() ) {
 
 
 <div class="mkdf-comment-form">
-	<div id="respond" class="comment-respond">
+	<div class="comment-respond">
 
 	<?php 
 		comment_form();

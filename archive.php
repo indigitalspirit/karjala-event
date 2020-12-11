@@ -12,33 +12,29 @@ get_header();
 <div class="mkdf-content">
   <div class="mkdf-content-inner">
 
+		<?php 
+			$blog_main_img = get_option("karjala_event_blog_field");
+			
+		?>
+
 
     <!-- BLOG TOP -->
-    <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
-      <div class="mkdf-title-image">
-				<?php 
-					$blog_main_img = get_field("blog_main_img");
-					if( $blog_main_img ):
-				?>
-				<img src="<?php echo $blog_main_img;?>" alt="блог">
-				<?php 
-					endif;
-				?>
-      </div>
+    <div class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top" <?php if( $blog_main_img ) { ?> style="background: url(<?php echo $blog_main_img; ?>) center no-repeat;background-size:cover;"<?php } ?>>
+     
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-
             <h2 class="mkdf-page-title entry-title">
               <?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
+							the_archive_title();
 							//the_archive_description( '<div class="archive-description">', '</div>' );
 							?>
-              ARCHIVE
+              
             </h2>
           </div>
         </div>
-      </div>
+			</div>
+			
     </div>
 
 
@@ -137,9 +133,12 @@ get_header();
         </div>
 
       </div>
-    </div>
+		</div>
+		
+	</div>
+</div>
 
 
 
-    <?php
+<?php
 get_footer();

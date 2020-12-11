@@ -17,12 +17,8 @@ get_header();
 
     <!-- BLOG POST TOP -->
     <div
-      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
-      <div class="mkdf-title-image">
-        <!-- <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg"
-						alt="s"> -->
-        <?php karjala_event_post_thumbnail(); ?>
-      </div>
+      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"  <?php $thumb = get_the_post_thumbnail_url(); if( $thumb ) { ?> style="background: url(<?php echo $thumb; ?>) center no-repeat;background-size:cover;"<?php } ?>>
+      
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
@@ -56,7 +52,6 @@ get_header();
                 <div class="mkdf-blog-single-navigation">
                   <div class="mkdf-blog-single-navigation-inner clearfix">
                     
-
                     <?php
 												// the_post_navigation(
 												// 	array(
@@ -167,14 +162,11 @@ get_header();
                     // If comments are open or we have at least one comment, load up the comment template.
                     if ( comments_open() || get_comments_number() ) :
                       comments_template();
+                      
                     endif;
                 
                   endwhile; // End of the loop.
                 ?>
-
-
-
-
 
               </div>
             </div>

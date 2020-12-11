@@ -19,7 +19,7 @@
 				if ( 'post' === get_post_type() ) :
 					?>
 					<div class="mkdf-post-info-top">
-						<div itemprop="dateCreated" class="mkdf-post-info-date entry-date published updated">
+						<div class="mkdf-post-info-date entry-date published updated">
 							<!-- <span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar "></span> <a href="https://wanderland.qodeinteractive.com/2019/10/">
 								October 11, 2019 </a>
 							<meta itemprop="interactionCount" content="UserComments: 3"> -->
@@ -37,29 +37,60 @@
 					<?php the_content(); ?>
 				</div>
 
+				<?php
+					$post_tags = get_the_tags();
+
+					$post_categories = get_categories();
+			
+
+					if( $post_tags || $post_categories){
+				?>
+
 				<div class="mkdf-post-info-bottom clearfix">
 					<div class="mkdf-post-info-bottom-left">
 						<div class="mkdf-tags-holder">
 							<div class="mkdf-tags">
 								<?php
-									$posttags = get_the_tags();
-									if( $posttags ){
-										foreach( $posttags as $posttag ){
+									if( $post_tags ):
+										foreach( $post_tags as $post_tag ){
 									
-											$posttag_link = get_tag_link($posttag->term_id);
-											$posttag_name = $posttag->name; 
+											$post_tag_link = get_tag_link($post_tag->term_id);
+											$post_tag_name = $post_tag->name; 
 
 								?>
 								<!-- <a href="https://wanderland.qodeinteractive.com/tag/adventure/" rel="tag">Adventure</a>, 
 								<a href="https://wanderland.qodeinteractive.com/tag/explore/" rel="tag">Explore</a>, <a href="https://wanderland.qodeinteractive.com/tag/guides/" rel="tag">Guides</a>  -->
-								<a href="<?php echo $posttag_link;?>">
-									<?php echo $posttag_name;?>
+								<a href="<?php echo $post_tag_link;?>">
+									<?php echo $post_tag_name;?>
 								</a>  
 
 								<?php 
+									
 										}
-									}
+									endif;
 								?>
+
+							<?php
+									if( $post_categories ):
+										foreach( $post_categories as $post_category ){
+									
+											$post_category_link = get_category_link($post_category->term_id);
+											$post_category_name = $post_category->name; 
+
+								?>
+								<!-- <a href="https://wanderland.qodeinteractive.com/tag/adventure/" rel="tag">Adventure</a>, 
+								<a href="https://wanderland.qodeinteractive.com/tag/explore/" rel="tag">Explore</a>, <a href="https://wanderland.qodeinteractive.com/tag/guides/" rel="tag">Guides</a>  -->
+								<a href="<?php echo $post_category_link;?>">
+									<?php echo $post_category_name;?>
+								</a>  
+
+								<?php 
+									
+										}
+									endif;
+								?>
+
+								
 							</div>
 						</div>
 					</div>
@@ -94,6 +125,11 @@
 						</div>
 					</div> -->
 				</div>
+
+				<?php 
+						
+					}
+				?>
 
 			</div>
 		</div>

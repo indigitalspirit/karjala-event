@@ -91,8 +91,82 @@
 
 
 .main-page__header-row .main-page__header-search {
+
+
   
 }
+
+
+.main-page__header-row .main-page__header-search form {
+
+  background: transparent;
+  margin-left: 20px;
+  
+}
+
+.main-page__header-row .main-page__header-search form:before {
+  background-color: #fff;
+
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: #59815b;
+  position: absolute;
+  left: 20px;
+  top: -2px;
+}
+
+.main-page__header-row .main-page__header-search form label {
+  position: relative;
+}
+
+/* .main-page__header-row .main-page__header-search form label:before {
+  font-family: ionicons;
+    speak: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  content: "\f4a5";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
+
+.main-page__header-row .main-page__header-search form input.search-submit {
+  font-size: 1px;
+  background-color: #ffffff;
+  padding: 8px 8px;
+
+  position: absolute;
+  top: 2px;
+  right: 0;
+
+  background-image:url('https://karjalaevent.anastasia-pavlova.com/wp/wp-content/themes/karjala-event/img/search.svg');
+
+  background-repeat: no-repeat;
+
+  
+
+
+}
+
+
+.main-page__header-row .main-page__header-search form input.search-field {
+  border: none;
+  padding: 5px 15px;
+  max-width: 155px;
+}
+
+
+
+
 
 .main-page__header-row .main-page__header-search a {
   margin-right: 0;
@@ -348,6 +422,19 @@ color: #ffffff;
 
 
 @media (max-width: 1199px) { 
+  header.main-page__header {
+    display: none;
+
+  }
+
+  header.mkdf-mobile-header {
+    display: block;
+
+  }
+
+
+
+
   .main-page__full-width-inner {
     padding-bottom: 50px !important;
   }

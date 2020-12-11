@@ -25,15 +25,23 @@
 						
 					</div>
 				</div>
+				<?php
+					$privacy_policy_link = get_privacy_policy_url();
+
+					if( $privacy_policy_link ):
+				?>
 				<div class="mkdf-position-right">
 					<div class="mkdf-position-right-inner">
 						<div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
 							
-							<a href="/privacy-policy" target="_blank">Политика конфиденциальности
+							<a href="<?php echo $privacy_policy_link; ?>" target="_blank">Политика конфиденциальности
 							</a>
 						</div>
 					</div>
 				</div>
+				<?php 
+					endif;
+				?>
 			</div>
 
 		</div>

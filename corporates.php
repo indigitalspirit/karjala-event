@@ -110,7 +110,7 @@ get_header('corporate');
                       $phone = get_option('karjala_event_phone_field');
                       if( $phone ) {
                     ?>
-                    <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo trim($phone); ?>"
+                    <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo str_replace(" ", "", $phone); ?>"
                       target="_blank">
                       <span class="mkdf-icon-element ion-android-call top-bar__phone-icon"></span>
                       <span class="mkdf-icon-text top-bar__phone-text">
@@ -184,9 +184,9 @@ get_header('corporate');
                   <?php if( $cr_main__img ): ?>style="background: url(<?php echo $cr_main__img; ?>) center center no-repeat;background-size: cover;"
                   <?php endif; ?>>
 
-                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt=""
+                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt="sh1"
                     class="top-block__top-bg">
-                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt=""
+                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt="sh2"
                     class="top-block__bottom-bg">
 
 
@@ -199,9 +199,9 @@ get_header('corporate');
                         <div class="">
                           <div class="mkdf-section-title-holder">
                             <div class="mkdf-st-inner">
-                              <h2 class="mkdf-st-title corporate-page__top-title">
-                                <?php echo $cr_main__title; ?> </h2>
-                              <div class="corporate-page__top-icons-set">
+                              <h1 class="mkdf-st-title corporate-page__top-title">
+                                <?php echo $cr_main__title; ?> </h1>
+                              <ul class="corporate-page__top-icons-set">
 
                                 <?php if( !empty($cr_main__icons) ) { ?>
 
@@ -212,12 +212,12 @@ get_header('corporate');
 																		
 																	    if($icon_img && $icon_text){ ?>
 
-                                <div class="corporate-page__top-icon">
+                                <li class="corporate-page__top-icon">
 
                                   <span><?php echo $icon_img; ?></span>
-                                  <p><?php echo $icon_text; ?></p>
+                                  <div><?php echo $icon_text; ?></div>
 
-                                </div>
+                                </li>
 
                                 <?php 
                                       } 
@@ -229,7 +229,7 @@ get_header('corporate');
 																?>
 
 
-                              </div>
+                              </ul>
 
                               <div class="corporate-page__top-btns">
 
@@ -296,9 +296,9 @@ get_header('corporate');
                                 <div class="mkdf-section-title-holder mkdf-st-highlight">
                                   <div class="mkdf-st-inner">
 
-                                    <p class="mkdf-st-text we-know__block-text">
+                                    <div class="mkdf-st-text we-know__block-text">
                                       <?php echo $cr_service__text; ?>
-                                    </p>
+                                    </div>
 
                                   </div>
                                 </div>
@@ -421,9 +421,9 @@ get_header('corporate');
                                 <div class="corporate-services__block-item-descr-wrapper">
                                   <div class="corporate-services__block-item-descr">
                                     <?php if( $item_title ): ?>
-                                    <div class="corporate-services__block-item-title">
+                                    <h3 class="corporate-services__block-item-title">
                                       <?php echo $item_title; ?>
-                                    </div>
+                                    </h3>
                                     <?php endif; ?>
 
                                     <?php if( $item_btn_text ): ?>
@@ -502,12 +502,13 @@ get_header('corporate');
                               
                             ?>
 
-
+                            <?php if( $item_title || $item_icon ): ?>
                             <article class="mkdf-dcl-item mkdf-item-space corporate-icons__block-item">
                               <div class="mkdf-dcl-item-inner">
+                                <?php if( $item_icon ): ?>
                                 <div class="mkdf-dcli-image">
                                   <img src="<?php echo $item_icon; ?>" class="attachment-full size-full"
-                                    alt="<?php echo $item_title; ?>">
+                                    alt="<?php if( $item_title ){echo $item_title;} else {echo 'alt';}; ?>">
 
                                   <span class="mkdf-dcl-highlight">
 
@@ -516,19 +517,24 @@ get_header('corporate');
                                   </span>
 
                                 </div>
+                                <?php endif; ?>
+
+                                <?php if( $item_title ): ?>
                                 <div class="mkdf-dcli-text-holder">
                                   <div class="mkdf-dcli-text-wrapper">
                                     <div class="mkdf-dcli-text">
-
-                                      <h6 class="mkdf-dcli-title entry-title">
+                                      
+                                      <h3 class="mkdf-dcli-title entry-title">
                                         <?php echo $item_title; ?>
-                                      </h6>
+                                      </h3>
                                     </div>
                                   </div>
                                 </div>
+                                <?php endif; ?>
 
                               </div>
                             </article>
+                            <?php endif; ?>
 
 
                             <?php
@@ -649,22 +655,23 @@ get_header('corporate');
 
                                         <div class="reviews-slider__descr">
 
-                                          <div class="reviews-slider__descr-name">
+                                          <h3 class="reviews-slider__descr-name">
 
 
                                             <?php echo $item_name; ?>
-                                          </div>
+                                          </h3>
 
-                                          <div class="reviews-slider__descr-author">
+                                          <h4 class="reviews-slider__descr-author">
 
 
                                             <?php echo $item_regalias; ?>
-                                          </div>
+                                          </h4>
 
                                           <div class="reviews-slider__text">
 
-                                            <p class="mkdf-post-excerpt">
-                                              <?php echo $item_text; ?> </p>
+                                            <div class="mkdf-post-excerpt">
+                                              <?php echo $item_text; ?> 
+                                            </div>
 
                                           </div>
 
@@ -760,15 +767,15 @@ get_header('corporate');
 
                                 <div class="mkdf-section-title-holder mkdf-st-highlight">
                                   <div class="mkdf-st-inner">
-                                    <h3 class="mkdf-st-title">
+                                    <h2 class="mkdf-st-title">
                                       <?php echo $cr_mailform__title; ?>
-                                    </h3>
+                                    </h2>
 
 
-                                    <p class="mkdf-st-text corporate-maillist__block-text-par"
+                                    <div class="mkdf-st-text corporate-maillist__block-text-par"
                                       >
                                       <?php echo $cr_mailform__descr; ?>
-                                    </p>
+                                    </div>
                                   </div>
                                 </div>
 
@@ -796,10 +803,10 @@ get_header('corporate');
                                 <div class="corporate-maillist__block-bottomtext">
 
 
-                                  <p class="mkdf-st-text corporate-maillist__block-text-par"
+                                  <div class="mkdf-st-text corporate-maillist__block-text-par"
                                     >
                                     <?php echo $cr_mailform__descr_2; ?>
-                                  </p>
+                                  </div>
 
                                   <a href="#"
                                     class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid cta-modal-consult__btn">
@@ -886,9 +893,9 @@ get_header('corporate');
                                     </div>
                                     <div class="mkdf-pli-text-wrapper">
 
-                                      <h6 class="entry-title mkdf-pli-title">
+                                      <h3 class="entry-title mkdf-pli-title">
                                         <span><?php echo $item_title; ?></span>
-                                      </h6>
+                                      </h3>
 
                                     </div>
                                   </div>
@@ -994,14 +1001,32 @@ get_header('corporate');
                               <li class="mkdf-bl-item mkdf-item-space corporate-blog__item">
                                 <div class="mkdf-bli-inner">
                                   <div class="mkdf-bli-wrapper">
+                                    <?php $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                                    if( $thumbnail_id ):
+                                    ?>
                                     <div class="mkdf-post-image mkdf-tilt-trigger">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>" class="mkdf-tilt-target">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"
                                           class="attachment-full size-full wp-post-image image__animation-tranform"
-                                          alt="<?php the_title(); ?>">
+                                          alt="<?php 
+                                            //var_dump( get_post_meta( get_the_ID() )  );
+                                            
+                                            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+                                            if( $alt ){ 
+                                              echo $alt;
+                                            } else {
+                                              the_title();
+                                            }
+                                          ?>">
                                       </a>
                                     </div>
+                                    <?php 
+                                    endif;
+                                    ?>
+
+
                                     <?php 
                                       $posttags = get_the_tags();
                                       if( $posttags ){
@@ -1031,12 +1056,12 @@ get_header('corporate');
                                         <meta content="UserComments: 0"> -->
                                       </div>
                                     </div>
-                                    <h5 class="entry-title mkdf-post-title">
+                                    <h3 class="entry-title mkdf-post-title">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                       </a>
-                                    </h5>
+                                    </h3>
 
                                   </div>
                                 </div>
@@ -1068,14 +1093,30 @@ get_header('corporate');
                               <li class="mkdf-bl-item mkdf-item-space corporate-blog__item">
                                 <div class="mkdf-bli-inner">
                                   <div class="mkdf-bli-wrapper">
+                                  <?php $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                                    if( $thumbnail_id ):
+                                    ?>
                                     <div class="mkdf-post-image mkdf-tilt-trigger">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>" class="mkdf-tilt-target">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"
                                           class="attachment-full size-full wp-post-image image__animation-tranform"
-                                          alt="<?php the_title(); ?>">
+                                          alt="<?php 
+                                            //var_dump( get_post_meta( get_the_ID() )  );
+                                            
+                                            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+                                            if( $alt ){ 
+                                              echo $alt;
+                                            } else {
+                                              the_title();
+                                            }
+                                          ?>">
                                       </a>
                                     </div>
+                                    <?php 
+                                    endif;
+                                    ?>
                                     <?php 
                                       $posttags = get_the_tags();
                                       if( $posttags ){
@@ -1105,12 +1146,12 @@ get_header('corporate');
                                         <meta content="UserComments: 0"> -->
                                       </div>
                                     </div>
-                                    <h5 class="entry-title mkdf-post-title">
+                                    <h3 class="entry-title mkdf-post-title">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                       </a>
-                                    </h5>
+                                    </h3>
 
                                   </div>
                                 </div>
@@ -1143,14 +1184,30 @@ get_header('corporate');
                               <li class="mkdf-bl-item mkdf-item-space corporate-blog__item">
                                 <div class="mkdf-bli-inner">
                                   <div class="mkdf-bli-wrapper">
+                                  <?php $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                                    if( $thumbnail_id ):
+                                    ?>
                                     <div class="mkdf-post-image mkdf-tilt-trigger">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>" class="mkdf-tilt-target">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"
                                           class="attachment-full size-full wp-post-image image__animation-tranform"
-                                          alt="<?php the_title(); ?>">
+                                          alt="<?php 
+                                            //var_dump( get_post_meta( get_the_ID() )  );
+                                            
+                                            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+                                            if( $alt ){ 
+                                              echo $alt;
+                                            } else {
+                                              the_title();
+                                            }
+                                          ?>">
                                       </a>
                                     </div>
+                                    <?php 
+                                    endif;
+                                    ?>
                                     <?php 
                                       $posttags = get_the_tags();
                                       if( $posttags ){
@@ -1180,12 +1237,12 @@ get_header('corporate');
                                         <meta content="UserComments: 0"> -->
                                       </div>
                                     </div>
-                                    <h5 class="entry-title mkdf-post-title">
+                                    <h3 class="entry-title mkdf-post-title">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                       </a>
-                                    </h5>
+                                    </h3>
 
                                   </div>
                                 </div>
@@ -1233,9 +1290,9 @@ get_header('corporate');
 
                         <div class="mkdf-section-title-holder mkdf-st-highlight">
                           <div class="mkdf-st-inner">
-                            <h3 class="mkdf-st-title">
+                            <h2 class="mkdf-st-title">
                               <?php echo $cr_form__title; ?>
-                            </h3>
+                            </h2>
 
 
                           </div>

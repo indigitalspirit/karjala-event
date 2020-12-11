@@ -375,13 +375,16 @@ span.thezis-bold:after {
 
 /*** blog tags ***/
 
-li.mkdf-bl-item .mkdf-post-info-category a {
+li.mkdf-bl-item .mkdf-post-info-category a,
+article .mkdf-post-info-category a {
   background-color: #ecebe1;
   padding: 5px 25px 5px 15px;
 }
 
 li.mkdf-bl-item .mkdf-post-info-category a:before,
-li.mkdf-bl-item .mkdf-post-info-category a:after {
+li.mkdf-bl-item .mkdf-post-info-category a:after,
+article .mkdf-post-info-category a:before,
+article .mkdf-post-info-category a:after {
   content: "";
   position: absolute;
   top: 0;
@@ -390,13 +393,15 @@ li.mkdf-bl-item .mkdf-post-info-category a:after {
   width: 40px;
 }
 
-li.mkdf-bl-item .mkdf-post-info-category a:before {
+li.mkdf-bl-item .mkdf-post-info-category a:before,
+article .mkdf-post-info-category a:before {
   background: url(../img/menu_item_left.svg) center no-repeat;
   left: -15px;
 
 }
 
-li.mkdf-bl-item .mkdf-post-info-category a:after {
+li.mkdf-bl-item .mkdf-post-info-category a:after,
+article .mkdf-post-info-category a:after {
   background: url(../img/menu_item_right.svg) center no-repeat;
   right: -45px;
 }
@@ -1571,7 +1576,7 @@ form.search-form input.search-submit {
   display: inline-block;
     vertical-align: middle;
     width: auto;
-    margin: 0;
+
     font-family: Oswald,sans-serif;
     font-size: 16px;
     line-height: 2em;
@@ -1588,6 +1593,9 @@ form.search-form input.search-submit {
     background-color: #59815b;
     border: 1px solid transparent;
     padding: 10px 40px;
+
+    margin-left: 10px;
+    
   
 }
 
@@ -1655,9 +1663,9 @@ form.search-form input.search-field {
     font-size: 18px;
     font-family: crimson text,serif;
     font-style: italic;
-    color: #fff;
+    color:#3c553a;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #3c553a;
     -webkit-transition: border-color .2s ease-out;
     -o-transition: border-color .2s ease-out;
     transition: border-color .2s ease-out;
@@ -1865,6 +1873,7 @@ aside .widget.widget_search input.search-field {
 aside .widget.widget_search input.search-submit {
   width: 100%;
   margin-top: 15px;
+  margin-left: 0;
 }
 
 aside .widget.widget_text form input,

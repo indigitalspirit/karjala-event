@@ -29,6 +29,61 @@
   <div class="mkdf-wrapper">
     <div class="mkdf-wrapper-inner">
 
+    <header class="mkdf-mobile-header">
+      <div class="mkdf-mobile-header-inner">
+        <div class="mkdf-mobile-header-holder">
+          <div class="mkdf-grid">
+            <div class="mkdf-vertical-align-containers">
+              <div class="mkdf-position-left">
+                <div class="mkdf-position-left-inner">
+                  <div class="mkdf-mobile-logo-wrapper">
+
+                    <?php the_custom_logo(); ?>
+                  </div>
+                </div>
+              </div>
+              <div class="mkdf-position-right">
+                <div class="mkdf-position-right-inner">
+                  <div class="mkdf-mobile-menu-opener mkdf-mobile-menu-opener-predefined">
+                    <a href="#">
+                      <h5 class="mkdf-mobile-menu-text">Меню</h5>
+                      <span class="mkdf-mobile-menu-icon">
+                        <span class="mkdf-hm-lines"><span class="mkdf-hm-line mkdf-line-1"></span><span
+                            class="mkdf-hm-line mkdf-line-2"></span><span
+                            class="mkdf-hm-line mkdf-line-3"></span></span> </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="mkdf-mobile-nav">
+          <!-- <div class="mkdf-grid">
+            
+          </div> -->
+          <?php
+            wp_nav_menu(
+              array(
+                'theme_location' => 'menu-mobile',
+                'menu' => '',
+                'container'       => 'div', 
+                'container_class' => 'mkdf-grid', 
+                //'menu_class'      => 'clearfix',  
+                //'menu_id'        => 'menu-standard-1',
+                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>', //'<ul id="%1$s" class="%2$s">%3$s</ul>',
+                //'link_before' => '<div class="menu-svg__left"></div>',
+                //'link_after' => '<div class="menu-svg__right"></div>',
+                'echo'            => true,
+                'depth'           => 0,
+                //'walker'          => '',
+              )
+            );
+          ?>
+        </nav>
+      </div>
+    </header>
+
       <div class="mkdf-content header-main">
         <div class="mkdf-content-inner">
           <div class="mkdf-full-width">
@@ -77,7 +132,7 @@
 
                                                   <div class="main-page__header-phone">
                                                     <a class="mkdf-icon-widget-holder green-hover"
-                                                      href="tel:<?php echo trim($phone); ?>">
+                                                      href="tel:<?php echo str_replace(" ", "", $phone); ?>">
                                                       <span class="mkdf-icon-element ion-android-call">
                                                       </span>
                                                       <span class="mkdf-icon-text">
@@ -95,7 +150,9 @@
                                                   <div class="main-page__header-search">
                                                     <div class="mkdf-search-opener-holder">
 
-                                                      <form action="https://wanderland.qodeinteractive.com/"
+                                                    <?php get_search_form(); ?>
+
+                                                      <!-- <form action="https://wanderland.qodeinteractive.com/"
                                                         class="mkdf-on-side-search-form" method="get">
                                                         <div class="mkdf-form-holder">
                                                           <div class="mkdf-form-holder-inner">
@@ -118,7 +175,7 @@
                                                             style="color:black">Поиск</span>
                                                           <i class="mkdf-icon-ion-icon ion-ios-search "
                                                             style="color:black"></i> </span>
-                                                      </a>
+                                                      </a> -->
 
                                                     </div>
                                                   </div>

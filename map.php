@@ -19,16 +19,18 @@ get_header();
 <div class="mkdf-content">
   <div class="mkdf-content-inner">
 
+    <?php 
+    $karjala_event_map_field = get_option('karjala_event_map_field');
+    ?>
+
     <!-- BLOG TOP -->
     <div
-      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
-      <div class="mkdf-title-image">
-        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg" alt="s">
-      </div>
+      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top" <?php if( $karjala_event_map_field ){ echo 'style="background: url(' . $karjala_event_map_field . ') center, no-repeat;background-size:cover;"'; } ?>>
+      
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h2 class="mkdf-page-title entry-title">Карта сайта</h2>
+            <h1 class="mkdf-page-title entry-title">Карта сайта</h1>
           </div>
         </div>
       </div>
@@ -46,98 +48,72 @@ get_header();
 
               <div class="mkdf-post-content">
 
+                <?php 
+                  $map_pages = get_pages(['post_type' => 'page']);
+
+                  if( $map_pages ):
+                ?>
+
                 <div class="map-page__top-pages">
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
+                    
+                  
+                  <?php
+                    foreach( $map_pages as $page ) {
+                      //echo $page->ID . '<br>'; 
+                      
+                  ?>
 
                   <div class="map-page__top-pages-item">
                     <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
+                      <a href="<?php echo get_page_link( $page->ID ); ?>" title="<?php echo  $page->post_title; ?>"><?php echo  $page->post_title; ?></a>
                     </h2>
+
+                    <?php
+                      $map_page_children = get_pages( array( 'child_of' => $page->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+
+                      if( $map_page_children > 0): 
+                    ?>
+
                     <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
+                  
+                    <?php
+                      foreach( $map_page_children as $map_page_child ) {      
+                        $child_content = $map_page_child->post_content;
+
+                        // пропустим страницу без контента
+                        if ( ! $child_content ) continue;
+
+                        $child_content = apply_filters( 'the_content', $child_content );
+
+                        ?>
+
+                      <li>
+                        <a href="<?php echo get_page_link( $map_page_child->ID ); ?>" title="<?php echo $map_page_child->post_title; ?>">
+                          <h3><?php echo $map_page_child->post_title; ?></h3>
+                        </a>
+                      </li>
+                  
+                    <?php
+                      }
+                    ?>
+
                     </ul>
-                  </div>
 
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
+                    <?php
+                      endif;
+                    ?>
 
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
+                  </div>   
 
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
-
-                  <div class="map-page__top-pages-item">
-                    <h2 class="mkdf-post-title entry-title">
-                      <a href="#" title="#">Страница сайта</a>
-                    </h2>
-                    <ul class="top-pages-item__children">
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                      <li><a href="#" title="#">Дочерняя страница</a></li>
-                    </ul>
-                  </div>
-
-
-
+                  <?php
+                    }
+                  ?>
+    
                 </div>
+
+                <?php
+                  endif;
+                ?>
 
               </div>
 

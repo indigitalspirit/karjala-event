@@ -135,15 +135,20 @@ if ( ! function_exists( 'karjala_event_post_thumbnail' ) ) :
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
+					//var_dump( get_post_meta( get_the_ID() )  );
+					$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+					$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+					if( !$alt ){ 
+						
+						$alt = the_title_attribute( array( 'echo' => false ) );
+					}
+			
 					the_post_thumbnail(
 						'post-thumbnail',
 						array(
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
+							'alt' => "$alt"
 							),
-						)
 					);
 				?>
 			</a>

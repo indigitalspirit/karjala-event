@@ -14,7 +14,7 @@ get_header();
     <div
       class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
       <div class="mkdf-title-image">
-        <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg" alt="s">
+        
       </div>
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">

@@ -84,9 +84,9 @@ get_header();
                   <?php if( $mg_main__img ): ?>style="background: url(<?php echo $mg_main__img; ?>) center center no-repeat;background-size: cover;"
                   <?php endif; ?>>
 
-                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt=""
+                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt="sh-1"
                     class="top-block__top-bg">
-                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt=""
+                  <img src="<?php echo get_template_directory_uri() . '/img/bg-top-white-sharp.png'; ?>" alt="sh-2"
                     class="top-block__bottom-bg">
 
 
@@ -99,10 +99,10 @@ get_header();
                         <div class="">
                           <div class="mkdf-section-title-holder ">
                             <div class="mkdf-st-inner">
-                              <h2 class="mkdf-st-title marriage-page__top-title">
+                              <h1 class="mkdf-st-title marriage-page__top-title">
                                 <?php echo $mg_main__title; ?>
-                              </h2>
-                              <div class="marriage-page__top-icons-set">
+                              </h1>
+                              <ul class="marriage-page__top-icons-set">
 
                                 <?php if( !empty($mg_main__icons) ) { ?>
 
@@ -114,14 +114,14 @@ get_header();
 																	    if($icon_img && $icon_text){ 
                                     ?>
 
-                                <div class="marriage-page__top-icon">
+                                <li class="marriage-page__top-icon">
 
                                   <span>
                                     <img src="<?php echo $icon_img; ?>" alt="<?php echo $icon_text; ?>">
                                   </span>
-                                  <p><?php echo $icon_text; ?></p>
+                                  <div><?php echo $icon_text; ?></div>
 
-                                </div>
+                                </li>
 
                                 <?php 
                                       } 
@@ -134,7 +134,7 @@ get_header();
 
 
 
-                              </div>
+                                </ul>
                               <div class="marriage-page__top-btns">
                                 <?php if( $mg_main__btn_1['cr-btn_text'] && $mg_main__btn_1['cr-btn_link'] ) { ?>
 
@@ -216,10 +216,10 @@ get_header();
                                       <?php echo $mg_marriage__title; ?>
                                     </h2>
 
-                                    <p class="mkdf-st-text marriage-page__block-services-txt"
+                                    <div class="mkdf-st-text marriage-page__block-services-txt"
                                      >
                                       <?php echo $mg_marriage__text; ?>
-                                    </p>
+                                    </div>
 
                                   </div>
                                 </div>
@@ -289,16 +289,16 @@ get_header();
 
                                 <div class="cases-slider__descr">
 
-                                  <div class="cases-slider__descr-name">
+                                  <h3 class="cases-slider__descr-name">
                                     <?php echo $block_title; ?>
-                                  </div>
+                                  </h3>
 
 
                                   <div class="cases-slider__text">
 
-                                    <p class="mkdf-post-excerpt">
+                                    <div class="mkdf-post-excerpt">
                                       <?php echo $block_descr; ?>
-                                    </p>
+                                    </div>
 
                                   </div>
 
@@ -401,28 +401,31 @@ get_header();
                                         <?php if($item_img || $item_text): ?>
 
                                         <div class="reviews-slider__item">
+                                          <?php if( $item_img ): ?>
                                           <div class="reviews-slider__img">
                                             <img src="<?php echo $item_img; ?>" class="attachment-full size-full"
                                               alt="<?php echo $item_name; ?>">
                                           </div>
+                                          <?php endif; ?>
 
                                           <div class="reviews-slider__descr">
 
-                                            <div class="reviews-slider__descr-name">
+                                            <h3 class="reviews-slider__descr-name">
 
 
                                               <?php echo $item_name; ?>
-                                            </div>
+                                            </h3>
 
-                                            <div class="reviews-slider__descr-author">
+                                            <h4 class="reviews-slider__descr-author">
 
                                               <?php echo $item_regalias; ?>
-                                            </div>
+                                            </h4>
 
                                             <div class="reviews-slider__text">
 
-                                              <p class="mkdf-post-excerpt">
-                                                <?php echo $item_text; ?> </p>
+                                              <div class="mkdf-post-excerpt">
+                                                <?php echo $item_text; ?> 
+                                              </div>
 
                                             </div>
 
@@ -518,9 +521,9 @@ get_header();
                                 <div class="mkdf-section-title-holder mkdf-st-highlight">
                                   <div class="mkdf-st-inner">
 
-                                    <p class="mkdf-st-text">
+                                    <div class="mkdf-st-text">
                                       <?php echo $mg_about__descr; ?>
-                                    </p>
+                                    </div>
 
                                   </div>
                                 </div>
@@ -618,10 +621,10 @@ get_header();
                                       <?php echo $mg_tent__title; ?>
                                     </h2>
 
-                                    <p class="mkdf-st-text marriage-page__block-services-txt"
+                                    <div class="mkdf-st-text marriage-page__block-services-txt"
                                      >
                                       <?php echo $mg_tent__text; ?>
-                                    </p>
+                                    </div>
 
 
                                     <a href="<?php echo $mg_tent__btn_link; ?>"
@@ -688,13 +691,13 @@ get_header();
                                   <div class="mkdf-section-title-holder mkdf-st-highlight">
                                     <div class="mkdf-st-inner">
                                       <!-- <span class="mkdf-st-tagline">Lorem ipsum dolor</span> -->
-                                      <h3 class="mkdf-st-title">
+                                      <h2 class="mkdf-st-title">
                                         <?php echo $mg_mailform__title; ?>
-                                      </h3>
+                                      </h2>
 
-                                      <p class="mkdf-st-text">
+                                      <div class="mkdf-st-text">
                                         <?php echo $mg_mailform__descr; ?>
-                                      </p>
+                                      </div>
                                     </div>
                                   </div>
 
@@ -715,9 +718,9 @@ get_header();
                                   <div class="trips-page__block_maillist-text-bottom">
 
 
-                                    <p class="mkdf-st-text">
+                                    <div class="mkdf-st-text">
                                       <?php echo $mg_mailform__descr_2; ?>
-                                    </p>
+                                    </div>
 
                                     <a href="#"
                                       class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid cta-modal-consult__btn">
@@ -817,11 +820,11 @@ get_header();
                                             </div>
                                             <div class="mkdf-pli-text-wrapper">
 
-                                              <h6 class="entry-title mkdf-pli-title">
+                                              <h3 class="entry-title mkdf-pli-title">
                                                 <span>
                                                   <?php echo $item_title; ?>
                                                 </span>
-                                              </h6>
+                                              </h3>
 
                                             </div>
                                           </div>
@@ -933,7 +936,17 @@ get_header();
                                         title="<?php the_title(); ?>" class="mkdf-tilt-target">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"
                                           class="attachment-full size-full wp-post-image image__animation-tranform"
-                                          alt="<?php the_title(); ?>">
+                                          alt="<?php 
+                                            //var_dump( get_post_meta( get_the_ID() )  );
+                                            $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                                            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+                                            if( $alt ){ 
+                                              echo $alt;
+                                            } else {
+                                              the_title();
+                                            }
+                                          ?>">
                                       </a>
                                     </div>
                                     <?php 
@@ -965,12 +978,12 @@ get_header();
                                         <meta content="UserComments: 0"> -->
                                       </div>
                                     </div>
-                                    <h5 class="entry-title mkdf-post-title">
+                                    <h3 class="entry-title mkdf-post-title">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                       </a>
-                                    </h5>
+                                    </h3>
 
                                   </div>
                                 </div>
@@ -1007,7 +1020,17 @@ get_header();
                                         title="<?php the_title(); ?>" class="mkdf-tilt-target">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"
                                           class="attachment-full size-full wp-post-image image__animation-tranform"
-                                          alt="<?php the_title(); ?>">
+                                          alt="<?php 
+                                            //var_dump( get_post_meta( get_the_ID() )  );
+                                            $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                                            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+                                            if( $alt ){ 
+                                              echo $alt;
+                                            } else {
+                                              the_title();
+                                            }
+                                          ?>">
                                       </a>
                                     </div>
                                     <?php 
@@ -1039,12 +1062,12 @@ get_header();
                                         <meta content="UserComments: 0"> -->
                                       </div>
                                     </div>
-                                    <h5 class="entry-title mkdf-post-title">
+                                    <h3 class="entry-title mkdf-post-title">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                       </a>
-                                    </h5>
+                                    </h3>
 
                                   </div>
                                 </div>
@@ -1082,7 +1105,17 @@ get_header();
                                         title="<?php the_title(); ?>" class="mkdf-tilt-target">
                                         <img src="<?php echo get_the_post_thumbnail_url(); ?>"
                                           class="attachment-full size-full wp-post-image image__animation-tranform"
-                                          alt="<?php the_title(); ?>">
+                                          alt="<?php 
+                                            //var_dump( get_post_meta( get_the_ID() )  );
+                                            $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+                                            $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+                                            if( $alt ){ 
+                                              echo $alt;
+                                            } else {
+                                              the_title();
+                                            }
+                                          ?>">
                                       </a>
                                     </div>
                                     <?php 
@@ -1114,12 +1147,12 @@ get_header();
                                         <meta content="UserComments: 0"> -->
                                       </div>
                                     </div>
-                                    <h5 class="entry-title mkdf-post-title">
+                                    <h3 class="entry-title mkdf-post-title">
                                       <a href="<?php the_permalink(); ?>"
                                         title="<?php the_title(); ?>">
                                         <?php the_title(); ?>
                                       </a>
-                                    </h5>
+                                    </h3>
 
                                   </div>
                                 </div>
@@ -1137,30 +1170,7 @@ get_header();
                               class="mkdf-btn mkdf-btn-medium mkdf-btn-solid mkdf-btn-svg-icon">
                               <span class="mkdf-btn-text"><?php echo $mg_blog__btn_text; ?>
                               </span>
-                              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 17"
-                                style="enable-background:new 0 0 17 17;" xml:space="preserve">
-                                <g>
-                                  <path d="M15,1.9"></path>
-                                  <line x1="1.7" y1="15.3" x2="15" y2="1.9"></line>
-                                  <line x1="16" y1="1.9" x2="15" y2="1.9"></line>
-                                  <line x1="15" y1="1.9" x2="1" y2="1.9"></line>
-                                  <path d="M15,1.9"></path>
-                                  <line x1="15" y1="16" x2="15" y2="1.9"></line>
-                                </g>
-                              </svg>
-                              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 17"
-                                style="enable-background:new 0 0 17 17;" xml:space="preserve">
-                                <g>
-                                  <path d="M15,1.9"></path>
-                                  <line x1="1.7" y1="15.3" x2="15" y2="1.9"></line>
-                                  <line x1="16" y1="1.9" x2="15" y2="1.9"></line>
-                                  <line x1="15" y1="1.9" x2="1" y2="1.9"></line>
-                                  <path d="M15,1.9"></path>
-                                  <line x1="15" y1="16" x2="15" y2="1.9"></line>
-                                </g>
-                              </svg>
+                             
                             </a>
                           </div>
 
@@ -1188,10 +1198,10 @@ get_header();
                             <div class="mkdf-section-title-holder mkdf-st-highlight">
                               <div class="mkdf-st-inner">
 
-                                <h3 class="mkdf-st-title">
+                                <h2 class="mkdf-st-title">
                                   <?php echo $mg_form__title; ?>
 
-                                </h3>
+                                </h2>
 
                               </div>
 

@@ -199,9 +199,7 @@ form.search-form input.search-submit {
   margin-left: 20px;
 }
 
-form.search-form input.search-field {
-width: 350px;
-}
+
 
 
 form.search-form input::-webkit-input-placeholder { /* Edge */
@@ -214,6 +212,12 @@ form.search-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
 
 form.search-form input::placeholder {
   color: #ffffff;
+}
+
+form.search-form input.search-field {
+  border: 1px solid #fff;
+  color: #fff; 
+    
 }
 
 /**** par content ****/

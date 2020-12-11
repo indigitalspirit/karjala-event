@@ -20,7 +20,7 @@
 				if ( 'post' === get_post_type() ) :
 					?>
 					<div class="mkdf-post-info-top">
-						<div itemprop="dateCreated" class="mkdf-post-info-date entry-date published updated">
+						<div class="mkdf-post-info-date entry-date published updated">
 							<!-- <span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar "></span> <a href="https://wanderland.qodeinteractive.com/2019/10/">
 								October 11, 2019 </a>
 							<meta itemprop="interactionCount" content="UserComments: 3"> -->

@@ -139,9 +139,9 @@ get_header();
                                             </div>
                                             <div class="mkdf-pli-text-wrapper">
 
-                                              <h6 class="entry-title mkdf-pli-title">
+                                              <h3 class="entry-title mkdf-pli-title">
                                                 <a href="#"><?php echo $product_name;?></a>
-                                              </h6>
+                                              </h3>
 
                                             </div>
                                           </div>
@@ -192,9 +192,9 @@ get_header();
                           <div class="mkdf-section-title-holder mkdf-st-highlight">
                             <div class="mkdf-st-inner">
 
-                              <h3 class="mkdf-st-title">
+                              <h2 class="mkdf-st-title">
                                 <?php echo $sp_form__title; ?>
-                              </h3>
+                              </h2>
 
                             </div>
                           </div>
@@ -222,11 +222,14 @@ get_header();
 
 
           </div>
+
         </div>
       </div>
 
     </div>
+
   </div>
+</div>
 
 
 

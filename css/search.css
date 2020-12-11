@@ -170,7 +170,9 @@ footer .widget_text img {
 
 /****** BLOG TOP *****/
 .blog-page__block_top {
-  height: 452px;background-image:url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg);
+  height: 452px;
+  background-image:url('https://karjalaevent.anastasia-pavlova.com/wp/wp-content/uploads/2020/12/error-page-bckg-01.jpg');
+  background-size: cover;
 
   margin-bottom: 90px;
 
@@ -192,12 +194,68 @@ footer .widget_text img {
   padding-top: 140px
 }
 
-.blog-page__block_top h2.mkdf-page-title {
-text-align: center;
+.blog-page__block_top .page-title {
+/* text-align: center; */
+color: #ffffff;
+
 }
 
 
 /****** ./BLOG TOP *****/
+
+.search-result .mkdf-search-page-holder {
+
+}
+
+.search-result .mkdf-search-page-holder .page-title {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.search-result .mkdf-search-page-holder p.mkdf-search-no-posts {
+  font-family: 'Muli', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+
+.search-result form.search-form input.search-field {
+  width: 70%;
+  margin-top: 20px;
+    
+}
+
+
+/**** article ***/
+
+.search-result article {
+  padding-top: 0;
+  min-height: unset;
+
+}
+
+.search-result article .mkdf-post-image { 
+  display: inline-block;
+  margin-right: 20px;
+  width: 150px;
+
+  vertical-align: top;
+}
+
+.search-result article .mkdf-post-title-area {
+
+  padding: 0;
+  display: inline-block;
+}
+
+.search-result article .mkdf-btn {
+  margin-top: 15px;
+}
+
+
+
+
 
 
 

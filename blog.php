@@ -24,7 +24,7 @@ get_header();
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
             <h2 class="mkdf-page-title entry-title">
-            BLOG 
+            
               <?php echo the_title(); ?>
             </h2>
           </div>

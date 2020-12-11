@@ -41,11 +41,12 @@ if ( ! function_exists( 'karjala_event_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
+		 * Enable support for Post and Categories  Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_theme_support('category-thumbnails');
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
@@ -137,8 +138,8 @@ function karjala_event_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'karjala_event_sidebar' ),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h5 class="mkdf-st-title">',
-			'after_title'   => '</h5>',
+			'before_title'  => '<h4 class="mkdf-st-title">',
+			'after_title'   => '</h4>',
 		)
 	);
 
@@ -167,8 +168,8 @@ function karjala_event_widgets_init() {
 		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="mkdf-widget-title-holder">
-		<h6 class="mkdf-widget-title">',
-		'after_title'   => '</h6></div>',
+		<h4 class="mkdf-widget-title">',
+		'after_title'   => '</h4></div>',
 	) );
 
 	
@@ -179,8 +180,8 @@ function karjala_event_widgets_init() {
 		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="mkdf-widget-title-holder">
-		<h6 class="mkdf-widget-title">',
-		'after_title'   => '</h6></div>',
+		<h4 class="mkdf-widget-title">',
+		'after_title'   => '</h4></div>',
 	) );
 
 	register_sidebar( array(
@@ -189,8 +190,8 @@ function karjala_event_widgets_init() {
 		'before_widget' => '<div class="widget mkdf-blog-list-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<div class="mkdf-widget-title-holder">
-		<h6 class="mkdf-widget-title">',
-		'after_title'   => '</h6></div>',
+		<h4 class="mkdf-widget-title">',
+		'after_title'   => '</h4></div>',
 	) );
 }
 add_action( 'widgets_init', 'karjala_event_widgets_init' );

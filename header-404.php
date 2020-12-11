@@ -39,7 +39,7 @@
               if( $phone ):
             ?>
 
-              <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo trim($phone); ?>" target="_blank">
+              <a class="mkdf-icon-widget-holder top-bar__phone" href="tel:<?php echo str_replace(" ", "", $phone); ?>" target="_blank">
                 <span class="mkdf-icon-element ion-android-call top-bar__phone-icon"></span>
                 <span class="mkdf-icon-text top-bar__phone-text">
                   <?php echo $phone; ?>
@@ -354,7 +354,7 @@
             </div>
           </div>
 
-          <nav class="mkdf-mobile-nav" role="navigation" aria-label="Mobile Menu">
+          <nav class="mkdf-mobile-nav">
             <!-- <div class="mkdf-grid"> -->
             <?php
               wp_nav_menu(
@@ -379,11 +379,12 @@
           </nav>
         
 
-          <nav id="site-navigation" class="main-navigation">
+          <!-- <nav id="site-navigation" class="main-navigation">
             <button class="menu-toggle" aria-controls="primary-menu"
               aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'karjala_event' ); ?></button>
            
-          </nav><!-- #site-navigation -->
+          </nav> -->
+          <!-- #site-navigation -->
 
         </div>
 

@@ -41,10 +41,20 @@
 																
 
 															</div>
+
+															<?php
+																$privacy_policy_link = get_privacy_policy_url();
+
+																if( $privacy_policy_link ):
+															?>
 															<div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-right footer-copyright__right">
-																<a href="/privacy-policy" target="_blank">Политика конфиденциальности
+																<a href="<?php echo $privacy_policy_link; ?>" target="_blank">Политика конфиденциальности
 																</a>
 															</div>
+															<?php 
+																endif;
+															?>
+
 														</div>
 
 														<div class="footer-author">

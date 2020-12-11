@@ -56,9 +56,9 @@
 						<div class="mkdf-column-content mkdf-grid-col-3">
 							<div id="text-4" class="widget mkdf-footer-column-1 widget_text">
 								<div class="mkdf-widget-title-holder">
-									<h6 class="mkdf-widget-title">
+									<h4 class="mkdf-widget-title">
 										<?php bloginfo('name'); ?>
-									</h6>
+									</h4>
 								</div>
 								<div class="textwidget">
 									<p style="line-height: 23px; max-width: 90%;">
@@ -71,7 +71,7 @@
 						<div class="mkdf-column-content mkdf-grid-col-3">
 							<div class="widget mkdf-blog-list-widget">
 								<div class="mkdf-widget-title-holder">
-									<h6 class="mkdf-widget-title" style="margin-bottom: 16px">Мы в соцсетях</h6>
+									<h4 class="mkdf-widget-title" style="margin-bottom: 16px">Мы в соцсетях</h4>
 								</div>
 								<div
 									class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-minimal mkdf-one-columns mkdf-disable-bottom-space mkdf-normal-space mkdf-bl-pag-no-pagination ">
@@ -138,17 +138,25 @@
 			<div class="mkdf-footer-bottom-holder">
 				<div class="mkdf-footer-bottom-inner mkdf-grid">
 					<div class="mkdf-grid-row ">
+						<?php
+							$privacy_policy_link = get_privacy_policy_url();
+
+							if( $privacy_policy_link ):
+						?>
 						<div class="mkdf-grid-col-6">
 							<div class="widget mkdf-footer-bottom-column-2 widget_text">
 								<div class="textwidget">
 									<p>
-										<a href="/privacy-policy" target="_blank">Политика конфиденциальности
+										<a href="<?php echo $privacy_policy_link; ?>" target="_blank">Политика конфиденциальности
 										</a>
 									</p>
 								</div>
 								
 							</div>
 						</div>
+						<?php 
+							endif;
+						?>
 						<div class="mkdf-grid-col-6">
 							<div id="text-5" class="widget mkdf-footer-bottom-column-2 widget_text">
 								<div class="textwidget">
@@ -179,7 +187,9 @@
 		</footer>
 
 	</div>
+	<!-- ./mkdf-wrapper-inner (header) -->
 </div>
+<!-- mkdf-wrapper (header) -->
   
 <?php //get_template_part('template-parts/side-menu'); ?>
 

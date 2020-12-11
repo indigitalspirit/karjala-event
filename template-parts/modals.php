@@ -38,7 +38,7 @@
 
 	<div class="vc_empty_space" style="height: 27px"><span class="vc_empty_space_inner"></span></div>
 
-	<div role="form" class="wpcf7" id="wpcf7-f1433-p1182-o1 common__form" lang="en-US" dir="ltr">
+	<div role="form" class="wpcf7 common__form">
 		
 		<form class="wpcf7-form init cf7_custom_style_1">
 
@@ -92,7 +92,7 @@
 
 	<div class="vc_empty_space" style="height: 27px"><span class="vc_empty_space_inner"></span></div>
 
-	<div role="form" class="wpcf7" id="wpcf7-f1433-p1182-o1 common__form" lang="en-US" dir="ltr">
+	<div role="form" class="wpcf7 common__form">
 		
 		<form class="wpcf7-form init cf7_custom_style_1">
 

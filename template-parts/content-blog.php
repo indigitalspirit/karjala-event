@@ -12,14 +12,31 @@
 <li class="mkdf-bl-item mkdf-item-space corporate-blog__item" id="post-<?php the_ID(); ?>">
 	<div class="mkdf-bli-inner">
 		<div class="mkdf-bli-wrapper">
+			<?php $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+				if( $thumbnail_id ):
+			?>
 			<div class="mkdf-post-image mkdf-tilt-trigger">
 				<a href="<?php the_permalink(); ?>"
 					title="<?php the_title(); ?>" class="mkdf-tilt-target">
 					<img src="<?php echo get_the_post_thumbnail_url(); ?>"
 						class="attachment-full size-full wp-post-image image__animation-tranform"
-						alt="<?php the_title(); ?>">
+						alt="<?php 
+									//var_dump( get_post_meta( get_the_ID() )  );
+									$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+									$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true); 
+
+									if( $alt ){ 
+										echo $alt;
+									} else {
+										the_title();
+									}
+								?>">
 				</a>
 			</div>
+			<?php 
+				endif;
+			?>
+			
 			<?php 
 				$posttags = get_the_tags();
 				if( $posttags ){
