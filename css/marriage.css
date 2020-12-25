@@ -1,4 +1,17 @@
-/**** MARRIDGE PAGE *****/
+/**** marriage PAGE *****/
+
+
+.common-padding {
+  padding: 50px 0px;
+
+}
+
+.common-padding.bg_aquarell > div {
+  padding: 50px 0px;
+
+}
+
+
 
 
 .vc_custom_1576679106364 {
@@ -36,7 +49,7 @@
 }
 
 .page-id-202 .mkdf-content {
-  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-02.jpg);
+  background-image: url(../img/h2-bckg-img-02.jpg);
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
@@ -118,7 +131,7 @@
 .vc_custom_1579104144167 {
   padding-top: 65px !important;
   padding-bottom: 150px !important;
-  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-05.png?id=1681) !important;
+  background-image: url(../img/h2-bckg-img-05.png) !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -169,8 +182,14 @@ header.mkdf-page-header {
 /***** ./HEADER ****/
 
 
-.mkdf-content .mkdf-content-inner .mkdf-full-width-inner.marridge {
+.mkdf-content .mkdf-content-inner .mkdf-full-width-inner.marriage {
   padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.mkdf-section-title-holder .mkdf-st-title {
+  text-align: center;
+  margin-top: 0 !important;
 }
 
 
@@ -286,7 +305,7 @@ footer .widget_text img {
 
 
 .marriage-page__top .marriage-page__top-icons-set .marriage-page__top-icon span,
-.marriage-page__top .marriage-page__top-icons-set .marriage-page__top-icon p {
+.marriage-page__top .marriage-page__top-icons-set .marriage-page__top-icon div {
   vertical-align: top;
 
   
@@ -323,12 +342,16 @@ footer .widget_text img {
 
 
 .marriage-page__block_cases {
-  padding: 30px 0px 60px 0px;
+  /* padding: 70px 0px 100px 0px; */
 }
 
 .marriage-page__block_cases h2 {
-  margin-top: 30px !important;
+  /* margin-top: 30px !important; */
   margin-bottom: 30px !important;
+}
+
+.marriage-page__block_cases .cases-slider__item {
+  padding-right: 20px;
 }
 
 
@@ -372,14 +395,14 @@ footer .widget_text img {
   position: absolute;
   margin-left: -30px;
   top: 0;
-  /* border: 1px solid #59815b; */
+  /* border: 1px solid #49706c; */
 }
 
 .marriage-page__block_cases .cases-slider__arrows .cases-slider__arrows_arrow-right  {
   position: absolute;
   margin-right: -30px;
   top: 0;
-  /* border: 1px solid #59815b; */
+  /* border: 1px solid #49706c; */
 }
 
 .marriage-page__block_cases .cases-slider__arrows .cases-slider__arrows_arrow-right img.arrow-green,
@@ -413,7 +436,7 @@ footer .widget_text img {
 .marriage-page__block_cases .cases-slider__arrows .cases-slider__arrows_arrow-right:hover:before,
 .marriage-page__block_cases .cases-slider__arrows .cases-slider__arrows_arrow-left:hover:before {
   
-  color: #59815b;
+  color: #49706c;
 }
 
 
@@ -459,7 +482,7 @@ footer .widget_text img {
  {
    height: 30px;
    width: 30px;
-   /* background: #59815b; */
+   /* background: #49706c; */
    padding: 10px;
    text-align: center;
    font-weight: bold;
@@ -469,7 +492,7 @@ footer .widget_text img {
 .trips-page__slider-wrapper .trips-page__slider-arrows .trips-page__slider-arrow-right:hover,
 .trips-page__slider-wrapper .trips-page__slider-arrows .trips-page__slider-arrow-left:hover {
   /* background: #ffffff; */
-  color: #59815b;
+  color: #49706c;
   transition: all .3s;
   cursor: pointer;
 }
@@ -535,7 +558,7 @@ footer .widget_text img {
 
 .trips-page__slider-wrapper .trips-page__slider-btn {
   margin-bottom: 20px;
-  background: #59815b;
+  background: #49706c;
   color: #ffffff;
   font-family: Oswald,sans-serif;
   font-size: 16px;
@@ -582,8 +605,16 @@ footer .widget_text img {
 
 
 .marriage-page__block-services {
+  /* padding: 70px 0px; */
   
 }
+
+
+.marriage-page__block-services .wpb_column .vc_column-inner {
+  padding-top: 0 !important;
+}
+
+
 
 .marriage-page__block-services .marriage-page__block-services-left {
   
@@ -596,11 +627,16 @@ footer .widget_text img {
 
 .marriage-page__block-services .marriage-page__block-services-right .marriage-page__block-services-title {
   margin-bottom: 20px;
+  text-align: left;
 
 }
 
 .marriage-page__block-services .marriage-page__block-services-right .marriage-page__block-services-txt {
 
+}
+
+.marriage-page__block-services .mkdf-btn {
+  margin-top: 20px;
 }
 
 
@@ -612,7 +648,7 @@ footer .widget_text img {
 
 
 .trips-page__block_we-know {
-  padding: 80px 0px 80px 0px;
+  /* padding: 80px 0px 60px 0px; */
 }
 
 .we-know-slider__wrapper {
@@ -638,7 +674,7 @@ footer .widget_text img {
    height: 30px;
    width: 30px;
   
-  color: #59815b;
+  color: #49706c;
    padding: 10px;
    text-align: center;
    font-weight: bold;
@@ -686,7 +722,7 @@ font-size: 25px;
   margin-right: 5px;
   margin-left: 5px;
   border-radius: 50%;
-  background: #59815b;
+  background: #49706c;
   width: 10px;
   height: 10px;
 }
@@ -723,8 +759,14 @@ font-size: 25px;
 }
 
 .trips-page__block_reviews {
-  padding: 30px 0px 100px 0px;
+  /* padding: 30px 0px 100px 0px; */
 }
+
+.trips-page__block_reviews .wpb_column .vc_column-inner {
+  padding-top: 0 !important;
+}
+
+
 
 .trips-page__block_reviews h2 {
   margin-top: 30px !important;
@@ -741,16 +783,17 @@ font-size: 25px;
   vertical-align: middle;
   display: inline-block;
   max-width: 50%;
+  margin-left: 15px;
 }
 
 .trips-page__block_reviews .reviews-slider__arrows .reviews-slider__arrows_arrow-left {
   margin-left: -30px;
-  /* border: 1px solid #59815b; */
+  /* border: 1px solid #49706c; */
 }
 
 .trips-page__block_reviews .reviews-slider__arrows .reviews-slider__arrows_arrow-right  {
   margin-right: -30px;
-  /* border: 1px solid #59815b; */
+  /* border: 1px solid #49706c; */
 }
 
 .trips-page__block_reviews .reviews-slider__arrows .reviews-slider__arrows_arrow-right img.arrow-green,
@@ -784,7 +827,7 @@ font-size: 25px;
 .trips-page__block_reviews .reviews-slider__arrows .reviews-slider__arrows_arrow-right:hover:before,
 .trips-page__block_reviews .reviews-slider__arrows .reviews-slider__arrows_arrow-left:hover:before {
   
-  color: #59815b;
+  color: #49706c;
 }
 
 
@@ -799,12 +842,12 @@ font-size: 25px;
 
 
 .trips-page__block_maillist {
-  padding: 100px 0px 100px 0px;
+  /* padding: 80px 0px 80px 0px; */
 }
 
 
 .trips-page__block_maillist .trips-page__block_maillist-wrapper {
-  padding: 70px 0px 70px 0px;
+  /* padding: 70px 0px 70px 0px; */
 }
 
 .trips-page__block_maillist .trips-page__block_maillist-img {
@@ -833,11 +876,16 @@ font-size: 25px;
 
 
 .trips-page__block_shop {
-  padding: 80px 0px 80px 0px ;
+  /* padding: 70px 0px 70px 0px ; */
+}
+
+.trips-page__block_shop .wpb_column .vc_column-inner {
+  padding-top: 0 !important;
 }
 
 .trips-page__block_shop .trips-page__block_shop-title {
   margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .trips-page__block_shop .shop-slider__item {
@@ -859,11 +907,11 @@ font-size: 25px;
 
 
 .trips-page__block_blog {
-  padding: 80px 0px 80px 0px !important;
+  /* padding: 70px 0px 70px 0px !important; */
 }
 
 .trips-page__block_form {
-  padding: 70px 0px 140px 0px !important;
+  /* padding: 70px 0px 70px 0px !important; */
 }
 
 .trips-page__block_maillist .trips-page__block_maillist-text-bottom {
@@ -925,6 +973,65 @@ flex-wrap: wrap;
 
 }
 
+@media(max-width: 1024px) { 
+  .marriage-page__block-services,
+  .trips-page__block_we-know,
+  .marriage-page__block-services,
+  .trips-page__block_maillist,
+  .trips-page__block_shop,
+  .trips-page__block_blog,
+  .trips-page__block_form {
+    text-align: center;
+  }
+
+  .marriage-page__block-services .marriage-page__block-services-right,
+  .marriage-page__block-services .marriage-page__block-services-right .marriage-page__block-services-title {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .marriage-page__block-services .marriage-page__block-services-left {
+    margin-bottom: 20px;
+  }
+
+  .marriage-page__block-services {
+    padding: 0px 0px 50px 0px;
+}
+
+.trips-page__block_reviews {
+  padding: 0px 0px 50px 0px;
+}
+
+.trips-page__block_shop {
+  padding: 30px 0px 70px 0px;
+}
+
+.trips-page__block_maillist .trips-page__block_maillist-text {
+  padding-left: 0px;
+ 
+}
+
+.trips-page__block_maillist form {
+  text-align: left;
+ 
+}
+
+.trips-page__block_maillist form .wpcf7-form-control-wrap {
+  margin-right: 5px;
+  
+}
+
+.trips-page__block_maillist form .wpcf7-form-control-wrap input {
+  margin-bottom: 10px;
+}
+
+.trips-page__block_maillist form .form-caption {
+  margin-left: 5px;
+}
+
+
+}
+
 
 @media(max-width: 991px) { 
   .marriage-page__top .marriage-page__top-title,
@@ -934,7 +1041,8 @@ flex-wrap: wrap;
   }
 
 
-  .reviews-slider .reviews-slider__item {
+  .reviews-slider .reviews-slider__item,
+   {
     text-align: center;
   }
   
@@ -982,6 +1090,30 @@ flex-wrap: wrap;
 .reviews-slider .reviews-slider__item .reviews-slider__img img {
   margin: 0 auto;
 }
+
+.trips-page__block_form form.common__form {
+  margin-top: 40px;
+}
+
+.trips-page__block_form form.common__form .wpcf7-form-control-wrap,
+.common__form form .contact-us span.wpcf7-form-control-wrap {
+  margin-right: 0px !important;
+  width: 100% !important;
+  
+}
+
+.trips-page__block_form form.common__form .wpcf7-form-control-wrap input,
+.common__form form .contact-us span.wpcf7-form-control-wrap {
+  margin-bottom: 10px;
+}
+
+.mkdf-blog-list .corporate-blog__item .entry-date{
+  text-align: center;
+  float: unset;
+  margin-bottom: 10px;
+}
+
+
 
 }
 

@@ -12,6 +12,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="mkdf-post-has-media post-506 post type-post status-publish format-standard has-post-thumbnail hentry category-trips tag-adventure tag-explore tag-guides">
 	<div class="mkdf-post-content">
+		<?php if( get_the_post_thumbnail() ): ?>
 		<div class="mkdf-post-heading">
 			<div class="mkdf-post-image">
 				<?php karjala_event_post_thumbnail(); ?>
@@ -36,6 +37,7 @@
 			?>
 
 		</div>
+		<?php endif; ?>
 
 		<div class="mkdf-post-text">
 			<div class="mkdf-post-text-inner">
@@ -47,7 +49,7 @@
 				
 					?>
 						<!-- <span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar "></span> <a itemprop="url"
-							href="https://wanderland.qodeinteractive.com/2019/10/">
+							href="">
 							October 11, 2019 </a>
 						<meta itemprop="interactionCount" content="UserComments: 0"> -->
 					</div>
@@ -58,7 +60,7 @@
 					?>
 						<!-- <span aria-hidden="true" class="mkdf-icon-font-elegant icon_pencil "></span> <a itemprop="author"
 							class="mkdf-post-info-author-link"
-							href="https://wanderland.qodeinteractive.com/author/alisa-michaels/">
+							href="">
 							<span class="mkdf-post-info-author-text">
 								by </span>
 							Alisa Michaels </a> -->
@@ -84,46 +86,89 @@
 						<div class="mkdf-post-read-more-button">
 							<a href="<?php echo get_the_permalink();?>"
 								target="_self"
-								class="mkdf-btn mkdf-btn-medium mkdf-btn-simple mkdf-btn-svg-icon mkdf-blog-list-button"> 
+								class="mkdf-btn mkdf-btn-medium mkdf-btn-solid"> 
 								<span class="mkdf-btn-text">Читать</span> 
 								
 							</a> 
 						</div>
 
 					</div>
-					<!-- <div class="mkdf-post-info-bottom-right">
+					<div class="mkdf-post-info-bottom-right">
 						<div class="mkdf-blog-share">
 							<div class="mkdf-social-share-holder mkdf-list">
-								<ul>
-									<li class="mkdf-facebook-share">
-										<a class="mkdf-share-link" href="#"
-											>
+							<ul>
+									<li class="">
+										<a href="#" onclick="Share.vkontakte('<?php echo get_the_permalink(); ?>','<?php echo get_the_title(); ?>','<?php echo get_the_post_thumbnail_url(); ?>','<?php echo get_the_excerpt(); ?>')"> 
+											<span class="mkdf-social-network-icon vk">
+												<img src="<?php echo get_template_directory_uri() . '/img/vk.svg'; ?>" alt="Vk">
+											</span>	
+										</a>								
+									</li>
+									<li class="">
+										<a onclick="Share.facebook('<?php echo get_the_permalink(); ?>')"> 
 											<span class="mkdf-social-network-icon social_facebook"></span>
+										</a>									
+									</li>							
+									<li class="">
+										<a onclick="Share.twitter('<?php echo get_the_permalink(); ?>','<?php echo get_the_title(); ?>')"> 
+											<span class="mkdf-social-network-icon vk">
+												<img src="<?php echo get_template_directory_uri() . '/img/twitter.svg'; ?>" alt="Twitter">
+											</span>
 										</a>
 									</li>
-									<li class="mkdf-twitter-share">
-										<a class="mkdf-share-link" href="#"
-											>
-											<span class="mkdf-social-network-icon social_twitter"></span>
-										</a>
-									</li>
-									<li class="mkdf-tumblr-share">
-										<a class="mkdf-share-link" href="#"
-											>
-											<span class="mkdf-social-network-icon social_tumblr"></span>
-										</a>
-									</li>
-									<li class="mkdf-pinterest-share">
-										<a class="mkdf-share-link" href="#"
-											>
+									<li class="">
+										<a onclick="Share.pinterest('<?php echo get_the_permalink(); ?>','<?php echo get_the_title(); ?>','<?php echo get_the_post_thumbnail_url(); ?>','<?php echo get_the_excerpt(); ?>')">
 											<span class="mkdf-social-network-icon social_pinterest"></span>
 										</a>
 									</li>
 								</ul>
-								<p class="mkdf-social-title">Share</p>
+
+								<script>
+									/*** SOCIAL MEDIA SHARING  */
+
+									Share = {
+										vkontakte: function(purl, ptitle, pimg, text) {
+											url  = 'http://vkontakte.ru/share.php?';
+											url += 'url='          + encodeURIComponent(purl);
+											url += '&title='       + encodeURIComponent(ptitle);
+											url += '&description=' + encodeURIComponent(text);
+											url += '&image='       + encodeURIComponent(pimg);
+											url += '&noparse=true';
+											Share.popup(url);
+										},
+										
+										facebook: function(purl) {
+											url  = 'http://www.facebook.com/sharer.php?';
+											url += 'u='       + encodeURIComponent(purl);
+											Share.popup(url);
+										},
+
+										twitter: function(purl, ptitle) {
+											url  = 'http://twitter.com/share?';
+											url += 'text='      + encodeURIComponent(ptitle);
+											url += '&url='      + encodeURIComponent(purl);
+											url += '&counturl=' + encodeURIComponent(purl);
+											Share.popup(url);
+										},
+										
+										pinterest: function(purl, ptitle, pimg, text) {
+											url  = 'https://pinterest.com/pin/create/button/?';
+											url += 'url='          + encodeURIComponent(purl);
+											url += '&title='       + encodeURIComponent(ptitle);
+											url += '&description=' + encodeURIComponent(text);
+											url += '&media='    + encodeURIComponent(pimg);
+											Share.popup(url)
+										},
+
+										popup: function(url) {
+											window.open(url,'','toolbar=0,status=0,width=626,height=436');
+										}
+									};
+
+								</script>
 							</div>
 						</div>
-					</div> -->
+					</div>
 				</div>
 
 			</div>

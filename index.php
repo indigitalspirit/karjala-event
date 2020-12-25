@@ -24,7 +24,7 @@ if( is_home() ):
             
           ?>
 
-    <!-- BLOG TOP -->
+    <!-- BLOG-page TOP -->
     <div
       class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top"
       <?php if( $blog_main_img ){ ?> style="background-image: url(<?php echo $blog_main_img; ?>);background-size:cover;"
@@ -33,10 +33,16 @@ if( is_home() ):
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h2 class="mkdf-page-title entry-title">
+            <h1 class="mkdf-page-title entry-title">
             
-              <?php single_post_title(); ?>
-            </h2>
+              <?php single_post_title(); ?> 
+            </h1>
+            <div class="breadcrumbs">
+              
+            <?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>
+            </div>
+
+            
           </div>
         </div>
       </div>
@@ -65,31 +71,11 @@ if( is_home() ):
 													
 											?>
 
-                        <!-- <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1572440552355">
-                          <div
-                            class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-offset-3 vc_col-lg-6 vc_col-md-offset-1 vc_col-md-10 vc_col-sm-offset-0">
-                            <div class="vc_column-inner">
-                              <div class="wpb_wrapper">
-                                <div class="mkdf-section-title-holder   mkdf-st-highlight mkdf-center-align">
-                                  <div class="mkdf-st-inner">
-
-                                    <h2 class="mkdf-st-title">
-                                      Блог
-                                      <span class="mkdf-st-highlight-title-holder" style="color: #f2f1e7">
-                                        <span class="mkdf-st-highlight-title" style="color: #59815b">KarjalaEvent</span>
-
-                                      </span>
-                                    </h2>
-
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div> -->
+                        
 
                         <div
                           class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-three-columns mkdf-normal-space mkdf-bl-pag-load-more">
+                          
                           <div class="mkdf-bl-wrapper mkdf-outer-space">
 
 
@@ -97,15 +83,15 @@ if( is_home() ):
 
 															<?php 
 															//$posts_counter = 0;
-															$page = (get_query_var('page')) ? get_query_var('page') : 1;
+															// $page = (get_query_var('page')) ? get_query_var('page') : 1;
 
-															$args = array(
+															// $args = array(
 															
-																	'posts_per_page' => 6,
-																	'paged' => $page
-															);
+															// 		'posts_per_page' => 6,
+															// 		'paged' => $page
+															// );
 
-															query_posts( $args );
+															// query_posts( $args );
 															while( have_posts() ): 
 																the_post();
 
@@ -121,48 +107,33 @@ if( is_home() ):
 
                           </div>
 
-													<?php 
-														//if( previous_posts_link('<<', 0) || next_posts_link('>>', 0) ) {
-													?>
-                          <!-- PAGINATION -->
+
+                          
+
+                        </div>
+
+                        <div class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-three-columns mkdf-normal-space mkdf-bl-pag-load-more">
+
+                          <?php 
+                            if( get_previous_posts_link() || get_next_posts_link() ) {
+                          ?>
+                          <!-- PAGINATION BLOG -->
                           <div class="blog-page__pagination">
                             <div class="mkdf-blog-pagination">
                               <ul>
-															<li class="mkdf-pag-number">
-															<?php previous_posts_link('<< Предыдущая страница', 0); ?>
-                                </li>
-																<li class="mkdf-pag-number">
-																<?php next_posts_link('Следующая страница >>', 0); ?>
-                                </li>
-                                <!-- <li class="mkdf-pag-number mkdf-pag-active">
-                                  <a href="#">1</a>
+                              <li class="mkdf-pag-number">
+                              <?php previous_posts_link('<< Предыдущая страница', 0); ?>
                                 </li>
                                 <li class="mkdf-pag-number">
-                                  <a href="#">2</a>
+                                <?php next_posts_link('Следующая страница >>', 0); ?>
                                 </li>
-                                <li class="mkdf-pag-number">
-                                  <a href="#">3</a>
-                                </li>
-                                <li class="mkdf-pag-number">
-                                  <a href="#">4</a>
-                                </li>
-                                <li class="mkdf-pag-next">
-                                  <a href="#">
-                                    <span class="arrow_carrot-right"></span>
-                                  </a>
-                                </li>
-                                <li class="mkdf-pag-last">
-                                  <a href="#">
-                                    <span class="arrow_carrot-2right"></span>
-                                  </a>
-                                </li> -->
+                                
                               </ul>
                             </div>
                           </div>
-													<?php 
-														//}
-													?>
-
+                          <?php 
+                            }
+                          ?>
 
                         </div>
 

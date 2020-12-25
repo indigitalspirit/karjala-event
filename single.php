@@ -22,10 +22,13 @@ get_header();
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h2 class="mkdf-page-title entry-title">
+            <h1 class="mkdf-page-title entry-title">
               <?php the_title(); ?>
              
-            </h2>
+            </h1>
+            <div class="breadcrumbs">
+              <?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>jyt
+            </div>
           </div>
         </div>
       </div>
@@ -59,12 +62,7 @@ get_header();
 												// 		'next_text' => '<span class="nav-subtitle mkdf-blog-single-next">' . esc_html__( 'Next:', 'karjala_event' ) . '</span> <span class="nav-title">%title</span>',
 												// 	)
                         // );
-                        /* <a itemprop="url" class="mkdf-blog-single-prev" href="https://wanderland.qodeinteractive.com/sometimes-the-hike-is-better-than-the-top-02/">
-                        <span class="mkdf-blog-single-nav-mark ion-ios-arrow-thin-left"></span> <span class="mkdf-blog-single-nav-label">previous post</span>
-                        <div class="mkdf-blog-single-nav-thumbnail"><img width="87" height="40" src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-08.jpg" class="attachment-wanderland_post_thumb_size size-wanderland_post_thumb_size wp-post-image" alt="s" loading="lazy"></div>
                         
-                      </a>
-                      */
                         $prev_post = get_adjacent_post(false, '', true);
                        
                         //echo $prev_thumbnail_url;//get_previous_post_link( '%link', $prev_thumbnail );
@@ -128,42 +126,14 @@ get_header();
                   </div>
                 </div>
 
-                <!-- TODO -->
-                <!-- <div class="mkdf-author-description">
-                  <div class="mkdf-author-description-image">
-                    <a itemprop="url" href="https://wanderland.qodeinteractive.com/author/alisa-michaels/" title="The Laugavegur Trail">
-                      <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-author-img-02.png" width="162" height="170" alt="Alisa Michaels" class="avatar avatar-170 wp-user-avatar wp-user-avatar-170 alignnone photo"> </a>
-                  </div>
-                  <div class="mkdf-author-description-content">
-                    <div class="mkdf-author-social-icons clearfix">
-                      <a itemprop="url" href="https://www.facebook.com/qodeInteractive/" target="_blank">
-                        <i class="mkdf-icon-ion-icon social_facebook mkdf-author-social-facebook mkdf-author-social-icon "></i>
-                      </a>
-                      <a itemprop="url" href="https://twitter.com/qodeInteractive" target="_blank">
-                        <i class="mkdf-icon-ion-icon social_twitter mkdf-author-social-twitter mkdf-author-social-icon "></i>
-                      </a>
-                      <a itemprop="url" href="https://www.instagram.com/qodeinteractive/" target="_blank">
-                        <i class="mkdf-icon-ion-icon social_instagram mkdf-author-social-instagram mkdf-author-social-icon "></i>
-                      </a>
-                      <span class="mkdf-social-share-title">Follow</span>
-                    </div>
-                    <h5 class="mkdf-author-name vcard author">
-                      <a itemprop="url" href="https://wanderland.qodeinteractive.com/author/alisa-michaels/" title="The Laugavegur Trail">
-                        <span class="fn">
-                          Alisa Michaels </span>
-                      </a>
-                    </h5>
-                    <p itemprop="description" class="mkdf-author-text">Lorem ipsum dolor sit amet mas, consect adipisicing elit
-                      sed. Eiusmod etrent te mporincidi du nt ut labore et dolore magna aliqua. Ut enim.</p>
-                  </div>
-                </div> -->
 
                 <?php 
                     // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                      comments_template();
+                    //CLOSE COMMENTS
+                    // if ( comments_open() || get_comments_number() ) :
+                    //   comments_template();
                       
-                    endif;
+                    // endif;
                 
                   endwhile; // End of the loop.
                 ?>

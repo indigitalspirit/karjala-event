@@ -27,7 +27,7 @@
 				<p class="mkdf-post-excerpt">
 					<?php the_excerpt(); ?>
 				</p>
-				<a href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>" class="mkdf-btn mkdf-btn-medium mkdf-btn-solid mkdf-btn-svg-icon">
+				<a href="<?php echo get_the_permalink(); ?>" title="<?php the_title(); ?>" class="mkdf-btn mkdf-btn-medium mkdf-btn-solid">
 					Открыть
 				</a>
 			</div>

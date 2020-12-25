@@ -24,13 +24,16 @@ get_header();
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h2 class="mkdf-page-title entry-title">
+            <h1 class="mkdf-page-title entry-title">
               <?php
 							the_archive_title();
-							//the_archive_description( '<div class="archive-description">', '</div>' );
+							//the_archive_description( '<div class="archive-description">', '</div>' );jgj
 							?>
               
-            </h2>
+						</h1>
+						<div class="breadcrumbs">
+            <?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>
+            </div>
           </div>
         </div>
 			</div>
@@ -82,21 +85,21 @@ get_header();
 													<a href="#">1</a>
 												</li>
 												<li class="mkdf-pag-number">
-													<a itemprop="url" href="https://wanderland.qodeinteractive.com/right-sidebar/page/2/">2</a>
+													<a itemprop="url" href="">2</a>
 												</li>
 												<li class="mkdf-pag-number">
-													<a itemprop="url" href="https://wanderland.qodeinteractive.com/right-sidebar/page/3/">3</a>
+													<a itemprop="url" href="">3</a>
 												</li>
 												<li class="mkdf-pag-number">
-													<a itemprop="url" href="https://wanderland.qodeinteractive.com/right-sidebar/page/4/">4</a>
+													<a itemprop="url" href="">4</a>
 												</li>
 												<li class="mkdf-pag-next">
-													<a itemprop="url" href="https://wanderland.qodeinteractive.com/right-sidebar/page/2/">
+													<a itemprop="url" href="">
 														<span class="arrow_carrot-right"></span>
 													</a>
 												</li>
 												<li class="mkdf-pag-last">
-													<a itemprop="url" href="https://wanderland.qodeinteractive.com/right-sidebar/page/17/">
+													<a itemprop="url" href="">
 														<span class="arrow_carrot-2right"></span>
 													</a>
 												</li>

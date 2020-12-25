@@ -201,12 +201,15 @@ add_action( 'widgets_init', 'karjala_event_widgets_init' );
  */
 function karjala_event_scripts() {
 
-	//TODO
-	//if( is_homepage() )
 
-	wp_enqueue_style( 'karjala_event-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C400i%2C600%7CMuli%3A300%2C400%2C400i%2C600%7CCrimson+Text%3A300%2C400%2C400i%2C600&#038;subset=latin-ext&#038;', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C400i%2C600%7CCrimson+Text%3A300%2C400%2C400i%2C600&#038;subset=latin-ext&#038;', array(), _S_VERSION );
+
+	// wp_enqueue_style( 'karjala_event-font', 'https://fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C400i%2C600%7CMuli%3A300%2C400%2C400i%2C600%7CCrimson+Text%3A300%2C400%2C400i%2C600&#038;subset=latin-ext&#038;', array(), _S_VERSION );
 
 	wp_enqueue_style( 'karjala_event-slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), _S_VERSION );
+
+	wp_enqueue_style( 'karjala_event-animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), _S_VERSION );
 
 
 	if( !is_home() && !is_front_page() ) {
@@ -220,7 +223,7 @@ function karjala_event_scripts() {
 
 	wp_enqueue_style( 'karjala_event-common', get_template_directory_uri() . '/css/common.css', array(), _S_VERSION );
 
-	if( is_archive() ) {
+	if( is_archive() || is_tag() || is_category() ) {
 		wp_enqueue_style( 'karjala_event-archive', get_template_directory_uri() . '/css/archive.css', array(), _S_VERSION );
 
 	}
@@ -235,7 +238,7 @@ function karjala_event_scripts() {
 
 	}
 
-	if( is_page('Политика конфиденциальности') ) {
+	if( is_page('Политика конфиденциальности') || is_privacy_policy() ) {
 		wp_enqueue_style( 'karjala_event-privacy', get_template_directory_uri() . '/css/privacy.css', array(), _S_VERSION );
 
 	}
@@ -246,26 +249,30 @@ function karjala_event_scripts() {
 	}
 
 
-	if( is_page('Корпоративы') ) {
+	if( is_page('Корпоративы') || is_page_template('corporates.php') ) {
 		wp_enqueue_style( 'karjala_event-corporate', get_template_directory_uri() . '/css/corporate.css', array(), _S_VERSION );
 
 	}
 
-	if( is_page('Магазин') ) {
+	if( is_page('Магазин') || is_page_template('shop.php') ) {
 		wp_enqueue_style( 'karjala_event-shop', get_template_directory_uri() . '/css/shop.css', array(), _S_VERSION );
 
 	}
 
-	if( is_page('Свадьбы') ) {
-		wp_enqueue_style( 'karjala_event-marridge', get_template_directory_uri() . '/css/marridge.css', array(), _S_VERSION );
+	if( is_page('Свадьбы') || is_page_template('marriage.php')  ) {
+		wp_enqueue_style( 'karjala_event-marriage', get_template_directory_uri() . '/css/marriage.css', array(), _S_VERSION );
 
 	}
 
-	if( is_page('Походы') || is_page('Праздники') ) {
+	if( is_page('Походы') || is_page('Праздники') || is_page_template('celebrations.php') || is_page_template('trips.php') ) {
 		wp_enqueue_style( 'karjala_event-trips', get_template_directory_uri() . '/css/trips.css', array(), _S_VERSION );
 	}
 
-	if( is_page('Карта сайта') ) {
+	if( is_page('Праздники') || is_page_template('celebrations.php') ) {
+		wp_enqueue_style( 'karjala_event-celebrations', get_template_directory_uri() . '/css/celebrations.css', array(), _S_VERSION );
+	}
+
+	if( is_page('Карта сайта') || is_page_template('map.php') ) {
 		wp_enqueue_style( 'karjala_event-map', get_template_directory_uri() . '/css/map.css', array(), _S_VERSION );
 	}
 	
@@ -279,6 +286,7 @@ function karjala_event_scripts() {
 		wp_enqueue_style( 'karjala_event-index', get_template_directory_uri() . '/css/index.css', array(), _S_VERSION );
 	}
 
+	wp_enqueue_style( 'karjala_event-overwrite', get_template_directory_uri() . '/style.css', array(), _S_VERSION );
 
 	wp_style_add_data( 'karjala_event-style', 'rtl', 'replace' );
 
@@ -301,9 +309,10 @@ function karjala_event_scripts() {
 
 	wp_enqueue_script( 'karjala_event-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	//CLOSE COMMENTS
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'karjala_event_scripts' );
 

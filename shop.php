@@ -8,11 +8,15 @@ get_header();
 
 
 <?php
-    $sp_categories = get_field("sp-categories");
+    //$sp_categories = get_field("sp-categories");
     $sp_main__img = get_field("sp-main__img");
     $sp_products = get_field("sp-products");
+    $sp_categories = get_field("sp-categories");
+
     $sp_form__title  = get_field("sp-form__title");
     $sp_form__shortcode  = get_field("sp-form__shortcode");
+
+    
     
   ?>
 
@@ -21,19 +25,22 @@ get_header();
 
     <!-- BLOG TOP -->
     <div
-      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top">
+      class="mkdf-title-holder mkdf-standard-type mkdf-title-va-header-bottom mkdf-has-bg-image mkdf-bg-responsive-disabled blog-page__block_top shop-page__block_top">
       <div class="mkdf-title-image">
-        <?php if( $sp_main__img ): ?>
-        <img src="<?php echo $sp_main__img; ?>" alt="<?php echo $sp_main__img; ?>">
+        <?php if( $sp_main__img["url"] ): ?>
+        <img src="<?php echo $sp_main__img{'url'}; ?>" alt="<?php echo $sp_main__img["alt"]; ?>">
         <?php endif; ?>
 
       </div>
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h2 class="mkdf-page-title entry-title">
+            <h1 class="mkdf-page-title entry-title">
               <?php the_title(); ?>
-            </h2>
+            </h1>
+            <div class="breadcrumbs">
+            <?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -81,10 +88,34 @@ get_header();
                                         foreach( $product_cats as $product_cat ) {
                                           if( $product_cat ):
 
+                                            $is_category_in_russian = false;
+
+                                            foreach( $sp_categories as $sp_category ) {
+                                              //foreach( $sp_category as $key => $value ) {
+                                                if ( !$is_category_in_russian ):
+                                                  if ( ( trim($sp_category['cat_id']) == trim($product_cat) ) ):
+
+                                                    //echo '$sp_category["cat_id"] : ' . $sp_category['cat_id'] . '$product_cat : ' . $product_cat . '<br>';
+
+                                                    $product_cat_name = $sp_category['cat_name'];
+                                                    $is_category_in_russian = true;
+                                                    //echo 'equal ' . $product_cat_name;
+                                                  else: 
+                                                    $product_cat_name = $product_cat;
+                                                  endif;
+
+                                                  //echo ' ' . $product_cat_name;
+
+                                                endif;
+
+                                            }
+
+
                                       ?>
-                                      <span data-filter="<?php echo $product_cat;?>"><?php echo $product_cat;?></span>
+                                      <span data-filter="<?php echo $product_cat;?>"><?php echo $product_cat_name;?></span>
 
                                       <?php 
+                                          
                                           endif;
                                         }
                                         
@@ -95,6 +126,28 @@ get_header();
                                     <?php 
                                         foreach( $product_cats as $product_cat ) {
                                           if( $product_cat ):
+
+                                            $is_category_in_russian = false;
+
+                                            foreach( $sp_categories as $sp_category ) {
+                                              //foreach( $sp_category as $key => $value ) {
+                                                if ( !$is_category_in_russian ):
+                                                  if ( ( trim($sp_category['cat_id']) == trim($product_cat) ) ):
+
+                                                    //echo '$sp_category["cat_id"] : ' . $sp_category['cat_id'] . '$product_cat : ' . $product_cat . '<br>';
+
+                                                    $product_cat_name = $sp_category['cat_name'];
+                                                    $is_category_in_russian = true;
+                                                    //echo 'equal ' . $product_cat_name;
+                                                  else: 
+                                                    $product_cat_name = $product_cat;
+                                                  endif;
+
+                                                  //echo 'product_cat_name: ' . $product_cat_name . '  product_cat: ' . $product_cat . '<br>';
+
+                                                endif;
+
+                                            }
                                     ?>
 
                                     <!-- category -->
@@ -106,7 +159,7 @@ get_header();
                                           <div class="mkdf-pli-text-wrapper">
 
                                             <h2 class="entry-title mkdf-pli-title">
-                                              <?php echo $product_cat; ?>
+                                              <?php echo $product_cat_name; ?>
                                             </h2>
 
                                           </div>
@@ -122,7 +175,7 @@ get_header();
                                             $product_img = $sp_product["product_img"];
                                             $product_categories = $sp_product["product_categories"];
 
-                                            if( $product_name && $product_img && ( strpos($product_categories, $product_cat) !== false)  ):
+                                            if( $product_name && $product_img["url"] && ( strpos($product_categories, $product_cat) !== false)  ):
                                             
                                         ?>
 
@@ -132,16 +185,20 @@ get_header();
                                               <div class="mkdf-pli-image">
                                                 <div class="mkdf-mark-wrapper">
                                                 </div>
-                                                <img class="mkdf-product-hover-image" alt="<?php echo $product_name;?>"
-                                                  src="<?php echo $product_img;?>">
+                                                <a href="<?php get_site_url() . '/magazin'?>">
+                                                  <img class="attachment-woocommerce_single size-woocommerce_single wp-post-image image__animation-tranform" alt="<?php echo $product_img["alt"];?>"
+                                                    src="<?php echo $product_img["url"];?>">
+                                                </a>
                                               </div>
                                               
                                             </div>
                                             <div class="mkdf-pli-text-wrapper">
 
+                                            <a href="<?php get_site_url() . '/magazin'?>">
                                               <h3 class="entry-title mkdf-pli-title">
                                                 <a href="#"><?php echo $product_name;?></a>
                                               </h3>
+                                            </a>
 
                                             </div>
                                           </div>

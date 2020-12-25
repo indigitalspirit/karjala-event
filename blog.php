@@ -23,10 +23,13 @@ get_header();
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h2 class="mkdf-page-title entry-title">
+            <h1 class="mkdf-page-title entry-title">
             
               <?php echo the_title(); ?>
-            </h2>
+            </h1>
+            <div class="breadcrumbs">
+            <?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -63,7 +66,7 @@ get_header();
                                     <h2 class="mkdf-st-title">
                                       Блог
                                       <span class="mkdf-st-highlight-title-holder" style="color: #f2f1e7">
-                                        <span class="mkdf-st-highlight-title" style="color: #59815b">KarjalaEvent</span>
+                                        <span class="mkdf-st-highlight-title" style="color: #49706c">KarjalaEvent</span>
 
                                       </span>
                                     </h2>

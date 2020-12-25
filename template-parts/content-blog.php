@@ -9,7 +9,7 @@
 
 ?>
 
-<li class="mkdf-bl-item mkdf-item-space corporate-blog__item" id="post-<?php the_ID(); ?>">
+<li class="mkdf-bl-item mkdf-item-space blog-item" id="post-<?php the_ID(); ?>">
 	<div class="mkdf-bli-inner">
 		<div class="mkdf-bli-wrapper">
 			<?php $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
@@ -58,12 +58,17 @@
 		<div class="mkdf-bli-content">
 			<div class="mkdf-bli-info">
 				<div class="mkdf-post-info-date entry-date published updated">
-					<span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar"></span>
-					<?php the_date(); ?>
+					<!-- <span aria-hidden="true" class="mkdf-icon-font-elegant icon_calendar"></span> -->
+					<?php //the_date(); ?>
 					<!-- <a href="<?php //echo $mp_history__title; ?>">
 						<?php //echo $mp_history__title; ?>
 					</a>
 					<meta content="UserComments: 0"> -->
+					<?php 
+						karjala_event_posted_on(); 
+						karjala_event_posted_by(); 
+					
+					?>
 				</div>
 			</div>
 			<h5 class="entry-title mkdf-post-title">

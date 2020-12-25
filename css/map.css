@@ -17,7 +17,7 @@ footer .widget_text img {
 
 /****** BLOG TOP *****/
 .blog-page__block_top {
-  height: 452px;background-image:url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-35.jpg);
+  height: 452px;background-image:url(../img/blog-post-img-35.jpg);
 
   margin-bottom: 90px;
 
@@ -94,7 +94,7 @@ text-align: center;
 
 .map-page .map-page__top-pages .map-page__top-pages-item .top-pages-item__children {
   list-style-type: disc;
-  padding-left: 15px;
+  padding-left: 0px;
   margin-top: 0;
 }
 
@@ -103,6 +103,11 @@ text-align: center;
 }
 
 .map-page .map-page__top-pages .map-page__top-pages-item .top-pages-item__children li a {
-  
+  display: inline-block;
+}
+
+.map-page .map-page__top-pages .map-page__top-pages-item .top-pages-item__children li a h3 {
+  font-size: 18px;
+  margin: 0;
 }
 

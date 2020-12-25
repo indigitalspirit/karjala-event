@@ -68,6 +68,18 @@
 
               $instagram = get_option('karjala_event_instagram_field');
 
+              $karjala_event_social_3_field = get_option('karjala_event_social_3_field');
+              $karjala_event_social_3_icon = get_option('karjala_event_social_3_icon');
+
+              $karjala_event_social_4_field = get_option('karjala_event_social_4_field');
+              $karjala_event_social_4_icon = get_option('karjala_event_social_4_icon');
+
+              $karjala_event_social_5_field = get_option('karjala_event_social_5_field');
+              $karjala_event_social_5_icon = get_option('karjala_event_social_5_icon');
+
+              $karjala_event_social_6_field = get_option('karjala_event_social_6_field');
+              $karjala_event_social_6_icon = get_option('karjala_event_social_6_icon');
+
             ?>
               <div class="widget mkdf-social-icons-group-widget mkdf-light-skin text-align-left">
                 <?php 
@@ -84,6 +96,41 @@
                 <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social"
                   href="<?php echo $instagram;?>" target="_blank">
                   <span class="mkdf-social-icon-widget ion-social-instagram top-bar__social-icon"></span>
+                </a>
+                <?php 
+                  endif;
+                  if( $karjala_event_social_3_field && $karjala_event_social_3_icon ):
+                ?>
+
+                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social"
+                  href="<?php echo $karjala_event_social_3_field;?>" target="_blank">
+                  <img class="mkdf-social-icon-widget  top-bar__social-icon" src="<?php echo $karjala_event_social_3_icon;?>" alt="<?php echo $karjala_event_social_3_field;?>">
+                </a>
+
+                <?php 
+                  endif;
+                  if( $karjala_event_social_4_field && $karjala_event_social_4_icon ):
+                ?>
+
+                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social"
+                  href="<?php echo $karjala_event_social_4_field;?>" target="_blank">
+                  <img class="mkdf-social-icon-widget  top-bar__social-icon" src="<?php echo $karjala_event_social_4_icon;?>" alt="<?php echo $karjala_event_social_4_field;?>">
+                </a>
+                <?php 
+                  endif;
+                  if( $karjala_event_social_5_field && $karjala_event_social_5_icon ):
+                ?>
+                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social"
+                  href="<?php echo $karjala_event_social_5_field;?>" target="_blank">
+                  <img class="mkdf-social-icon-widget  top-bar__social-icon" src="<?php echo $karjala_event_social_5_icon;?>" alt="<?php echo $karjala_event_social_5_field;?>">
+                </a>
+                <?php 
+                  endif;
+                  if( $karjala_event_social_6_field && $karjala_event_social_6_icon ):
+                ?>
+                <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover top-bar__social"
+                  href="<?php echo $karjala_event_social_6_field;?>" target="_blank">
+                  <img class="mkdf-social-icon-widget  top-bar__social-icon" src="<?php echo $karjala_event_social_6_icon;?>" alt="<?php echo $karjala_event_social_6_field;?>">
                 </a>
                 <?php 
                   endif;
@@ -138,7 +185,28 @@
 
                 <div class="mkdf-logo-wrapper">
 
-                  <?php the_custom_logo(); ?>
+                <?php 
+
+                $svg_logo = get_option('karjala_event_svg_logo_field');
+
+                if( $svg_logo ): 
+
+                ?>
+
+                <a href="https://karjalaevent.anastasia-pavlova.com/wp/" class="custom-logo-link" rel="home">
+                  <img src="<?php echo $svg_logo; ?> " class="custom-logo" alt="Karjala Event">
+                </a>
+
+
+                <?php
+
+                else:
+
+                  the_custom_logo(); 
+
+                endif;
+
+                ?>
 
                 </div>
 
@@ -191,7 +259,28 @@
                 <div class="mkdf-position-left">
                   <div class="mkdf-position-left-inner">
                     <div class="mkdf-mobile-logo-wrapper">
-                      <?php the_custom_logo(); ?>
+                    <?php 
+
+                    $svg_logo = get_option('karjala_event_svg_logo_field');
+
+                    if( $svg_logo ): 
+
+                    ?>
+
+                    <a href="https://karjalaevent.anastasia-pavlova.com/wp/" class="custom-logo-link" rel="home">
+                      <img src="<?php echo $svg_logo; ?> " class="custom-logo" alt="Karjala Event">
+                    </a>
+
+
+                    <?php
+
+                    else:
+
+                      the_custom_logo(); 
+
+                    endif;
+
+                    ?>
 
                     </div>
                   </div>

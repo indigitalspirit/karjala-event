@@ -9,7 +9,7 @@
 
 ?>
 
-<!-- <div class="loading loading-end">
+<div class="loading loading-end">
       
 	<div class="mkdf-st-loader">
 		<div class="mkdf-st-loader1">
@@ -35,4 +35,4 @@
 		</div>
 	</div>
 
-</div> -->
+</div>

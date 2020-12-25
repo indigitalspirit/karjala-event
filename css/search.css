@@ -34,7 +34,7 @@
 }
 
 .page-id-202 .mkdf-content {
-  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-02.jpg);
+  background-image: url(../img/h2-bckg-img-02.jpg);
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: cover;
@@ -116,7 +116,7 @@
 .vc_custom_1579104144167 {
   padding-top: 65px !important;
   padding-bottom: 150px !important;
-  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h2-bckg-img-05.png?id=1681) !important;
+  background-image: url(../img/h2-bckg-img-05.png) !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -213,7 +213,7 @@ color: #ffffff;
 }
 
 .search-result .mkdf-search-page-holder p.mkdf-search-no-posts {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Crimson', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 26px;

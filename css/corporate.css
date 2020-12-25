@@ -1,5 +1,9 @@
 
 
+
+
+/************/
+
  .vc_custom_1576679106364 {
   background-image: url(img/bg-map.jpg) !important;
   background-position: 0 0 !important;
@@ -21,10 +25,12 @@
 }
 
 .page-id-401 .mkdf-content {
-  background-image: url(https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h6-bckg-img-01.jpg);
-  background-repeat: no-repeat;
-  /* background-position: center 0; */
-  background-size: cover;
+
+  background-image: url(../img/h6-bckg-img-01.jpg);
+    background-repeat: repeat-y;
+    /* background-position: center 0; */
+    background-size: auto;
+
 }
 
 .page-id-401 .mkdf-content .mkdf-content-inner>.mkdf-container>.mkdf-container-inner,
@@ -64,6 +70,52 @@
 
 
 
+.mkdf-section-title-holder .mkdf-st-title {
+  text-align: center;
+}
+
+
+.mkdf-header-vertical .mkdf-vertical-alignment-center .mkdf-vertical-area-widget-holder {
+  bottom: 55px;
+}
+
+
+
+
+/**** MENU ****/
+
+ul li.menu-item a:hover .menu-svg__left, ul li.menu-item a:hover .menu-svg__right {
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  height: 42px;
+  width: 30px;
+}
+
+
+ul li.menu-item a:hover .menu-svg__left, .mkdf-main-menu ul li.menu-item.current_page_item .menu-svg__left, .mkdf-vertical-menu ul li.menu-item.current_page_item .menu-svg__left {
+  background: url(../img/menu_item_left.svg) center no-repeat;
+  left: -28px;
+  background-size: cover;
+}
+
+ul li.menu-item a:hover .menu-svg__right, .mkdf-main-menu ul li.menu-item.current_page_item .menu-svg__right,
+.mkdf-vertical-menu ul li.menu-item.current_page_item .menu-svg__right {
+  background: url(../img/menu_item_right.svg) center no-repeat;
+  right: -28px;
+  background-size: cover;
+}
+
+.mkdf-vertical-menu ul li.menu-item.current_page_item .menu-svg__left, .mkdf-vertical-menu ul li.menu-item.current_page_item .menu-svg__right {
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  height: 42px;
+  width: 30px;
+}
+
+/**** ./MENU ****/
+
 /***** CORPORATE SERVICES ***/
 
 .aside-contacts {
@@ -78,6 +130,54 @@
 .aside-contacts .aside-contacts__item span {
   font-size: 22px;
 }
+
+.aside-contacts .aside-contacts__item img {
+  height: 20px;
+}
+
+
+.aside-search {
+
+}
+
+.aside-search form {
+  background: transparent;
+  margin-left: 20px;
+}
+
+
+.aside-search form:before {
+  background-color: #fff;
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: #49706c;
+  position: absolute;
+  left: 20px;
+  top: -2px;
+}
+
+.aside-search form label {
+  position: relative;
+}
+
+.aside-search form input.search-field {
+  border: none;
+  padding: 5px 15px;
+  max-width: 155px;
+}
+
+.aside-search form input.search-submit {
+  font-size: 1px;
+  background-color: #ffffff;
+  padding: 8px 8px;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  background-image: url(https://karjalaevent.anastasia-pavlova.com/wp/wp-content/themes/karjala-event/img/search.svg);
+  background-repeat: no-repeat;
+}
+
 
 
 
@@ -147,6 +247,7 @@
 
 .corporate-page__top .corporate-page__top-title {
   color: #ffffff;
+  text-align: left;
 }
 
 .corporate-page__top .corporate-page__top-btns {
@@ -164,20 +265,23 @@
 
 .corporate-page__top .corporate-page__top-icons-set {
   margin-top: 25px;
+  list-style-type: none;
 }
 
 .corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 20px;
 
 
 }
 
 .corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon span,
-.corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon p {
-  display: inline-block;
-  vertical-align: top;
+.corporate-page__top .corporate-page__top-icons-set .corporate-page__top-icon div {
+  /* display: inline-block;
+  vertical-align: top; */
   margin: 0;
-  margin-right: 15px;
+  /* margin-right: 15px; */
   color: #ffffff;
 
 }
@@ -314,7 +418,7 @@
 
  .corporate-services__block-item-btn {
   margin-bottom: 20px;
-  background: #59815b;
+  background: #49706c;
   color: #ffffff;
   font-family: Oswald,sans-serif;
   font-size: 16px;
@@ -408,6 +512,10 @@ padding: 30px 10px 20px 10px;
   position: relative;
 }
 
+.we-know-slider__wrapper .slick-dots {
+  margin-top: 10px;
+}
+
 
 .we-know-slider__wrapper .we-know-slider__item {
   
@@ -479,6 +587,10 @@ padding: 30px 10px 20px 10px;
   margin-bottom: 40px;
 }
 
+.corporate-video__block .corporate-video__block-video {
+  text-align: center;
+}
+
 
 /******** ./video block ***/
 
@@ -531,6 +643,15 @@ margin-bottom: 40px;
 
 }
 
+.corporate-maillist__block .mkdf-st-title {
+  text-align: left;
+
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-bottomtext .mkdf-btn {
+  max-width: unset;
+}
+
 /* ./MAILLIST */
 
 
@@ -558,6 +679,14 @@ margin-bottom: 40px;
 .corporate-blog__block .corporate-blog__block-title {
   margin-bottom: 40px;
 }
+
+
+
+.corporate-blog__block .mkdf-blog-list-holder  {
+margin-top: 40px;
+}
+
+
 
 .corporate-blog__block .corporate-blog__block-item {
   
@@ -595,9 +724,16 @@ margin-bottom: 40px;
 }
 
 .corporate-footer .footer-phraze {
-  margin-top: 30px;
+
+  max-width: 700px;
+  margin: 30px auto 0px auto;
 }
 
+
+.corporate-footer .footer-author a,
+.corporate-footer .footer-copyright a {
+  text-decoration: underline;
+}
 
 .corporate-footer .footer-author {
   margin-bottom: 25px;
@@ -675,7 +811,33 @@ margin-bottom: 40px;
   text-align: center;
 }
 
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-text .mkdf-st-title {
+  text-align: center;
+}
 
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-form form {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-form form .user-name {
+  margin-right: 5px;
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-form form  .form-caption {
+  margin-left: 0;
+
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-form form .contact-us   .wpcf7-text {
+  margin-bottom: 10px;
+
+}
+
+.corporate-maillist__block .corporate-maillist__block-wrapper .corporate-maillist__block-text {
+  padding-left: 0px;
+}
 
 }
 
@@ -708,6 +870,9 @@ margin-bottom: 40px;
 
 
 @media(max-width: 767px) { 
+  .corporate-block_wrapper {
+    padding: 50px 8% 22px 8%;
+  }
   .corporate-services__block .corporate-services__block-items .corporate-services__block-item {
     height: 360px;
     width: 48.9%;
@@ -725,6 +890,37 @@ margin-bottom: 40px;
   display: block;
   width: fit-content;
 }
+
+.common__form form .contact-us span.wpcf7-form-control-wrap {
+  margin-right: 0;
+  width: 100%;
+}
+
+.corporate-footer {
+  margin-top: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.corporate-footer .footer-copyright__right, 
+.corporate-footer .footer-copyright__left {
+  margin: 15px auto 0px auto;
+  display: block;
+}
+
+
+.corporate-blog__block .mkdf-blog-list .corporate-blog__item {
+  text-align: center;
+}
+
+.corporate-blog__block .mkdf-blog-list .corporate-blog__item .entry-date{
+  text-align: center;
+  float: unset;
+  margin-bottom: 10px;
+}
+
+
 
 }
 

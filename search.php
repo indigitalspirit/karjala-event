@@ -52,7 +52,7 @@ get_header();
 
 
 
-            <?php if ( have_posts() ) :
+            <?php if ( have_posts() && get_search_query() ) :
 							/* Start the Loop */
 							while ( have_posts() ) :
 								the_post();

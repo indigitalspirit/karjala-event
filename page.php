@@ -15,9 +15,7 @@ if ( is_home() || is_front_page() ) :
 
 	get_header('main');
 
-
 	$mp_history__title = get_field("mp_history__title");
-
 	$mp_history__text = get_field("mp_history__text");
 
 	$mp_video__link = get_field("mp_video__link");
@@ -25,11 +23,9 @@ if ( is_home() || is_front_page() ) :
 	$mp_services = get_field("mp_services");
 
 	$mp_form__title = get_field("mp_form__title");
-
 	$mp_form__shortcode = get_field("mp_form__shortcode");
 
 	$mp_slider = get_field("mp_slider");
-
 	$mp_slider_big = get_field("mp_slider_big");
 
 	?>
@@ -47,7 +43,7 @@ if ( is_home() || is_front_page() ) :
 																<div class="wpb_wrapper">
 																	<div class="section-spacer-bt-70 main-page__history">
 																	
-																		<h1>
+																		<h1 class="mkdf-st-title">
 																			<?php echo $mp_history__title; ?>
 																		</h1>
 																	
@@ -146,7 +142,7 @@ if ( is_home() || is_front_page() ) :
 																<div
 																class="mkdf-blog-list-holder mkdf-grid-list mkdf-bl-standard mkdf-two-columns mkdf-disable-bottom-space mkdf-small-space mkdf-bl-pag-no-pagination">
 																<div class="mkdf-bl-wrapper mkdf-outer-space">
-																	<ul class="mkdf-blog-list">
+																	<ul class="mkdf-blog-list main-page__services">
 
 																	<?php 
 																		foreach( $mp_services as $mp_services__item ) {
@@ -163,25 +159,26 @@ if ( is_home() || is_front_page() ) :
 																			<div class="mkdf-bli-inner">
 																				<div class="mkdf-bli-wrapper">
 																					<div class="mkdf-post-image">
+																					<?php //var_dump($service_img_link); ?>
 																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?>">
-																							<img src="<?php echo $service_img_link; ?>" class="attachment-full size-full wp-post-image" alt="<?php echo $service_title;?>"/> 
+																							<img src="<?php echo $service_img_link["url"]; ?>" class="attachment-full size-full wp-post-image image__animation-tranform" alt="<?php echo $service_img_link["alt"];?>"/> 
 																						</a>
 																					</div>
 																				</div>
 																				<div class="mkdf-bli-content">
-																					<h2 class="entry-title mkdf-post-title">
+																					<h2 class="entry-title mkdf-post-title main-page__services-title">
 																						<a href="<?php echo $service_btn_link; ?>" title="<?php echo $service_title;?>">
 																							<?php echo $service_title;?> 
 																						</a>
 																					</h2>
 
 
-																					<div class="mkdf-bli-excerpt">
+																					<div class="mkdf-bli-excerpt main-page__services-descr">
 																						<p>
 																							<?php echo $service_descr;?>
 																						</p>
 																					</div>
-																					<a href="<?php echo $service_btn_link; ?>" class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
+																					<a href="<?php echo $service_btn_link; ?>" class="mkdf-btn mkdf-btn-medium mkdf-btn-solid main-page__services-btn">
 																						<span class="mkdf-btn-text">
 																							<?php echo $service_btn_text; ?>
 																						</span>
@@ -218,7 +215,7 @@ if ( is_home() || is_front_page() ) :
 										
 											<?php if( $mp_form__title || $mp_form__shortcode ): ?>	
 											<!-- form -->
-											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768">
+											<div class="mkdf-elements-holder mkdf-one-column mkdf-responsive-mode-768 main-page__form">
 												<div class="mkdf-eh-item">
 													<div class="mkdf-eh-item-inner">
 														<div class="mkdf-eh-item-content mkdf-eh-custom-2456 main-page__block-pd">
@@ -241,10 +238,10 @@ if ( is_home() || is_front_page() ) :
 																			</div>
 																		
 																			<?php if( $mp_form__shortcode ): ?>	
-																			<div role="form" class="wpcf7 common__form">
+																			<div class="wpcf7 common__form">
 																			
 																				<?php 
-																					$mp_form__shortcode = "'" . $mp_form__shortcode . "'";
+																					$mp_form__shortcode = ". $mp_form__shortcode . ";
 																				
 																					echo do_shortcode($mp_form__shortcode); 
 																				?>
@@ -354,7 +351,28 @@ if ( is_home() || is_front_page() ) :
 																
 
 																<div class="footer-logo">
-																	<?php the_custom_logo(); ?>
+																<?php 
+
+																$svg_logo = get_option('karjala_event_svg_logo_field');
+
+																if( $svg_logo ): 
+
+																?>
+
+																<a href="https://karjalaevent.anastasia-pavlova.com/wp/" class="custom-logo-link" rel="home">
+																	<img src="<?php echo $svg_logo; ?> " class="custom-logo" alt="Karjala Event">
+																</a>
+
+
+																<?php
+
+																else:
+
+																	the_custom_logo(); 
+
+																endif;
+
+																?>
 																</div>
 
 																
@@ -432,6 +450,20 @@ if ( is_home() || is_front_page() ) :
 																	$vk = get_option('karjala_event_vk_field');
 
 																	$instagram = get_option('karjala_event_instagram_field');
+
+																	$karjala_event_social_3_field = get_option('karjala_event_social_3_field');
+																	$karjala_event_social_3_icon = get_option('karjala_event_social_3_icon');
+
+																	$karjala_event_social_4_field = get_option('karjala_event_social_4_field');
+																	$karjala_event_social_4_icon = get_option('karjala_event_social_4_icon');
+
+																	$karjala_event_social_5_field = get_option('karjala_event_social_5_field');
+																	$karjala_event_social_5_icon = get_option('karjala_event_social_5_icon');
+
+																	$karjala_event_social_6_field = get_option('karjala_event_social_6_field');
+																	$karjala_event_social_6_icon = get_option('karjala_event_social_6_icon');
+
+
 																?>
 
 																<!-- footer-socials -->
@@ -449,16 +481,46 @@ if ( is_home() || is_front_page() ) :
 																		</a>
 
 																	<?php 
-																			endif;
-																			if( $instagram ):
+																		endif;
+																		if( $instagram ):
 																	?>
 																			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $instagram;?>" target="_blank">
 																			<span class="mkdf-social-icon-widget ion-social-instagram"></span>
 																		</a>
 																	<?php 
 																		endif;
+																		if( $karjala_event_social_3_field && $karjala_event_social_3_icon ):
+																	?>
+																			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $karjala_event_social_3_field;?>" target="_blank">
+																			<img src="<?php echo $karjala_event_social_3_icon;?>" alt="<?php echo $karjala_event_social_3_field;?>">
+																		</a>
+																	<?php 
+																		endif;
+																		if( $karjala_event_social_4_field && $karjala_event_social_4_icon ):
+																	?>
+																			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $karjala_event_social_4_field;?>" target="_blank">
+																			<img src="<?php echo $karjala_event_social_4_icon;?>" alt="<?php echo $karjala_event_social_4_field;?>">
+																		</a>
+																	<?php 
+																		endif;
+																		if( $karjala_event_social_5_field && $karjala_event_social_5_icon ):
+																	?>
+																			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $karjala_event_social_5_field;?>" target="_blank">
+																			<img src="<?php echo $karjala_event_social_5_icon;?>" alt="<?php echo $karjala_event_social_5_field;?>">
+																		</a>
+																	<?php 
+																		endif;
+																		if( $karjala_event_social_6_field && $karjala_event_social_6_icon ):
+																	?>
+																			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover green-hover" href="<?php echo $karjala_event_social_6_field;?>" target="_blank">
+																			<img src="<?php echo $karjala_event_social_6_icon;?>" alt="<?php echo $karjala_event_social_6_field;?>">
+																		</a>
+																	<?php 
+																		endif;
 																		
 																	?>
+
+
 																		
 																	</div>
 																</div>
@@ -609,14 +671,12 @@ if ( is_home() || is_front_page() ) :
 	</div>
 </div>
 
-
-
-
-
 <?
 	//echo 'home page';
 
 	get_footer('main');
+
+
 
 else:
 
@@ -646,11 +706,14 @@ else:
 				<div class="mkdf-title-wrapper">
 					<div class="mkdf-title-inner">
 						<div class="mkdf-grid">
-							<h2 class="mkdf-page-title entry-title">
+							<h1 class="mkdf-page-title entry-title">
 								<?php
-									the_title();
+									the_title(); 
 								?>
-							</h2>
+							</h1>
+							<div class="breadcrumbs">
+            	<?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>
+            	</div>
 						</div>
 					</div>
 				</div>
@@ -682,9 +745,10 @@ else:
 		<?php
 
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				// CLOSE COMMENTS
+				// if ( comments_open() || get_comments_number() ) :
+				// 	comments_template();
+				// endif;
 
 			endwhile; // End of the loop.
 

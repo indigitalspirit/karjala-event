@@ -12,7 +12,7 @@
 ?>
 
 		<!-- bottom-bar -->
-		<div class="mkdf-top-bar bottom-bar">
+		<div class="bottom-bar">
 
 			<div class="mkdf-vertical-align-containers">
 				<div class="mkdf-position-left">

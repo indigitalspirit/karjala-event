@@ -96,43 +96,7 @@ if ( post_password_required() ) {
 	<?php 
 		comment_form();
 	?>
-		<!-- <h4 id="reply-title" class="comment-reply-title">Post a Comment 		<small>
-				<a rel="nofollow" id="cancel-comment-reply-link" href="/the-laugavegur-trail/#respond" style="display:none;">cancel
-					reply</a>
-			</small>
-		</h4>
-
-		<form action="https://wanderland.qodeinteractive.com/wp-comments-post.php" method="post" id="commentform" class="comment-form anti-spam-form-processed">
-			<textarea id="comment" placeholder="Your comment" name="comment" cols="45" rows="6" aria-required="true"></textarea>
-			<input id="author" name="author" placeholder="Your Name" type="text" value="" aria-required="true">
-			<input id="email" name="email" placeholder="Your Email" type="text" value="" aria-required="true">
-			<input id="url" name="url" placeholder="Website" type="text" value="" size="30" maxlength="200">
-			<p class="comment-form-cookies-consent">
-				<input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
-				<label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I
-					comment.</label>
-			</p>
-			<p class="form-submit">
-				<button name="submit" type="submit" id="submit_comment" class="mkdf-btn mkdf-btn-medium mkdf-btn-solid" value="Submit">
-					<span class="mkdf-btn-text">Submit</span>
-				</button> 
-				<input type="hidden" name="comment_post_ID" value="9" id="comment_post_ID">
-				<input type="hidden" name="comment_parent" id="comment_parent" value="0">
-			</p>
-
-			<input type="hidden" name="antspm-j" class="antispam-control antispam-control-j" value="on">
-			<input type="hidden" name="antspm-t" class="antispam-control antispam-control-t" value="1604986074">
-			<p class="antispam-group antispam-group-q" style="clear: both; display: none;">
-				<label>Current ye@r <span class="required">*</span></label>
-				<input type="hidden" name="antspm-a" class="antispam-control antispam-control-a" value="2020">
-				<input type="text" name="antspm-q" class="antispam-control antispam-control-q" value="6.5.1" autocomplete="off">
-			</p>
-			<p class="antispam-group antispam-group-e" style="display: none;">
-				<label>Leave this field empty</label>
-				<input type="text" name="antspm-e-email-url-website" class="antispam-control antispam-control-e" value="" autocomplete="off">
-			</p>
-			<input type="hidden" name="antspm-d" class="antispam-control antispam-control-d" value="2020">
-		</form> -->
+	
 
 	</div>
 </div>
@@ -164,8 +128,11 @@ if ( post_password_required() ) {
 	// 		}
 	// 		?>
 	 	<!-- </h2> -->
-
-	 	<?php the_comments_navigation(); ?>
+		
+		 <?php 
+		 	//CLOSE COMMENTS
+			 //the_comments_navigation(); 
+			?>
 
 	 	<!-- <ol class="comment-list"> -->
 	 		<?php

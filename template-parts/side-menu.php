@@ -53,16 +53,16 @@
 		<div class="widget mkdf-social-icons-group-widget text-align-center">
 			<div class="mkdf-widget-title-holder">
 				<h5 class="mkdf-widget-title">Follow us on</h5>
-			</div> <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#59815b"
+			</div> <a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#49706c"
 				style="color: #878787;" href="https://www.instagram.com/qodeinteractive/" target="_blank">
 				<span class="mkdf-social-icon-widget ion-social-instagram"></span> </a>
-			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#59815b" style="color: #878787;"
+			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#49706c" style="color: #878787;"
 				href="https://twitter.com/qodeinteractive/" target="_blank">
 				<span class="mkdf-social-icon-widget ion-social-twitter"></span> </a>
-			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#59815b" style="color: #878787;"
+			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#49706c" style="color: #878787;"
 				href="https://www.facebook.com/QodeInteractive/" target="_blank">
 				<span class="mkdf-social-icon-widget ion-social-facebook"></span> </a>
-			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#59815b" style="color: #878787;"
+			<a class="mkdf-social-icon-widget-holder mkdf-icon-has-hover" data-hover-color="#49706c" style="color: #878787;"
 				href="https://www.youtube.com/QodeInteractiveVideos" target="_blank">
 				<span class="mkdf-social-icon-widget ion-social-youtube"></span> </a>
 		</div>

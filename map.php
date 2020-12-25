@@ -30,7 +30,10 @@ get_header();
       <div class="mkdf-title-wrapper">
         <div class="mkdf-title-inner">
           <div class="mkdf-grid">
-            <h1 class="mkdf-page-title entry-title">Карта сайта</h1>
+            <h1 class="mkdf-page-title entry-title"><?php the_title(); ?> </h1>
+            <div class="breadcrumbs">
+            <?php if ( function_exists( 'karjala_event_breadcrumbs' ) ) karjala_event_breadcrumbs(); ?>
+            </div>
           </div>
         </div>
       </div>
@@ -60,6 +63,7 @@ get_header();
                   <?php
                     foreach( $map_pages as $page ) {
                       //echo $page->ID . '<br>'; 
+                      if ( !$page->post_parent ):
                       
                   ?>
 
@@ -69,7 +73,7 @@ get_header();
                     </h2>
 
                     <?php
-                      $map_page_children = get_pages( array( 'child_of' => $page->ID, 'sort_column' => 'post_date', 'sort_order' => 'desc' ) );
+                      $map_page_children = get_pages( array( 'child_of' => $page->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc', 'hierarchical' => false ) );
 
                       if( $map_page_children > 0): 
                     ?>
@@ -106,6 +110,7 @@ get_header();
                   </div>   
 
                   <?php
+                      endif;
                     }
                   ?>
     

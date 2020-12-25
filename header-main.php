@@ -38,7 +38,28 @@
                 <div class="mkdf-position-left-inner">
                   <div class="mkdf-mobile-logo-wrapper">
 
-                    <?php the_custom_logo(); ?>
+                  <?php 
+
+                  $svg_logo = get_option('karjala_event_svg_logo_field');
+
+                  if( $svg_logo ): 
+
+                  ?>
+
+                  <a href="https://karjalaevent.anastasia-pavlova.com/wp/" class="custom-logo-link" rel="home">
+                    <img src="<?php echo $svg_logo; ?> " class="custom-logo" alt="Karjala Event">
+                  </a>
+
+
+                  <?php
+
+                  else:
+
+                    the_custom_logo(); 
+
+                  endif;
+
+                  ?>
                   </div>
                 </div>
               </div>
@@ -119,7 +140,28 @@
                                               <div class="mkdf-position-left">
                                                 <div class="main-page__header-row">
                                                   <div class="main-page__header-logo">
-                                                    <?php the_custom_logo(); ?>
+                                                  <?php 
+
+                                                  $svg_logo = get_option('karjala_event_svg_logo_field');
+
+                                                  if( $svg_logo ): 
+
+                                                  ?>
+
+                                                  <a href="https://karjalaevent.anastasia-pavlova.com/wp/" class="custom-logo-link" rel="home">
+                                                    <img src="<?php echo $svg_logo; ?> " class="custom-logo" alt="Karjala Event">
+                                                  </a>
+
+
+                                                  <?php
+
+                                                  else:
+
+                                                    the_custom_logo(); 
+
+                                                  endif;
+
+                                                  ?>
 
                                                   </div>
 
@@ -152,31 +194,7 @@
 
                                                     <?php get_search_form(); ?>
 
-                                                      <!-- <form action="https://wanderland.qodeinteractive.com/"
-                                                        class="mkdf-on-side-search-form" method="get">
-                                                        <div class="mkdf-form-holder">
-                                                          <div class="mkdf-form-holder-inner">
-                                                            <div class="mkdf-field-holder">
-                                                              <input type="text" placeholder="Поиск" name="s"
-                                                                class="mkdf-search-field" autocomplete="off"
-                                                                required="">
-                                                            </div>
-                                                            <button class="mkdf-onside-btn" type="submit">
-                                                              <span class="mkdf-onside-btn-icon"></span>
-                                                            </button>
-                                                          </div>
-                                                        </div>
-                                                      </form>
-
-                                                      <a class="mkdf-search-opener mkdf-icon-has-hover mkdf-search-opener-icon-pack"
-                                                        href="#">
-                                                        <span class="mkdf-search-opener-wrapper">
-                                                          <span class="mkdf-search-icon-text"
-                                                            style="color:black">Поиск</span>
-                                                          <i class="mkdf-icon-ion-icon ion-ios-search "
-                                                            style="color:black"></i> </span>
-                                                      </a> -->
-
+                                                   
                                                     </div>
                                                   </div>
                                                 </div>

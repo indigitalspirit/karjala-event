@@ -22,7 +22,7 @@
 
 			<h3 class="mkdf-st-title">
 				Оставьте <span class="mkdf-st-highlight-title-holder" style="color: #f2f1e7">
-					<span class="mkdf-st-highlight-title" style="color: #59815b">заявку</span> !
+					<span class="mkdf-st-highlight-title" style="color: #49706c">заявку</span> !
 					<span class="mkdf-st-highlight">
 
 						<span class="mkdf-active-hover-middle"></span>
@@ -40,25 +40,8 @@
 
 	<div role="form" class="wpcf7 common__form">
 		
-		<form class="wpcf7-form init cf7_custom_style_1">
+		<?php echo do_shortcode('[contact-form-7 id="2050" title="Форма заявки (модальное окно)"]'); ?>
 
-			<div class="contact-us">
-				<!-- <span class="wpcf7-form-control-wrap your-name"> -->
-				<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя">
-				<!-- </span> -->
-				<!-- <span class="wpcf7-form-control-wrap your-email"> -->
-				<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Телефон">
-				<!-- </span> -->
-				<button type="submit" class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-					<span class="mkdf-btn-text">Отправить</span>
-				</button>
-				<span class="mkdf-btn-text form-caption">
-					Нажимая на кнопку "Отправить", вы соглашаетесь с <a href="/privacy-policy">Политикой конфиденциальности</a>
-				</span>
-				<span class="ajax-loader"></span>
-			</div>
-			<div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
-		</form>
 	</div>
 
 
@@ -70,13 +53,13 @@
 	<div class="cta-modal__close-btn" id="cta-modal-consult__close-btn">
 		<i class="fa fa-times" title="окно"></i>
 	</div>
-	<div class="section-spacer-bt-50 common__form">
+	<div class="common__form">
 		<div class="mkdf-section-title-holder   mkdf-st-highlight" style="text-align: center">
 		<div class="mkdf-st-inner">
 
 			<h3 class="mkdf-st-title">
 				Закажите <span class="mkdf-st-highlight-title-holder" style="color: #f2f1e7">
-					<span class="mkdf-st-highlight-title" style="color: #59815b">консультацию</span> !
+					<span class="mkdf-st-highlight-title" style="color: #49706c">консультацию</span> !
 					<span class="mkdf-st-highlight">
 
 						<span class="mkdf-active-hover-middle"></span>
@@ -94,25 +77,8 @@
 
 	<div role="form" class="wpcf7 common__form">
 		
-		<form class="wpcf7-form init cf7_custom_style_1">
-
-			<div class="contact-us">
-				<!-- <span class="wpcf7-form-control-wrap your-name"> -->
-				<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя">
-				<!-- </span> -->
-				<!-- <span class="wpcf7-form-control-wrap your-email"> -->
-				<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Телефон">
-				<!-- </span> -->
-				<button type="submit" class="wpcf7-form-control wpcf7-submit mkdf-btn mkdf-btn-medium mkdf-btn-solid">
-					<span class="mkdf-btn-text">Заказать звонок</span>
-				</button>
-				<span class="mkdf-btn-text form-caption">
-					Нажимая на кнопку "Заказать звонок", вы соглашаетесь с <a href="/privacy-policy">Политикой конфиденциальности</a>
-				</span>
-				<span class="ajax-loader"></span>
-			</div>
-			<div class="wpcf7-response-output" role="alert" aria-hidden="true"></div>
-		</form>
+		<?php echo do_shortcode('[contact-form-7 id="2049" title="Форма заказа консультации (модальное окно)"]'); ?>
+	
 	</div>
 
 	</div>
